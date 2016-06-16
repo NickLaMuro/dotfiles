@@ -1,0 +1,18 @@
+[include]
+  path = .gitconfig.local
+[core]
+  editor = vim
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  hist = log --pretty=format:\"%C(red)%h%C(cyan) %aN%C(reset) -%C(yellow)%d%C(reset) %s %C(green)(%cr)%C(reset)\" --graph --date=short
+[push]
+  default = tracking
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+[diff]
+  tool = vimdiff

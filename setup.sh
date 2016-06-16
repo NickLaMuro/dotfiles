@@ -18,6 +18,7 @@ cd $HOME
 remove_and_reload ".bashrc"
 remove_and_reload ".bashrc.d"
 remove_and_reload "bin"
+remove_and_reload ".gitconfig"
 remove_and_reload ".git_completion.bash"
 remove_and_reload ".tmux"
 remove_and_reload ".tmux.conf"
@@ -35,6 +36,18 @@ if [[ $(uname -s) == "Darwin" ]] ; then
   defaults write com.apple.screencapture location ~/Pictures/screenshots/
   killall SystemUIServer
 fi
+
+
+# Setup git credentials in ~/.gitconfig.local
+echo; echo;
+read -p "Enter your git user.name: "  GIT_USER_NAME
+read -p "Enter your git user.email: " GIT_EMAIL
+
+cat > .gitconfig.local <<EOF
+[user]
+  name = $GIT_USER_NAME
+  email = $GIT_EMAIL
+EOF
 
 
 cd $CURRENT_WORKING_DIR
