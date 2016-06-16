@@ -1,0 +1,24 @@
+# Set PS1 prompt
+# 
+# Maintainer: Nick LaMuro
+# Add color support for ls and others
+# 
+
+case $(uname -s) in 
+  "Linux")
+    if [[ "${linux_use_color}" == "true" ]] ; then
+      # Enable colors for ls, etc.  Prefer ~/.dir_colors #64489
+      if type -P dircolors >/dev/null ; then
+        if [[ -f ~/.dir_colors ]] ; then
+          eval $(dircolors -b ~/.dir_colors)
+        elif [[ -f /etc/DIR_COLORS ]] ; then
+          eval $(dircolors -b /etc/DIR_COLORS)
+        fi
+      fi
+    fi
+    ;;
+  "Darwin")
+    export CLICOLOR=1
+    export LSCOLORS=GxFxCxDxBxegedabagacad
+    ;;
+esac

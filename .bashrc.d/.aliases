@@ -1,0 +1,191 @@
+# -------------------------- #
+#           Aliases          #
+# -------------------------- #
+
+
+# Add a directory to $PATH
+add_to_path() {
+  if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
+    if [[ "$2" == "prepend" ]]; then
+      PATH=$1:$PATH
+    else
+      PATH="${PATH:+"$PATH:"}$1"
+    fi
+  fi
+}
+
+# Safe source that checks for the file existing before sourcing
+source_file() {
+  if [ -f "$1" ]; then
+    source "$1"
+  fi
+}
+
+
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    alias dir='dir --color=auto'
+    alias vdir='vdir --color=auto'
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+
+# Helper function for determining if color should be used for linux terminals
+linux_use_color() {
+  local use_color=false
+
+  # Set colorful PS1 only on colorful terminals.
+  # dircolors --print-database uses its own built-in database
+  # instead of using /etc/DIR_COLORS.  Try to use the external file
+  # first to take advantage of user additions.  Use internal bash
+  # globbing instead of external grep binary.
+  safe_term=${TERM//[^[:alnum:]]/?}   # sanitize TERM
+  match_lhs=""
+  [[ -f ~/.dir_colors   ]] && match_lhs="${match_lhs}$(<~/.dir_colors)"
+  [[ -f /etc/DIR_COLORS ]] && match_lhs="${match_lhs}$(</etc/DIR_COLORS)"
+  [[ -z ${match_lhs}    ]] \
+  && type -P dircolors >/dev/null \
+  && match_lhs=$(dircolors --print-database)
+  [[ $'\n'${match_lhs} == *$'\n'"TERM "${safe_term}* ]] && use_color=true
+
+  echo $use_color
+}
+
+
+# Add an "alert" alias for long running commands.  Use like so:
+#
+# Example
+#
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+
+# Pretty print json in the terminal like so:
+#   $ echo "{'json': 'stuff'}" | json
+alias json='python -mjson.tool'
+
+
+# Pretty print xml in the terminal like so:
+#
+# Example
+#
+#   $ echo "<xml><stuff></stuff></xml>" | xml
+alias xml='xmllint --format -'
+
+
+# Create/use a gemset based on the folder name and current ruby version
+alias gemsetize='rvm use --create `rvm current`@$(basename `pwd`)'
+
+
+# Strip ANSI escape sequences
+# alias stripcolors='sed -E "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g"'
+alias stripcolors="sed \"s,$(printf '\033')\\[[0-9;]*[a-zA-Z],,g\""
+
+
+# Use vim to read a manpage
+vman() {
+  vim -c "$(
+    echo "
+      source \$VIMRUNTIME/ftplugin/man.vim
+      execute 'Man' '$1'
+      silent only
+      setlocal readonly
+      setlocal nomodifiable
+    "
+  )"
+}
+
+
+# solves issues with rake having mismatched versions with what Gemfile.lock expects
+rake() {
+  # if [[ -e ./Gemfile ]] && which bundle; then
+  if [[ -e ./Gemfile ]] && command -v bundle > /dev/null; then
+    bundle exec rake "$@"
+  else
+    command rake "$@"
+  fi
+}
+
+
+# Parses json.  Each arg is a level deeper in the tree:
+#
+# Examples
+# 
+#   echo "{'json': {'foo': 'bar'}}" | parse_json
+#   => {'json': {'foo': 'bar'}}
+#
+#   echo "{'foo': {'bar': 'baz'}}" | parse_json foo
+#   => {'bar': 'baz'}
+#
+#   echo "{'foo': [{'bar': 'baz'}}]" | parse_json foo [0]
+#   => {'foo': 'bar'}
+#
+parse_json() {
+  python -c "import json,sys;print json.dumps(json.load(sys.stdin)$(__process_json_args_for_use_in_parsing "$*"))"
+}
+
+
+# Parses json and returns the keys as a list.
+#
+# Examples
+# 
+#   $ echo "{'json': {'foo': 'bar'}}" | parse_json_keys
+#   => json
+#
+#   $ echo "{'foo': {'bar': 'baz'}}" | parse_json_keys foo
+#   => bar
+#
+#   $ echo "{'foo': [{'bar': 'baz'}}]" | parse_json_keys foo [0]
+#   => bar
+#
+parse_json_keys() {
+  python -c "import json,sys;print \"\\n\".join(json.load(sys.stdin)$(__process_json_args_for_use_in_parsing "$*").keys());"
+}
+
+
+# Parses arguments for use with parse_json and parse_json_keys
+#
+# Examples
+#   
+#   $ __process_json_args_for_use_in_parsing foo
+#   => ['foo']
+#   
+#   $ __process_json_args_for_use_in_parsing foo bar
+#   => ['foo']['bar']
+#   
+#   $ __process_json_args_for_use_in_parsing foo [0] bar
+#   => ['foo'][0]['bar']
+#
+__process_json_args_for_use_in_parsing() {
+  output=''
+  for var in $*; do
+    if [[ $var =~ ^\[[0-9]*\]$ ]]; then
+      output="$output$var"
+    else
+      output="$output['$var']"
+    fi
+  done
+  printf "$output"
+}
+
+# OSX 'Open in browser' commands
+if [[ "$(uname -s)" == "Darwin" ]]; then
+  # Open a file in chrome
+  chrome() {
+    open -a /Applications/Google\ Chrome.app/ $1
+  }
+
+  # Open a file in vivaldi
+  vivaldi() {
+    open -a /Applications/Vivaldi.app/ $1
+  }
+fi

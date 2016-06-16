@@ -1,0 +1,10 @@
+# Include bash completion
+# 
+# Maintainer: Nick LaMuro
+# Add bash completion either through the script included on the system (Linux),
+# or via homebrew (OSX)
+# 
+
+
+source_file /etc/bash_completion
+which -s brew && source_file $(brew --prefix)/etc/bash_completion

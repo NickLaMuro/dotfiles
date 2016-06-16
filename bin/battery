@@ -1,0 +1,121 @@
+#!/bin/sh
+
+BATTERY_CONNECTED='║ ✒ ╠'
+BATTERY_CHARGING='║ ⚡ ╠'
+BATTERY_NA='║N/A╠'
+BATTERY_20='║▊▉▉╠'
+BATTERY_19='║▊▉▉╠'
+BATTERY_18='║▊▉▊╠'
+BATTERY_17='║▊▉▋╠'
+BATTERY_16='║▊▉▌╠'
+BATTERY_15='║▊▉▍╠'
+BATTERY_14='║▊▉▎╠'
+BATTERY_13='║▊▉▎╠'
+BATTERY_12='║▊▊ ╠'
+BATTERY_11='║▊▋ ╠'
+BATTERY_10='║▊▌ ╠'
+ BATTERY_9='║▊▍ ╠'
+ BATTERY_8='║▊▎ ╠'
+ BATTERY_7='║▊  ╠'
+ BATTERY_6='║▋  ╠'
+ BATTERY_5='║▌  ╠'
+ BATTERY_4='║▍  ╠'
+ BATTERY_3='║▎  ╠'
+ BATTERY_2='║▏  ╠'
+ BATTERY_1='║   ╠'
+ BATTERY_0='║ - ╠'
+
+battery_display() {
+  eval "echo \$BATTERY_$1"
+}
+
+linux_get_bat () {
+    bf=$(cat $BAT_FULL)
+    bn=$(cat $BAT_NOW)
+    BAT=`echo "(100 * $bn / $bf) / 5" | bc`
+    echo $BAT
+}
+
+freebsd_get_bat () {
+    echo "$(sysctl -n hw.acpi.battery.life) / 5" | bc
+
+}
+
+# Do with grep and awk unless too hard
+
+# TODO Identify which machine we're on from teh script.
+
+battery_status() {
+  case $(uname -s) in
+    "Linux")
+        BATPATH=${BATPATH:-/sys/class/power_supply/BAT0}
+        STATUS=$BATPATH/status
+        if [ -f "$BATPATH/energy_full" ]; then
+            naming="energy"
+        elif [ -f "$BATPATH/charge_full" ]; then
+            naming="charge"
+        fi
+        BAT_FULL=$BATPATH/${naming}_full
+        BAT_NOW=$BATPATH/${naming}_now
+        if [ "$1" = `cat $STATUS` -o "$1" = "" ]; then
+            linux_get_bat
+        fi
+        ;;
+    "FreeBSD")
+        STATUS=`sysctl -n hw.acpi.battery.state`
+        case $1 in
+            "Discharging")
+                if [ $STATUS -eq 1 ]; then
+                    freebsd_get_bat
+                fi
+                ;;
+            "Charging")
+                if [ $STATUS -eq 2 ]; then
+                    freebsd_get_bat
+                fi
+                ;;
+            "")
+                freebsd_get_bat
+                ;;
+        esac
+        ;;
+    "Darwin")
+        ioreg -c AppleSmartBattery -w0 | \
+        grep -o '"[^"]*" = [^ ]*' | \
+        sed -e 's/= //g' -e 's/"//g' | \
+        sort | \
+        while read key value; do
+          case $key in
+            "MaxCapacity")
+              export maxcap=$value;;
+            "CurrentCapacity")
+              export curcap=$value;;
+            "ExternalConnected")
+              export power_cable_connected=$value;;
+            "FullyCharged")
+              export fully_charged=$value;;
+            "IsCharging")
+              export battery_charging=$value;;
+          esac
+          if [[ -n $power_cable_connected && $power_cable_connected == "Yes" ]]; then
+            echo "Power connected"
+            if [[ -n $fully_charged && $fully_charged == "Yes" ]]; then
+              echo "CONNECTED"
+            else
+              echo "CHARGING"
+            fi
+          else
+            if [[ -n $maxcap && -n $curcap ]]; then
+              echo "(100 * $curcap / $maxcap) / 5" | bc
+            fi
+          fi
+        done
+  esac
+}
+
+BATTERY_STATUS=`battery_status $1 | tail -1`
+if [[ -z "$BATTERY_STATUS" ]]; then
+  battery_display "NA"
+else
+  battery_display $BATTERY_STATUS
+fi

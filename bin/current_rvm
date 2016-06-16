@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# watch $(tmux send-keys -p $(tmux list-windows | grep active | cut -d: -f1) rvm tools identifier;tmux send-keys -p $(tmux list-windows | grep active | cut -d: -f1) Enter)
+function current_rvm {
+  while sleep 5; do
+    clear
+    local PANE=$(tmux list-panes | grep active | cut -d: -f1)
+    tmux send-keys -t $PANE rvm tools identifier
+    tmux send-keys -t $PANE Enter
+  done
+}
+
+current_rvm

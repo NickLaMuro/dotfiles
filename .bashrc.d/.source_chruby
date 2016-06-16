@@ -1,0 +1,13 @@
+# Set settings for interactive prompts
+# 
+# Maintainer: Nick LaMuro
+# Source chruby based on if homebrew is present or not
+# 
+
+if command -v brew > /dev/null; then
+  source_file /usr/local/opt/chruby/share/chruby/chruby.sh
+  source_file /usr/local/opt/chruby/share/chruby/auto.sh
+else
+  source_file /opt/chruby/share/chruby/chruby.sh
+  source_file /opt/chruby/share/chruby/auto.sh
+fi

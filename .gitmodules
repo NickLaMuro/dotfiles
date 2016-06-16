@@ -1,0 +1,69 @@
+[submodule ".vim/bundles/vim-fugitive"]
+	path = .vim/bundles/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule ".vim/bundles/vim-airline"]
+	path = .vim/bundles/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule ".vim/bundles/vim-markdown"]
+	path = .vim/bundles/vim-markdown
+	url = https://github.com/tpope/vim-markdown.git
+[submodule ".vim/bundles/vim-surround"]
+	path = .vim/bundles/vim-surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule ".vim/bundles/supertab"]
+	path = .vim/bundles/supertab
+	url = https://github.com/ervandew/supertab.git
+[submodule ".vim/bundles/tmuxline.vim"]
+	path = .vim/bundles/tmuxline.vim
+	url = https://github.com/edkolev/tmuxline.vim.git
+[submodule ".vim/bundles/vim-commentary"]
+	path = .vim/bundles/vim-commentary
+	url = https://github.com/tpope/vim-commentary.git
+[submodule ".vim/bundles/nerdtree"]
+	path = .vim/bundles/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule ".vim/bundles/renamer.vim"]
+	path = .vim/bundles/renamer.vim
+	url = https://github.com/vim-scripts/renamer.vim.git
+[submodule ".vim/bundles/tabular"]
+	path = .vim/bundles/tabular
+	url = https://github.com/godlygeek/tabular.git
+[submodule ".vim/bundles/dbext.vim"]
+	path = .vim/bundles/dbext.vim
+	url = https://github.com/vim-scripts/dbext.vim.git
+[submodule ".vim/bundles/vim-coffee-script"]
+	path = .vim/bundles/vim-coffee-script
+	url = https://github.com/kchmck/vim-coffee-script.git
+[submodule ".vim/bundles/vim-css-color"]
+	path = .vim/bundles/vim-css-color
+	url = https://github.com/ap/vim-css-color.git
+[submodule ".vim/bundles/bats.vim"]
+	path = .vim/bundles/bats.vim
+	url = https://github.com/vim-scripts/bats.vim.git
+[submodule ".vim/bundles/vim-snipmate"]
+	path = .vim/bundles/vim-snipmate
+	url = https://github.com/garbas/vim-snipmate.git
+[submodule ".vim/bundles/snipmate.vim"]
+	path = .vim/bundles/snipmate.vim
+	url = https://github.com/garbas/vim-snipmate.git
+[submodule ".vim/bundles/tlib_vim"]
+	path = .vim/bundles/tlib_vim
+	url = https://github.com/tomtom/tlib_vim.git
+[submodule ".vim/bundles/vim-addon-mw-utils"]
+	path = .vim/bundles/vim-addon-mw-utils
+	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
+[submodule ".vim/bundles/vim-go"]
+	path = .vim/bundles/vim-go
+	url = https://github.com/fatih/vim-go.git
+[submodule ".vim/bundles/vim-hashicorp-tools"]
+	path = .vim/bundles/vim-hashicorp-tools
+	url = https://github.com/hashivim/vim-hashicorp-tools.git
+[submodule ".vim/bundles/vim-ragtag"]
+	path = .vim/bundles/vim-ragtag
+	url = https://github.com/tpope/vim-ragtag.git
+[submodule ".vim/bundles/vim-rails"]
+	path = .vim/bundles/vim-rails
+	url = https://github.com/tpope/vim-rails.git
+[submodule ".vim/bundles/vim-files"]
+	path = .vim/bundles/vim-files
+	url = https://github.com/NickLaMuro/vim-files.git
