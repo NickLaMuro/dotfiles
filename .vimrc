@@ -194,12 +194,6 @@ nmap <Leader><C-R>c :Rcontroller<CR>
 nmap <Leader><C-R>a :A<CR>
 nmap <Leader><C-R>r :R<CR>
 
-" vimgrep/ack.vim shortcuts
-" Shortcut for using Ack.vim or vimgrep
-" nmap <Leader><C-f> :Ack "
-nmap <Leader><C-f> :vimgrep 
-" Auto-open vimgrep results in a quickfix window
-autocmd QuickFixCmdPost *vimgrep* cwindow
 
 " Bufferline
 " ----------
