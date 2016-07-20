@@ -23,3 +23,7 @@ endfunc
 " http://stackoverflow.com/a/29179159
 "
 command Bd bp\|bd \#
+
+
+" Close open Quickfix windows
+noremap <Leader>X :ccl <bar> lcl<CR>
