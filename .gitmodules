@@ -73,3 +73,6 @@
 [submodule ".vim/bundles/vimproc.vim"]
 	path = .vim/bundles/vimproc.vim
 	url = https://github.com/Shougo/vimproc.vim.git
+[submodule ".vim/bundles/vim-dispatch"]
+	path = .vim/bundles/vim-dispatch
+	url = https://github.com/tpope/vim-dispatch.git
