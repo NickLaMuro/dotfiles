@@ -19,8 +19,24 @@ endfunction
 autocmd QuickFixCmdPost *vimgrep* cwindow
 autocmd QuickFixCmdPost *grep* cwindow
 
+" Mappings
+
 " start a Ctrl-p like search using unite.vim
-nnoremap <C-p> :Unite -start-insert file_rec/async<CR>
+nnoremap <C-p> :Unite -start-insert file_rec/async:!<CR>
+" nnoremap <C-p> :Unite -start-insert file_rec/async<CR>
+
+" search
+nnoremap <leader>Y :<C-u>Unite -no-split -buffer-name=yank    history/yank<CR>
+nnoremap <leader>E :<C-u>Unite -no-split -buffer-name=buffer  buffer<CR>
+
+autocmd FileType unite call s:unite_settings()
+function! s:unite_settings()
+  " Play nice with supertab
+  let b:SuperTabDisabled=1
+  " Enable navigation with control-j and control-k in insert mode
+  imap <buffer> <C-j>   <Plug>(unite_select_next_line)
+  imap <buffer> <C-k>   <Plug>(unite_select_previous_line)
+endfunction
 
 " Open unite.vim windows on the bottom of the screen
 call unite#custom#profile('default', 'context', {
