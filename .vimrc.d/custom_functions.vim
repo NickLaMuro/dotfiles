@@ -22,7 +22,13 @@ endfunc
 "
 " http://stackoverflow.com/a/29179159
 "
-command Bd bp\|bd \#
+" command Bd  \| bd \#
+command Bd call <SID>BuffDeleteAndReturnToLastBuff()
+
+function! s:BuffDeleteAndReturnToLastBuff()
+  exec "b #"
+  exec "bd #"
+endfunc
 
 
 " Close open Quickfix windows
