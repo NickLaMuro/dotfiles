@@ -73,3 +73,7 @@
 [submodule ".vim/bundles/vim-dispatch"]
 	path = .vim/bundles/vim-dispatch
 	url = https://github.com/tpope/vim-dispatch.git
+[submodule ".vim/bundles/vim-rubocop"]
+	path = .vim/bundles/vim-rubocop
+	url = https://github.com/NickLaMuro/vim-rubocop.git
+	branch = swap-extra-args-location
