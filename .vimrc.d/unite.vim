@@ -78,9 +78,9 @@ function! s:ToggleUniteSearchCommand()
   let grep_cmd = g:possible_grep_commands[g:current_grep_command]
 
   if grep_cmd ==# 'default'
-    unlet g:unite_source_grep_command
-    unlet g:unite_source_grep_default_opts
-    unlet g:unite_source_grep_recursive_opt
+    unlet! g:unite_source_grep_command
+    unlet! g:unite_source_grep_default_opts
+    unlet! g:unite_source_grep_recursive_opt
   else
     exec "let g:unite_source_grep_command = g:".grep_cmd."_unite_source_grep_command"
     exec "let g:unite_source_grep_default_opts = g:".grep_cmd."_unite_source_grep_default_opts"
