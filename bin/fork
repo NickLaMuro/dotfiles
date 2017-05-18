@@ -1,0 +1,51 @@
+#!/bin/bash
+
+# Usage: fork GH_ORG_NAME/GH_REPO_NAME
+# 
+# forks and clones a repo using hub credentials, and modifies the .git/config
+# to work with hub pull-requests
+
+GH_USERNAME=`grep user ~/.config/hub | tail -1 | sed "s/- user: //"`
+GH_TOKEN=`grep oauth_token ~/.config/hub | tail -1 | sed "s/  oauth_token: //"`
+
+FORKED_ORG_REPO=$1
+FORKED_ORG=${FORKED_ORG_REPO%/*}
+FORKED_REPO=${FORKED_ORG_REPO#*/}
+FORKED_URL="https://github.com/$FORKED_ORG/$FORKED_REPO.git"
+
+ohai() {
+  echo -e "\033[34m==>\033[0m \033[1m$1\033[0m"
+}
+
+ohai "Forking $FORKED_URL ..."
+curl -sH "Authorization: token $GH_TOKEN" -X POST \
+     https://api.github.com/repos/$FORKED_ORG/$FORKED_REPO/forks > /dev/null
+
+# give github 5 seconds before cloning the newly forked repo
+sleep 5
+
+ohai "Cloning new fork from git@github.com:$GH_USERNAME/$FORKED_REPO.git ..."
+git clone git@github.com:$GH_USERNAME/$FORKED_REPO.git
+
+ohai "Adding upstream remote: $FORKED_URL ..."
+git --git-dir=$FORKED_REPO/.git --work-tree=$FORKED_REPO \
+    remote add upstream $FORKED_URL
+
+# Update the .git/config to handle upstream in hub better
+# 
+# Moves around the contents of the .git/config so hub can make use of it better
+# when making pull requests.  Prints the following, in order to re-write the
+# .git/config (should be idempotent):
+#
+#   * Grabs the [core] config (everything before a new section)
+#   * Grabs the upstream config (line with 'remote "upstream"` plus 2 more
+#   * Grabs everything that isn't the core config and upstream config
+
+# Core config lines
+GIT_CONFIG_CONTENTS="$(sed '/^\[[^"]*"/q' $FORKED_REPO/.git/config | sed \$d)"
+# Upstream config lines
+GIT_CONFIG_CONTENTS="$GIT_CONFIG_CONTENTS$(echo; grep 'remote "upstream"' -A 2 $FORKED_REPO/.git/config)"
+# Remaining lines (see http://stackoverflow.com/a/19081111 )
+GIT_CONFIG_CONTENTS="$GIT_CONFIG_CONTENTS$(echo; awk 'FNR==NR{a[$0]=1;next}!($0 in a)' <(echo "$GIT_CONFIG_CONTENTS") $FORKED_REPO/.git/config)"
+
+echo "$GIT_CONFIG_CONTENTS" > $FORKED_REPO/.git/config
