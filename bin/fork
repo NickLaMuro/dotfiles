@@ -31,6 +31,10 @@ ohai "Adding upstream remote: $FORKED_URL ..."
 git --git-dir=$FORKED_REPO/.git --work-tree=$FORKED_REPO \
     remote add upstream $FORKED_URL
 
+ohai "Fetching from upstream..."
+git --git-dir=$FORKED_REPO/.git --work-tree=$FORKED_REPO \
+    fetch upstream
+
 # Update the .git/config to handle upstream in hub better
 # 
 # Moves around the contents of the .git/config so hub can make use of it better
