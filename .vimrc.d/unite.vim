@@ -56,6 +56,11 @@ if executable('ack')
   let g:ack_unite_source_grep_command = 'ack'
   let g:ack_unite_source_grep_default_opts = '--no-heading --no-color -C4 --type-set=LOG=.log --noLOG'
 endif
+if executable('rg')
+  let g:possible_grep_commands = g:possible_grep_commands + ['rg']
+  let g:rg_unite_source_grep_command = 'rg'
+  let g:rg_unite_source_grep_default_opts = '--no-heading --vimgrep'
+endif
 if executable('git')
   let g:possible_grep_commands = g:possible_grep_commands + ['git']
   let g:git_unite_source_grep_command = 'git'
