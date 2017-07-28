@@ -77,3 +77,6 @@
 	path = .vim/bundles/vim-rubocop
 	url = https://github.com/NickLaMuro/vim-rubocop.git
 	branch = swap-extra-args-location
+[submodule ".vim/bundles/Dockerfile.vim"]
+	path = .vim/bundles/Dockerfile.vim
+	url = https://github.com/ekalinin/Dockerfile.vim.git
