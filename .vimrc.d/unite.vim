@@ -15,10 +15,6 @@ function! s:UniteSearch(...)
   exec ":Unite grep:."
 endfunction
 
-" Auto-open vimgrep results in a quickfix window
-autocmd QuickFixCmdPost *vimgrep* cwindow
-autocmd QuickFixCmdPost *grep* cwindow
-
 " Mappings
 
 " start a Ctrl-p like search using unite.vim

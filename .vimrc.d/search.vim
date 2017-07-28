@@ -41,3 +41,7 @@ if !hasmapto("<Plug>VLToggle")
   nmap <unique> <Leader>vl <Plug>VLToggle
 endif
 let &cpo = s:save_cpo | unlet s:save_cpo
+
+" Auto-open vimgrep results in a quickfix window
+autocmd QuickFixCmdPost *vimgrep* cwindow
+autocmd QuickFixCmdPost *grep* cwindow
