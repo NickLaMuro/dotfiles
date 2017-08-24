@@ -80,3 +80,9 @@
 [submodule ".vim/bundles/Dockerfile.vim"]
 	path = .vim/bundles/Dockerfile.vim
 	url = https://github.com/ekalinin/Dockerfile.vim.git
+[submodule ".vim/bundles/goyo.vim"]
+	path = .vim/bundles/goyo.vim
+	url = https://github.com/junegunn/goyo.vim.git
+[submodule ".vim/bundles/limelight.vim"]
+	path = .vim/bundles/limelight.vim
+	url = https://github.com/junegunn/limelight.vim
