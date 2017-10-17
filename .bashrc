@@ -30,14 +30,14 @@ export EDITOR='vim'
 #       Scripts and Paths        #
 # ------------------------------ #
 
-add_to_path $HOME/bin                      # Add custom scripts to PATH
-add_to_path /usr/local/heroku/bin          # Add heroku to PATH
-add_to_path /usr/local/lib/node_modules    # Add node_modules to PATH
+add_to_path $HOME/bin                               # Add custom scripts to PATH
+add_to_path /usr/local/heroku/bin                   # Add heroku to PATH
+add_to_path /usr/local/lib/node_modules             # Add node_modules to PATH
 
 
-source_file "$HOME/.bashrc.local"                      # Source local bashrc
-source_file "$HOME/.rvm/scripts/rvm"                   # Source rvm
-source_file $DOTFILES_DIR/.bashrc.d/.source_chruby     # Source chruby
+source_file "$HOME/.bashrc.local"                   # Source local bashrc
+source_file "$HOME/.rvm/scripts/rvm"                # Source rvm
+source_file $DOTFILES_DIR/.bashrc.d/.source_chruby  # Source chruby
 
 
 # ------------------------------ #
