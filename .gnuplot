@@ -15,6 +15,9 @@ USE_PNG_TERM    = "set terminal png size 1024.768 ".FONT.BKGRND
 USE_SVG_TERM    = "set terminal svg size 1024,768 dynamic ".FONT.BKGRND
 USE_CANVAS_TERM = "set terminal canvas size 1024.768 standalone ".FONT.BKGRND
 
+WITH_POINTS     = 'pointtype 7 pointsize .5'
+THICK           = 'linewidth 2'
+
 
 # Titles
 set title   @TEXT_COLOR
