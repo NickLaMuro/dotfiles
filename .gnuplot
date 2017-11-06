@@ -4,7 +4,9 @@
 
 set macros
 
-FONT         = 'font "Helvetica"'
+FONT            = 'font "Helvetica"'
+FONT_COLOR      = '"#D8D9DA"'
+TEXT_COLOR      = 'textcolor rgb '.FONT_COLOR
 BKGRND       = 'background rgb "#1f1d1d"'
 
 USE_PNG_TERM    = "set terminal png size 1024.768 ".FONT.BKGRND
@@ -13,20 +15,20 @@ USE_CANVAS_TERM = "set terminal canvas size 1024.768 standalone ".FONT.BKGRND
 
 
 # Titles
-set title textcolor rgb "#D8D9DA"
+set title   @TEXT_COLOR
 
 # Tic and label styles
-set xlabel textcolor rgb "#D8D9DA"
-set xtic textcolor rgb "#D8D9DA"
-set x2label textcolor rgb "#D8D9DA"
-set x2tic textcolor rgb "#D8D9DA"
-set ylabel textcolor rgb "#D8D9DA"
-set ytic textcolor rgb "#D8D9DA"
-set y2label textcolor rgb "#D8D9DA"
-set y2tic textcolor rgb "#D8D9DA"
+set xlabel  @TEXT_COLOR
+set xtic    @TEXT_COLOR
+set x2label @TEXT_COLOR
+set x2tic   @TEXT_COLOR
+set ylabel  @TEXT_COLOR
+set ytic    @TEXT_COLOR
+set y2label @TEXT_COLOR
+set y2tic   @TEXT_COLOR
 
 # Legend (Key) Styles
-set key left bottom outside horizontal nobox textcolor rgb "#D8D9DA"
+set key left bottom outside horizontal nobox @TEXT_COLOR
 
 # Border styles
 set style line 80 linetype 1 linecolor rgb "#545454"
