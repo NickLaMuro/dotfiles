@@ -7,7 +7,9 @@ set macros
 FONT            = 'font "Helvetica"'
 FONT_COLOR      = '"#D8D9DA"'
 TEXT_COLOR      = 'textcolor rgb '.FONT_COLOR
-BKGRND       = 'background rgb "#1f1d1d"'
+BKGRND_COLOR    = '"#1f1d1d"'
+BKGRND          = 'background rgb '.BKGRND_COLOR
+LINE_COLOR      = 'linecolor rgb "#545454"'
 
 USE_PNG_TERM    = "set terminal png size 1024.768 ".FONT.BKGRND
 USE_SVG_TERM    = "set terminal svg size 1024,768 dynamic ".FONT.BKGRND
@@ -31,11 +33,11 @@ set y2tic   @TEXT_COLOR
 set key left bottom outside horizontal nobox @TEXT_COLOR
 
 # Border styles
-set style line 80 linetype 1 linecolor rgb "#545454"
+set style line 80 linetype 1 @LINE_COLOR
 set border 11 back linestyle 80
 
 # Grid styles
-set style line 81 linetype 1 linecolor rgb "#545454" linewidth 0.5
+set style line 81 linetype 1 @LINE_COLOR linewidth 0.5
 set grid xtics
 set grid ytics
 set grid back ls 81
