@@ -86,3 +86,6 @@
 [submodule ".vim/bundles/limelight.vim"]
 	path = .vim/bundles/limelight.vim
 	url = https://github.com/junegunn/limelight.vim
+[submodule ".vim/bundles/info.vim"]
+	path = .vim/bundles/info.vim
+	url = https://github.com/vim-scripts/info.vim.git
