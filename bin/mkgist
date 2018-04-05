@@ -1,0 +1,69 @@
+#!/bin/bash
+# 
+# Creates a gist on github for the current dir
+# 
+# Does the following:
+#   - Initializes a git repo in the current dir (if not already done)
+#   - Creates a github api token for mkgist (if it doesn't already exist)
+#   - Makes an API call to create the new gist (includes all hidden files)
+#   - Adds gist.github.com as origin remote
+#   - Force updates the existing git history to what is on gist.github.com
+
+ohai() {
+  printf "\033[34m==>\033[0m \033[1m$1\033[0m\n"
+}
+
+init_git_repo_if_needed() {
+  git status &> /dev/null
+  if [ $? == 128 ]; then
+    ohai "Initializing git repo..."
+    git init
+  fi
+}
+
+create_gist_api_token() {
+  local cmd=""
+
+  read -p  "Enter your GitHub Username: " MKGIST_GITHUB_USERNAME
+  read -sp "Enter GitHub Password (never stored): " MKGIST_GITHUB_PASS
+  echo
+
+  # Curl command outputs the response body,  status code, and all of the
+  # headers into stdout.  Idea munged from:
+  # 
+  #   https://superuser.com/a/590170
+  #
+  cmd="$cmd curl https://api.github.com/authorizations"
+  cmd="$cmd   --user '$MKGIST_GITHUB_USERNAME:$MKGIST_GITHUB_PASS'"
+  cmd="$cmd   --data '{\"scopes\":[\"gist\"],\"note\":\"mkgist on $(hostname)\"}'"
+  cmd="$cmd   --silent -D /dev/stdout --write-out '%{http_code}' 2>&1"
+
+  local response=`$cmd`
+
+  # Parse response
+  local opening_bracket={
+  local closing_bracket=}
+  local response_body=""
+
+  response_body="${response%%$closing_bracket*}}"
+  response_body="{${response_body##*$opening_bracket}"
+  # echo "${response##*$'\n'}" # response code
+
+  if [ "${response##*$'\n'}" == "401" ]; then
+    echo "OTP needed... retrying..."
+    read -p  "Enter 2 Factor code: " MKGIST_TWO_FACTOR_AUTH
+  fi
+}
+
+create_api_token_if_needed() {
+  if [ ! -f ~/.mkgist_token ]; then
+    create_gist_api_token
+    # curl https://api.github.com/authorizations \
+    #     --user "$MKGIST_GITHUB_USERNAME" \
+    #     --data "{\"scopes\":[\"gist\"],\"note\":\"mkgist on $(hostname)\"}"
+    # touch ~/.mkgist_token
+  fi
+}
+
+init_git_repo_if_needed
+create_api_token_if_needed

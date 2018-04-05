@@ -1,9 +1,13 @@
 #!/bin/bash
 
-# Usage: fork GH_ORG_NAME/GH_REPO_NAME
+# Usage: fork GH_ORG_NAME/GH_REPO_NAME [DIR_NAME]
 # 
 # forks and clones a repo using hub credentials, and modifies the .git/config
 # to work with hub pull-requests
+#
+# Adding an optional DIR_NAME will change the name of the dir it clones it
+# into.  Default is the name of the repo relative to the current working
+# directory.
 
 GH_USERNAME=`grep user ~/.config/hub | tail -1 | sed "s/- user: //"`
 GH_TOKEN=`grep oauth_token ~/.config/hub | tail -1 | sed "s/  oauth_token: //"`
@@ -11,6 +15,7 @@ GH_TOKEN=`grep oauth_token ~/.config/hub | tail -1 | sed "s/  oauth_token: //"`
 FORKED_ORG_REPO=$1
 FORKED_ORG=${FORKED_ORG_REPO%/*}
 FORKED_REPO=${FORKED_ORG_REPO#*/}
+FORKED_DIR=${2-${FORKED_ORG_REPO#*/}}
 FORKED_URL="https://github.com/$FORKED_ORG/$FORKED_REPO.git"
 
 ohai() {
@@ -25,14 +30,14 @@ curl -sH "Authorization: token $GH_TOKEN" -X POST \
 sleep 5
 
 ohai "Cloning new fork from git@github.com:$GH_USERNAME/$FORKED_REPO.git ..."
-git clone git@github.com:$GH_USERNAME/$FORKED_REPO.git
+git clone git@github.com:$GH_USERNAME/$FORKED_REPO.git $FORKED_DIR
 
 ohai "Adding upstream remote: $FORKED_URL ..."
-git --git-dir=$FORKED_REPO/.git --work-tree=$FORKED_REPO \
+git --git-dir=$FORKED_DIR/.git --work-tree=$FORKED_DIR \
     remote add upstream $FORKED_URL
 
 ohai "Fetching from upstream..."
-git --git-dir=$FORKED_REPO/.git --work-tree=$FORKED_REPO \
+git --git-dir=$FORKED_DIR/.git --work-tree=$FORKED_DIR \
     fetch upstream
 
 # Update the .git/config to handle upstream in hub better
@@ -46,10 +51,10 @@ git --git-dir=$FORKED_REPO/.git --work-tree=$FORKED_REPO \
 #   * Grabs everything that isn't the core config and upstream config
 
 # Core config lines
-GIT_CONFIG_CONTENTS="$(sed '/^\[[^"]*"/q' $FORKED_REPO/.git/config | sed \$d)"
+GIT_CONFIG_CONTENTS="$(sed '/^\[[^"]*"/q' $FORKED_DIR/.git/config | sed \$d)"
 # Upstream config lines
-GIT_CONFIG_CONTENTS="$GIT_CONFIG_CONTENTS$(echo; grep 'remote "upstream"' -A 2 $FORKED_REPO/.git/config)"
+GIT_CONFIG_CONTENTS="$GIT_CONFIG_CONTENTS$(echo; grep 'remote "upstream"' -A 2 $FORKED_DIR/.git/config)"
 # Remaining lines (see http://stackoverflow.com/a/19081111 )
-GIT_CONFIG_CONTENTS="$GIT_CONFIG_CONTENTS$(echo; awk 'FNR==NR{a[$0]=1;next}!($0 in a)' <(echo "$GIT_CONFIG_CONTENTS") $FORKED_REPO/.git/config)"
+GIT_CONFIG_CONTENTS="$GIT_CONFIG_CONTENTS$(echo; awk 'FNR==NR{a[$0]=1;next}!($0 in a)' <(echo "$GIT_CONFIG_CONTENTS") $FORKED_DIR/.git/config)"
 
-echo "$GIT_CONFIG_CONTENTS" > $FORKED_REPO/.git/config
+echo "$GIT_CONFIG_CONTENTS" > $FORKED_DIR/.git/config
