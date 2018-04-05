@@ -220,6 +220,9 @@ autocmd BufNewFile,BufReadPost Vagrantfile set filetype=ruby
 autocmd BufNewFile,BufReadPost Berksfile set filetype=ruby
 autocmd BufNewFile,BufReadPost *.ru set filetype=ruby
 
+autocmd Filetype *.c set tabstop=8
+autocmd Filetype *.h set tabstop=8
+
 "------------------------------------------------------------
 " Load Plugin Files
 
