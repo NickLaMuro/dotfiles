@@ -8,6 +8,7 @@
   st = status
   br = branch
   hist = log --pretty=format:\"%C(red)%h%C(cyan) %aN%C(reset) -%C(yellow)%d%C(reset) %s %C(green)(%ar)%C(reset)\" --graph
+  msg = show -s --format="%s%n%n%b"
 [push]
   default = tracking
 [color]
