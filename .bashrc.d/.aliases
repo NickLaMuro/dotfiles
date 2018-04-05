@@ -75,12 +75,13 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 alias json='python -mjson.tool'
 
 
-# Pretty print xml in the terminal like so:
+# Pretty print xml/html in the terminal like so:
 #
 # Example
 #
 #   $ echo "<xml><stuff></stuff></xml>" | xml
 alias xml='xmllint --format -'
+alias html='xmllint --format --html --nowarning -'
 
 
 # Create/use a gemset based on the folder name and current ruby version
