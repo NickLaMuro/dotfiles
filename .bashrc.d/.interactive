@@ -22,3 +22,32 @@ shopt -s checkwinsize
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+
+# Readline Options
+# ----------------
+
+# set vi mode in readline
+#
+# Note:  Press Esc to enter command mode
+#
+# `man bash` and `/bind` for more info, or the `info` pages for your install of
+# readline
+set -o vi
+
+# Add back some emacs-mode defaults
+# (it is what I am used to now... #dealwithit)
+# ((also, trains me to stay used to the defaults))
+
+
+# Make 'edit-and-execute-command' the same as emacs mode (Ctrl-x Ctrl-e)
+bind               '"\C-x\C-e": edit-and-execute-command'
+bind -m vi-command '"\C-x\C-e": edit-and-execute-command'
+
+# Make 'beginning-of-line' the same as emacs mode (Ctrl-a)
+bind               '"\C-a": beginning-of-line'
+bind -m vi-command '"\C-a": beginning-of-line'
+
+# Make 'end-of-line' the same as emacs mode (Ctrl-e)
+bind               '"\C-e": end-of-line'
+bind -m vi-command '"\C-e": end-of-line'
