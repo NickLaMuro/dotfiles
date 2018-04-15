@@ -9,6 +9,7 @@
   br = branch
   hist = log --pretty=format:\"%C(red)%h%C(cyan) %aN%C(reset) -%C(yellow)%d%C(reset) %s %C(green)(%ar)%C(reset)\" --graph
   msg = show -s --format="%s%n%n%b"
+  stat = show --color --format=\"%n%C(yellow)%h %C(blue bold)%s%C(reset)\" --stat
 [push]
   default = tracking
 [color]
