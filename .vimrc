@@ -129,6 +129,9 @@ set number
 " Quickly time out on keycodes, but never time out on mappings
 set notimeout ttimeout ttimeoutlen=200
 
+" Open new splits on the right instead of the left (default)
+set splitright
+
 "------------------------------------------------------------
 " Indentation options
 "
