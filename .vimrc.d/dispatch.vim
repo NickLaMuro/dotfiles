@@ -1,6 +1,6 @@
 " Configuration and keymaps for vim-dispatch
 
-let g:dispatch_rspec_possible_commands = ['rspec', 'zeus test']
+let g:dispatch_rspec_possible_commands = ['rspec', 'bundle exec rspec', 'zeus test']
 let g:dispatch_test_unit_possible_commands = ['ruby -I test', 'testdrb -I test', 'zeus test']
 let g:dispatch_current_test_unit_command = 0
 let g:dispatch_current_rspec_command = 0
