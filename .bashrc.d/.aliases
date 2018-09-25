@@ -62,6 +62,42 @@ linux_use_color() {
 }
 
 
+# Dump the contents of the current tmux pane into a file, or STDOUT if no file
+# is given.
+#
+# Will automatically set the -S and -E options for `tmux capture-pane`, as well
+# as -p.  The rest of the setable options can be found below.
+#
+#   -a                use "alternate screen"      (tmux original option)
+#   -e                included escape sequences   (tmux original option)
+#   -c                aliases '-e'
+#   -q                suppress errors             (tmux original option)
+#   -t [target-pane]  output pane                 (tmux original option)
+#
+# Example
+#
+#   $ dump_tmux_pane 20000101_tmux_pane.contents
+dump_tmux_pane() {
+  local capture_pane_opts=""
+
+  while getopts "acePqt:" opt; do
+    case "$opt" in
+      [aePq]) capture_pane_opts="${capture_pane_opts} -${opt}" ;;
+      c)      capture_pane_opts="${capture_pane_opts} -e" ;;
+      t)      capture_pane_opts="${capture_pane_opts} -${opt} ${OPTARG}" ;;
+    esac
+  done
+  shift "$((OPTIND-1))"
+  OPTIND=0
+
+  if [[ "$1" != "" ]]; then
+    tmux capture-pane -S - -E - $capture_pane_opts -p > $1
+  else
+    tmux capture-pane -S - -E - $capture_pane_opts -p
+  fi
+}
+
+
 # Add an "alert" alias for long running commands.  Use like so:
 #
 # Example
