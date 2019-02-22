@@ -143,18 +143,6 @@ vman() {
 }
 
 
-# solves issues with rake having mismatched versions with what Gemfile.lock expects
-#
-# Only run if there is a Gemfile.lock, otherwise let's go with what we've got
-rake() {
-  if [[ -e ./Gemfile ]] && [[ -e ./Gemfile.lock ]] && command -v bundle > /dev/null; then
-    bundle exec rake "$@"
-  else
-    command rake "$@"
-  fi
-}
-
-
 # Parses json.  Each arg is a level deeper in the tree:
 #
 # Examples
