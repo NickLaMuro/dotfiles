@@ -37,3 +37,22 @@ lines, so for them to show up properly, you will need have one of them install.
 This repo has a nice collection available with many free to use fonts:
 
 https://github.com/powerline/fonts
+
+
+Vim
+---
+
+I use pathogen for my plugin management, and specifically manage them in this repo
+by including them as `git submodules`.
+
+
+### Adding a new plugin
+
+```console
+$ git submodule add [CLONE_URL] .vim/bundles/[REPO_NAME]
+```
+
+Where:
+
+- `[CLONE_URL]` is the name of the repo to clone (EX: https://github.com/junkblocker/patchreview-vim)
+- `[REPO_NAME]` is the name of the repo in the dir (EX: patchreview-vim)
