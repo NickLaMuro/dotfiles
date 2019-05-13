@@ -89,3 +89,6 @@
 [submodule ".vim/bundles/info.vim"]
 	path = .vim/bundles/info.vim
 	url = https://github.com/vim-scripts/info.vim.git
+[submodule ".vim/bundles/patchreview-vim"]
+	path = .vim/bundles/patchreview-vim
+	url = https://github.com/junkblocker/patchreview-vim
