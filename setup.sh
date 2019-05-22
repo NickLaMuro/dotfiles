@@ -42,6 +42,20 @@ if [[ $(uname -s) == "Darwin" ]] ; then
   # Changes screenshots to be stored in ~/Pictures/screenshots
   mkdir -p ~/Pictures/screenshots/
   defaults write com.apple.screencapture location ~/Pictures/screenshots/
+
+  # Lock Screen with `CMD-L`
+  #
+  # Note:  This seems to take a while to take effect
+  #
+  # Other key short hands
+  #
+  #     command = $
+  #     control = ^
+  #     option  = ~
+  #     shift   = @
+  #
+  defaults write -g NSUserKeyEquivalents -dict-add "Lock Screen" "@l"
+
   killall SystemUIServer
 fi
 
