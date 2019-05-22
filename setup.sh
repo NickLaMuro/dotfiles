@@ -11,6 +11,9 @@ remove_and_reload() {
   ln -s "$DOTFILES_DIR/$source" "$1"
 }
 
+git submodule init
+git submodule update
+
 CURRENT_WORKING_DIR=`pwd`
 cd $HOME
 
