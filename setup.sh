@@ -39,6 +39,7 @@ if [[ $(uname -s) == "Darwin" ]] ; then
   rm -rf ".bashrc"
   remove_and_reload ".bash_profile" ".bashrc"
 
+  mkdir -p ~/Pictures/screenshots/
   defaults write com.apple.screencapture location ~/Pictures/screenshots/
   killall SystemUIServer
 fi
