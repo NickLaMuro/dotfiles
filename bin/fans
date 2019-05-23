@@ -31,19 +31,19 @@ SMC="/Applications/smcFanControl.app/Contents/Resources/smc"
 #   0x4650
 #
 up() {
-  sudo $SMC -k "FS! " -w 0003 # force fans 0 and 1 to manual
-  sudo $SMC -k F0Tg -w 4650 # force RPM to 4500 for fan 0 (in HEX)
-  sudo $SMC -k F1Tg -w 4650 # force RPM to 4500 for fan 1 (in HEX)
+  sudo "$SMC" -k "FS! " -w 0003 # force fans 0 and 1 to manual
+  sudo "$SMC" -k F0Tg -w 4650 # force RPM to 4500 for fan 0 (in HEX)
+  sudo "$SMC" -k F1Tg -w 4650 # force RPM to 4500 for fan 1 (in HEX)
 }
 
 down() {
-  sudo $SMC -k "FS! " -w 0003 # force fans 0 and 1 to manual
-  sudo $SMC -k F0Tg -w 0000 # force RPM to 0 for fan 0
-  sudo $SMC -k F1Tg -w 0000 # force RPM to 0 for fan 1
+  sudo "$SMC" -k "FS! " -w 0003 # force fans 0 and 1 to manual
+  sudo "$SMC" -k F0Tg -w 0000 # force RPM to 0 for fan 0
+  sudo "$SMC" -k F1Tg -w 0000 # force RPM to 0 for fan 1
 }
 
 reset() {
-  sudo $SMC -k "FS! " -w 0000 # return fans to auto mode
+  sudo "$SMC" -k "FS! " -w 0000 # return fans to auto mode
 }
 
 case "$1" in
