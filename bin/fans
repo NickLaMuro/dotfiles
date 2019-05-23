@@ -29,29 +29,23 @@ SMC="/Applications/smcFanControl.app/Contents/Resources/smc"
 fi
 
 
+up() {
+  set_speed 4500
+}
+
+low() {
+  set_speed 2000
+}
+
+down() {
+  set_speed 0
+}
+
 # Note:  Hex values calculated by running:
 #
 #   $ python -c "print hex(4500 << 2)"
 #   0x4650
 #
-up() {
-  sudo "$SMC" -k "FS! " -w 0003 # force fans 0 and 1 to manual
-  sudo "$SMC" -k F0Tg -w 4650 # force RPM to 4500 for fan 0 (in HEX)
-  sudo "$SMC" -k F1Tg -w 4650 # force RPM to 4500 for fan 1 (in HEX)
-}
-
-low() {
-  sudo "$SMC" -k "FS! " -w 0003 # force fans 0 and 1 to manual
-  sudo "$SMC" -k F0Tg -w 1f40 # force RPM to 2000 for fan 0 (in HEX)
-  sudo "$SMC" -k F1Tg -w 1f40 # force RPM to 2000 for fan 1 (in HEX)
-}
-
-down() {
-  sudo "$SMC" -k "FS! " -w 0003 # force fans 0 and 1 to manual
-  sudo "$SMC" -k F0Tg -w 0000 # force RPM to 0 for fan 0
-  sudo "$SMC" -k F1Tg -w 0000 # force RPM to 0 for fan 1
-}
-
 set_speed() {
   local SPEED=`python -c "print hex($1 << 2)" | sed s/^0x//`
   sudo "$SMC" -k "FS! " -w 0003 # force fan0 and fan1 to manual
