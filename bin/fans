@@ -22,7 +22,9 @@ help() {
   sed -e'1,2d' -e'3,$ s/^# \{0,1\}\(.*\)$/\1/' -e'tx' -e'c\' -e'q' -e':x' $0
 }
 
+if [ "$SMC" == "" ]; then
 SMC="/Applications/smcFanControl.app/Contents/Resources/smc"
+fi
 
 
 # Note:  Hex values calculated by running:
