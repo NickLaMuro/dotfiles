@@ -4,10 +4,11 @@
 #
 # OSX fan toggling using the smcFanControl cli utility.
 #
-#   on   | up:     Force the fans to 4500 RPM
-#   off  | down:   Force the fans to 0 RPM
-#   auto | reset:  Reset the fans to auto
-#   help:          Print this help
+#   on   | up:       Force the fans to 4500 RPM
+#   low  | default:  Force fans to stay at 2000 RPM
+#   off  | down:     Force the fans to 0 RPM
+#   auto | reset:    Reset the fans to auto
+#   help:            Print this help
 # 
 # Requires smcFanControl to be installed:
 # 
@@ -38,6 +39,12 @@ up() {
   sudo "$SMC" -k F1Tg -w 4650 # force RPM to 4500 for fan 1 (in HEX)
 }
 
+low() {
+  sudo "$SMC" -k "FS! " -w 0003 # force fans 0 and 1 to manual
+  sudo "$SMC" -k F0Tg -w 1f40 # force RPM to 2000 for fan 0 (in HEX)
+  sudo "$SMC" -k F1Tg -w 1f40 # force RPM to 2000 for fan 1 (in HEX)
+}
+
 down() {
   sudo "$SMC" -k "FS! " -w 0003 # force fans 0 and 1 to manual
   sudo "$SMC" -k F0Tg -w 0000 # force RPM to 0 for fan 0
@@ -50,6 +57,7 @@ reset() {
 
 case "$1" in
 on|up)       up    ;;
+low|default) low   ;;
 off|down)    down  ;; 
 auto|reset)  reset ;;
 help|*)      help
