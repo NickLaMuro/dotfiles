@@ -1,13 +1,15 @@
 #!/bin/bash
 #
-# usage: fans [on|off|up|down|auto|reset|help]
+# usage: fans [on|off|up|down|auto|reset|help] [SPEED]
 #
 # OSX fan toggling using the smcFanControl cli utility.
 #
-#   on   | up:     Force the fans to 4500 RPM
-#   off  | down:   Force the fans to 0 RPM
-#   auto | reset:  Reset the fans to auto
-#   help:          Print this help
+#   on   | up:       Force the fans to 4500 RPM
+#   low  | default:  Force fans to stay at 2000 RPM
+#   off  | down:     Force the fans to 0 RPM
+#   auto | reset:    Reset the fans to auto
+#   set  | speed:    Force fans to a specified speed
+#   help:            Print this help
 # 
 # Requires smcFanControl to be installed:
 # 
@@ -22,12 +24,21 @@ help() {
   sed -e'1,2d' -e'3,$ s/^# \{0,1\}\(.*\)$/\1/' -e'tx' -e'c\' -e'q' -e':x' $0
 }
 
+if [ "$SMC" == "" ]; then
 SMC="/Applications/smcFanControl.app/Contents/Resources/smc"
+fi
+
 
 up() {
-  sudo $SMC -k "FS! " -w 0003 # force fans 0 and 1 to manual
-  sudo $SMC -k F0Tg -w 4650 # force RPM to 4500 for fan 0 (in HEX)
-  sudo $SMC -k F1Tg -w 4650 # force RPM to 4500 for fan 1 (in HEX)
+  set_speed 4500
+}
+
+low() {
+  set_speed 2000
+}
+
+down() {
+  set_speed 0
 }
 
 # Note:  Hex values calculated by running:
@@ -35,20 +46,23 @@ up() {
 #   $ python -c "print hex(4500 << 2)"
 #   0x4650
 #
-down() {
-  sudo $SMC -k "FS! " -w 0003 # force fans 0 and 1 to manual
-  sudo $SMC -k F0Tg -w 0000 # force RPM to 0 for fan 0
-  sudo $SMC -k F1Tg -w 0000 # force RPM to 0 for fan 1
+set_speed() {
+  local SPEED=`python -c "print hex($1 << 2)" | sed s/^0x//`
+  sudo "$SMC" -k "FS! " -w 0003 # force fan0 and fan1 to manual
+  sudo "$SMC" -k F0Tg -w $SPEED # force RPM to $SPEED for fan0
+  sudo "$SMC" -k F1Tg -w $SPEED # force RPM to $SPEED for fan1
 }
 
 reset() {
-  sudo $SMC -k "FS! " -w 0000 # return fans to auto mode
+  sudo "$SMC" -k "FS! " -w 0000 # return fans to auto mode
 }
 
 case "$1" in
-on|up)       up    ;;
-off|down)    down  ;; 
-auto|reset)  reset ;;
+on|up)       up           ;;
+low|default) low          ;;
+off|down)    down         ;;
+auto|reset)  reset        ;;
+set|speed)   set_speed $2 ;;
 help|*)      help
              exit 0
              ;;  
