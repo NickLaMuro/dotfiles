@@ -1,6 +1,13 @@
 call pathogen#helptags()
 call pathogen#runtime_prepend_subdirectories(expand('<sfile>:h').'/.vim/bundles')
 
+" Add `hub pull-request` syntax highlighting to vim, if installed via homebrew
+"
+" TODO:  Support other platforms
+if isdirectory('/usr/local/share/vim')
+  call pathogen#runtime_prepend_subdirectories('/usr/local/share/vim')
+endif
+
 "These options and commands enable some very useful features in Vim, that
 " no user should have to live without.
 
