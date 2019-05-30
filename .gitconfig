@@ -8,7 +8,7 @@
   ci = commit
   st = status
   br = branch
-  hist = log --pretty=format:\"%C(red)%h%C(cyan) %aN%C(reset) -%C(yellow)%d%C(reset) %s %C(green)(%ar)%C(reset)\" --graph
+  hist = log --pretty=format:\"%C(red)%h%C(cyan) %aN%C(reset) -%C(yellow)%d%C(reset) %s %C(green)(%ar)%C(reset)\" --graph --color
   msg = show -s --format="%s%n%n%b"
   stat = show --color --format=\"%n%C(yellow)%h %C(blue bold)%s%C(reset)\" --stat
 [push]

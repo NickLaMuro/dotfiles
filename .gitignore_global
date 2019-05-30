@@ -1,3 +1,6 @@
+# OSX directory dotfile BS
+.DS_Store
+
 # Ruby version management
 .ruby-version
 .ruby-gemset
