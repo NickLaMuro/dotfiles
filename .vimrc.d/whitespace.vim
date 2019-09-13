@@ -1,5 +1,8 @@
 " Strip trailing whitespace
 function! <SID>StripTrailingWhitespaces()
+  if exists('b:whitespace') && !b:whitespace
+    return
+  endif
   " Preperation stuff: save last search, and cursor position.
   let _s=@/
   let l = line(".")
