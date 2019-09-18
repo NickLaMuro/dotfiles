@@ -17,17 +17,23 @@ FORKED_ORG=${FORKED_ORG_REPO%/*}
 FORKED_REPO=${FORKED_ORG_REPO#*/}
 FORKED_DIR=${2-${FORKED_ORG_REPO#*/}}
 FORKED_URL="https://github.com/$FORKED_ORG/$FORKED_REPO.git"
+NEW_FORK_URL="https://github.com/$GH_USERNAME/$FORKED_REPO"
+IS_FORKED=$(curl --silent -o /dev/null --fail --write-out "%{http_code}" "$NEW_FORK_URL")
 
 ohai() {
   echo -e "\033[34m==>\033[0m \033[1m$1\033[0m"
 }
 
-ohai "Forking $FORKED_URL ..."
-curl -sH "Authorization: token $GH_TOKEN" -X POST \
-     https://api.github.com/repos/$FORKED_ORG/$FORKED_REPO/forks > /dev/null
+if [[ $IS_FORKED == "404" ]]; then
+  ohai "Forking $FORKED_URL ..."
+  curl -sH "Authorization: token $GH_TOKEN" -X POST \
+       https://api.github.com/repos/$FORKED_ORG/$FORKED_REPO/forks > /dev/null
 
-# give github 5 seconds before cloning the newly forked repo
-sleep 5
+  # give github 5 seconds before cloning the newly forked repo
+  sleep 5
+else
+  ohai "Already forked!  Repo at $NEW_FORK_URL"
+fi
 
 ohai "Cloning new fork from git@github.com:$GH_USERNAME/$FORKED_REPO.git ..."
 git clone git@github.com:$GH_USERNAME/$FORKED_REPO.git $FORKED_DIR
