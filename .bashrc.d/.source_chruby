@@ -11,3 +11,9 @@ else
   source_file /opt/chruby/share/chruby/chruby.sh
   source_file /opt/chruby/share/chruby/auto.sh
 fi
+
+# If chruby is loaded, add a few helpful aliases
+if command -v chruby > /dev/null; then
+  alias rblibdir='cd $RUBY_ROOT/lib/ruby/${RUBY_VERSION%%.*}*'
+  alias rbgemdir='cd $RUBY_ROOT/lib/ruby/gems/${RUBY_VERSION%%.*}*/gems/'
+fi
