@@ -9,41 +9,93 @@
 # into.  Default is the name of the repo relative to the current working
 # directory.
 
-GH_USERNAME=`grep user ~/.config/hub | tail -1 | sed "s/- user: //"`
-GH_TOKEN=`grep oauth_token ~/.config/hub | tail -1 | sed "s/  oauth_token: //"`
+# initial variable defaults to github
+# or whatever GITHOST env is set to
 
-FORKED_ORG_REPO=$1
-FORKED_ORG=${FORKED_ORG_REPO%/*}
-FORKED_REPO=${FORKED_ORG_REPO#*/}
-FORKED_DIR=${2-${FORKED_ORG_REPO#*/}}
-FORKED_URL="https://github.com/$FORKED_ORG/$FORKED_REPO.git"
-NEW_FORK_URL="https://github.com/$GH_USERNAME/$FORKED_REPO"
-IS_FORKED=$(curl --silent -o /dev/null --fail --write-out "%{http_code}" "$NEW_FORK_URL")
+GITHOST=${GITHOST:-github.com}
+
+# function
 
 ohai() {
   echo -e "\033[34m==>\033[0m \033[1m$1\033[0m"
 }
 
-if [[ $IS_FORKED == "404" ]]; then
-  ohai "Forking $FORKED_URL ..."
-  curl -sH "Authorization: token $GH_TOKEN" -X POST \
-       https://api.github.com/repos/$FORKED_ORG/$FORKED_REPO/forks > /dev/null
+# parse options
 
-  # give github 5 seconds before cloning the newly forked repo
-  sleep 5
+while [ True ]; do
+if [ "$1" = "--help" -o "$1" = "-h" ]; then
+    echo " "
+    echo "$0 [--host] REPO"
+    echo " "
+    exit
+elif [ "$1" = "--host" -o "$1" = "-h" ]; then
+    GITHOST="${2}"
+    shift 2
+elif [ "$1" = "--verbose" -o "$1" = "-v" ]; then
+    VERBOSE=1
+    shift 1
+else
+    break
+fi
+done
+
+# if anything is left, it is NAMESPACE/REPO to be forked
+# followed by the desired name of new FORKED_DIR
+
+GITHOST_CONFIG=${GITHOST_CONFIG:-$HOME/.config/githost}
+
+GITHOST_USER=`sed -nr "/^\[$GITHOST\]/ { :l /^user[ ]*=/ { s/.*=[ ]*//; p; q;}; n; b l;}" "${GITHOST_CONFIG}"`
+GITHOST_TOKEN=`sed -nr "/^\[$GITHOST\]/ { :l /^token[ ]*=/ { s/.*=[ ]*//; p; q;}; n; b l;}" "${GITHOST_CONFIG}"`
+
+FORKED_ORG_REPO="${1}"
+FORKED_ORG=${FORKED_ORG_REPO%/*}
+FORKED_REPO=${FORKED_ORG_REPO#*/}
+
+FORKED_DIR=${2-${FORKED_ORG_REPO#*/}}
+FORKED_URL="$FORKED_ORG/$FORKED_REPO.git"
+NEW_FORK_URL="$GITHOST_USER/$FORKED_REPO"
+IS_FORKED=$(curl --silent -o /dev/null --fail --write-out "%{http_code}" "${GITHOST}"/"$NEW_FORK_URL")
+
+if [[ "$VERBOSE == 1" ]]; then
+echo "HOST: $GITHOST"
+echo "USER: $GITHOST_USER"
+echo "ORG: $FORKED_ORG"
+echo "REPO: $FORKED_REPO"
+echo "TOKEN: $GITHOST_TOKEN"
+echo "DEST_DIR: $FORKED_DIR"
+fi
+
+# main
+
+if [[ "$IS_FORKED" != "404" && "$GITHOST" == "github.com" ]]; then
+    ohai "Forking $GITHOST/$FORKED_URL ..."
+    curl -sH "Authorization: token $GITHOST_TOKEN" \
+	 -X POST \
+	 https://api.github.com/repos/$FORKED_ORG/$FORKED_REPO/forks > /dev/null
+    sleep 5 # give githost 5 seconds before cloning the newly forked repo
+elif [[ "$IS_FORKED" != "404" && "$GITHOST" == "gitlab.com" ]]; then
+    ohai "Forking $GITHOST/$FORKED_URL ..."
+    curl -s --header "PRIVATE-TOKEN: $GITHOST_TOKEN" \
+	 -X POST \
+	 https://gitlab.com/api/v4/projects/"$FORKED_ORG"%2F"$FORKED_REPO"/fork
+    sleep 5 # give githost 5 seconds before cloning the newly forked repo
 else
   ohai "Already forked!  Repo at $NEW_FORK_URL"
 fi
 
-ohai "Cloning new fork from git@github.com:$GH_USERNAME/$FORKED_REPO.git ..."
-git clone git@github.com:$GH_USERNAME/$FORKED_REPO.git $FORKED_DIR
+printf "\n"
+ohai "Cloning new fork from $GITHOST:$GITHOST_USER/$FORKED_REPO.git ..."
+git clone git@"${GITHOST}":"${GITHOST_USER}/${FORKED_REPO}.git" "${FORKED_DIR}"
 
-ohai "Adding upstream remote: $FORKED_URL ..."
-git --git-dir=$FORKED_DIR/.git --work-tree=$FORKED_DIR \
-    remote add upstream $FORKED_URL
+printf "\n"
+ohai "Adding upstream remote: ${GITHOST}/${FORKED_URL} ..."
+git --git-dir="${FORKED_DIR}"/.git --work-tree="${FORKED_DIR}" \
+    remote add upstream "${GITHOST}":"${FORKED_URL}"
 
+printf "\n"
 ohai "Fetching from upstream..."
-git --git-dir=$FORKED_DIR/.git --work-tree=$FORKED_DIR \
+git --git-dir="${FORKED_DIR}"/.git \
+    --work-tree="${FORKED_DIR}" \
     fetch upstream
 
 # Update the .git/config to handle upstream in hub better
@@ -57,10 +109,12 @@ git --git-dir=$FORKED_DIR/.git --work-tree=$FORKED_DIR \
 #   * Grabs everything that isn't the core config and upstream config
 
 # Core config lines
-GIT_CONFIG_CONTENTS="$(sed '/^\[[^"]*"/q' $FORKED_DIR/.git/config | sed \$d)"
-# Upstream config lines
-GIT_CONFIG_CONTENTS="$GIT_CONFIG_CONTENTS$(echo; grep 'remote "upstream"' -A 2 $FORKED_DIR/.git/config)"
-# Remaining lines (see http://stackoverflow.com/a/19081111 )
-GIT_CONFIG_CONTENTS="$GIT_CONFIG_CONTENTS$(echo; awk 'FNR==NR{a[$0]=1;next}!($0 in a)' <(echo "$GIT_CONFIG_CONTENTS") $FORKED_DIR/.git/config)"
+GITHOST_CONFIG_CONTENTS="$(sed '/^\[[^"]*"/q' $FORKED_DIR/.git/config | sed \$d)"
 
-echo "$GIT_CONFIG_CONTENTS" > $FORKED_DIR/.git/config
+# Upstream config lines
+GITHOST_CONFIG_CONTENTS="$GITHOST_CONFIG_CONTENTS$(echo; grep 'remote "upstream"' -A 2 $FORKED_DIR/.git/config)"
+
+# Remaining lines (see http://stackoverflow.com/a/19081111 )
+GITHOST_CONFIG_CONTENTS="$GITHOST_CONFIG_CONTENTS$(echo; awk 'FNR==NR{a[$0]=1;next}!($0 in a)' <(echo "$GITHOST_CONFIG_CONTENTS") $FORKED_DIR/.git/config)"
+
+echo "$GITHOST_CONFIG_CONTENTS" > $FORKED_DIR/.git/config
