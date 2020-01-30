@@ -56,3 +56,15 @@ Where:
 
 - `[CLONE_URL]` is the name of the repo to clone (EX: https://github.com/junkblocker/patchreview-vim)
 - `[REPO_NAME]` is the name of the repo in the dir (EX: patchreview-vim)
+
+
+License
+-------
+
+This project is available as open source under the [MIT License][] terms.  That
+said, it is strictly a formality, and you are free to do with this as you like.
+
+... though my ego would probably appreciate an small acknowledgement :)
+
+
+[MIT License]:   https://opensource.org/licenses/MIT
