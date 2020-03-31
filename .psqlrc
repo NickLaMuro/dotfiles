@@ -1,0 +1,121 @@
+-- :dbsizes
+--
+-- List all of the databases and their size on disk
+--
+-- Query pulled from here:  https://wiki.postgresql.org/wiki/Disk_Usage
+--
+--
+-- == Expanded Query
+-- 
+--     SELECT d.datname AS Name,  pg_catalog.pg_get_userbyid(d.datdba) AS Owner,
+--         CASE WHEN pg_catalog.has_database_privilege(d.datname, 'CONNECT')
+--             THEN pg_catalog.pg_size_pretty(pg_catalog.pg_database_size(d.datname))
+--             ELSE 'No Access'
+--         END AS SIZE
+--     FROM pg_catalog.pg_database d
+--         ORDER BY
+--         CASE WHEN pg_catalog.has_database_privilege(d.datname, 'CONNECT')
+--             THEN pg_catalog.pg_database_size(d.datname)
+--             ELSE NULL
+--         END DESC -- nulls first
+--         LIMIT 20
+--
+--
+-- == Usage
+-- 
+--     psql> :dbsizes;
+--              name          |   owner    |  size
+--     -----------------------+------------+---------
+--      db1                   | root       | 13 GB
+--      db2                   | root       | 9397 MB
+--      dbtest                | root       | 42 MB
+--
+--
+\set dbsizes 'SELECT d.datname AS Name,  pg_catalog.pg_get_userbyid(d.datdba) AS Owner, CASE WHEN pg_catalog.has_database_privilege(d.datname, \'CONNECT\') THEN pg_catalog.pg_size_pretty(pg_catalog.pg_database_size(d.datname)) ELSE \'No Access\' END AS SIZE FROM pg_catalog.pg_database d ORDER BY CASE WHEN pg_catalog.has_database_privilege(d.datname, \'CONNECT\') THEN pg_catalog.pg_database_size(d.datname) ELSE NULL END DESC LIMIT 20'
+
+-- :tablesizes
+--
+-- List all of the tables for the current DB and their size on disk.
+--
+-- Query pulled from here:  https://wiki.postgresql.org/wiki/Disk_Usage
+--
+--
+-- == Expanded Query
+-- 
+--      SELECT nspname || '.' || relname AS "relation",
+--          pg_size_pretty(pg_total_relation_size(C.oid)) AS "total_size"
+--        FROM pg_class C
+--        LEFT JOIN pg_namespace N ON (N.oid = C.relnamespace)
+--        WHERE nspname NOT IN ('pg_catalog', 'information_schema')
+--          AND C.relkind <> 'i'
+--          AND nspname !~ '^pg_toast'
+--        ORDER BY pg_total_relation_size(C.oid) DESC
+--        LIMIT 20
+--
+--
+-- == Usage
+-- 
+--     psql> :tablesizes;
+--                relation            | total_size
+--     -------------------------------+------------
+--      public.vmdb_metrics           | 6948 MB
+--      public.vim_performance_states | 2731 MB
+--      public.event_streams          | 1622 MB
+--      public.metric_rollups_11      | 305 MB
+--      public.metric_rollups_10      | 295 MB
+--      public.metric_rollups_01      | 266 MB
+--
+--
+\set tablesizes 'SELECT nspname || \'.\' || relname AS \"relation\", pg_size_pretty(pg_total_relation_size(C.oid)) AS \"total_size\" FROM pg_class C LEFT JOIN pg_namespace N ON (N.oid = C.relnamespace) WHERE nspname NOT IN (\'pg_catalog\', \'information_schema\') AND C.relkind <> \'i\' AND nspname !~ \'^pg_toast\' ORDER BY pg_total_relation_size(C.oid) DESC LIMIT 20'
+
+-- :tablesizes2
+--
+-- List all of the tables for the current DB and their size on disk
+--
+-- Alternate form of ':tablesizes' with a more verbose output
+--
+-- Query pulled from here:  https://wiki.postgresql.org/wiki/Disk_Usage
+--
+--
+-- == Expanded Query
+-- 
+--     SELECT table_name, row_estimate, total_bytes, index_bytes, toast_bytes, table_bytes,
+--     		pg_size_pretty(total_bytes) AS total,
+--         pg_size_pretty(index_bytes) AS INDEX,
+--         pg_size_pretty(toast_bytes) AS toast,
+--         pg_size_pretty(table_bytes) AS TABLE
+--       FROM (
+--       SELECT *, total_bytes-index_bytes-COALESCE(toast_bytes,0) AS table_bytes FROM (
+--           SELECT c.oid,nspname AS table_schema, relname AS TABLE_NAME
+--                   , c.reltuples AS row_estimate
+--                   , pg_total_relation_size(c.oid) AS total_bytes
+--                   , pg_indexes_size(c.oid) AS index_bytes
+--                   , pg_total_relation_size(reltoastrelid) AS toast_bytes
+--               FROM pg_class c
+--               LEFT JOIN pg_namespace n ON n.oid = c.relnamespace
+--               WHERE relkind = 'r'
+--       ) a
+--     ) a
+--     ORDER BY total_bytes DESC
+--     LIMIT 20
+--
+--
+-- == Usage
+-- 
+--     psql> :tablesizes2;
+--            table_name       | row_estimate | total_bytes | index_bytes | toast_bytes | table_bytes |  total  |  index  |   toast    |  table
+--     ------------------------+--------------+-------------+-------------+-------------+-------------+---------+---------+------------+---------
+--      vmdb_metrics           |  3.08302e+07 |  7285760000 |  2225676288 |        8192 |  5060075520 | 6948 MB | 2123 MB | 8192 bytes | 4826 MB
+--      vim_performance_states |  4.08743e+06 |  2863144960 |   292200448 |    34619392 |  2536325120 | 2731 MB | 279 MB  | 33 MB      | 2419 MB
+--      event_streams          |  1.64058e+06 |  1701175296 |   557776896 |    15753216 |  1127645184 | 1622 MB | 532 MB  | 15 MB      | 1075 MB
+--      metric_rollups_11      |       368754 |   319832064 |    51421184 |     1081344 |   267329536 | 305 MB  | 49 MB   | 1056 kB    | 255 MB
+--      metric_rollups_10      |       363155 |   309370880 |    50733056 |      991232 |   257646592 | 295 MB  | 48 MB   | 968 kB     | 246 MB
+--      metric_rollups_01      |       345062 |   278962176 |    48193536 |     1097728 |   229670912 | 266 MB  | 46 MB   | 1072 kB    | 219 MB
+--      metric_rollups_12      |       341840 |   277807104 |    47710208 |     1179648 |   228917248 | 265 MB  | 46 MB   | 1152 kB    | 218 MB
+--      metric_rollups_02      |       301546 |   251764736 |    42082304 |     1064960 |   208617472 | 240 MB  | 40 MB   | 1040 kB    | 199 MB
+--      metric_rollups_03      |       142982 |   118079488 |    19996672 |      499712 |    97583104 | 113 MB  | 19 MB   | 488 kB     | 93 MB
+--      metric_rollups_09      |       114799 |   102449152 |    16056320 |      425984 |    85966848 | 98 MB   | 15 MB   | 416 kB     | 82 MB
+--      guest_applications     |       189899 |    92749824 |    20848640 |      237568 |    71663616 | 88 MB   | 20 MB   | 232 kB     | 68 MB
+--
+--
+\set tablesizes2 'SELECT table_name, row_estimate, total_bytes, index_bytes, toast_bytes, table_bytes, pg_size_pretty(total_bytes) AS total, pg_size_pretty(index_bytes) AS INDEX, pg_size_pretty(toast_bytes) AS toast, pg_size_pretty(table_bytes) AS TABLE FROM ( SELECT *, total_bytes-index_bytes-COALESCE(toast_bytes,0) AS table_bytes FROM ( SELECT c.oid,nspname AS table_schema, relname AS TABLE_NAME , c.reltuples AS row_estimate , pg_total_relation_size(c.oid) AS total_bytes , pg_indexes_size(c.oid) AS index_bytes , pg_total_relation_size(reltoastrelid) AS toast_bytes FROM pg_class c LEFT JOIN pg_namespace n ON n.oid = c.relnamespace WHERE relkind = \'r\') a) a ORDER BY total_bytes DESC LIMIT 20'
