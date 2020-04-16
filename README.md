@@ -38,6 +38,12 @@ This repo has a nice collection available with many free to use fonts:
 
 https://github.com/powerline/fonts
 
+There is also some available for `homebrew`: https://github.com/Homebrew/homebrew-cask-fonts
+
+And I specifically make use of the "Meslo LG S" myself:
+
+https://github.com/Homebrew/homebrew-cask-fonts/blob/master/Casks/font-meslo-for-powerline.rb
+
 
 Vim
 ---
