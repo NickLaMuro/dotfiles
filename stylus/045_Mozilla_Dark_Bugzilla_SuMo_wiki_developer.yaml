@@ -1,0 +1,24 @@
+---
+enabled: true
+updateUrl: https://userstyles.org/styles/chrome/154002.json
+md5Url: https://update.userstyles.org/154002.md5
+url: http://userstyles.org/styles/154002
+originalMd5: 3f8e168e1922a53740d0e6e543061a75
+installDate: 1587061070421
+sections:
+- domains:
+  - bugzilla.mozilla.org
+  - support.mozilla.org
+  - wiki.mozilla.org
+  - developer.mozilla.org
+- domains:
+  - bugzilla.mozilla.org
+  - support.mozilla.org
+  - wiki.mozilla.org
+  - developer.mozilla.org
+name: Mozilla Dark (Bugzilla, SuMo, wiki, developer)
+originalDigest: 9db10ac8362fb3a7e1fa24cf49f928c025f709aa
+_id: 67d253b5-ce59-4b18-b283-44c981b0268c
+_rev: 1587061687959
+id: 65
+updateDate: 1587061687959

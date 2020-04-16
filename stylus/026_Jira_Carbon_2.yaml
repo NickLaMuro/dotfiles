@@ -1,0 +1,22 @@
+---
+enabled: true
+updateUrl: https://userstyles.org/styles/chrome/164736.json?ik-%2321252D=%2321252D&ik-%232C3037=%232C3037&ik-%23434953=%23434953&ik-%233C414C=%233C414C&ik-%234B97F8=%234B97F8&ik-%23EBEBEB=%23EBEBEB&ik-%23BEBEBE=%23BEBEBE&ik-%23888888=%23888888&ik-%236A25AA=%236A25AA
+md5Url: https://update.userstyles.org/164736.md5
+url: http://userstyles.org/styles/164736
+originalMd5: bcc40c812acfe95b708aa0e2ef932d07
+installDate: 1554744116782
+sections:
+- urlPrefixes:
+  - http://jira
+  - https://jira
+  domains:
+  - jira.atlassian.com
+  - projects.engineering.redhat.com
+- domains:
+  - projects.engineering.redhat.com
+name: Jira Carbon 2
+originalDigest: b9d6313ff24071ea0d2bc623795bc4941a7c18ea
+id: 44
+updateDate: 1554846353447
+_id: 80005809-7796-45a8-a951-93fa37d9b673
+_rev: 1583342080472

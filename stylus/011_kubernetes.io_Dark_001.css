@@ -1,0 +1,34 @@
+body, section {
+  color: white;
+  background-color: #4c4c4c;
+}
+
+a { color: #00b4ff; }
+
+.flip-nav header {
+  color: white;
+  background-color: #333;
+}
+
+.flip-nav ul.global-nav li a,
+.open-nav ul.global-nav li a {
+  color: white;
+}
+
+#docsToc {
+  background-color: #333;
+}
+
+#docsToc .yah > .title {
+  background-color: #555;
+}
+
+.pi-accordion .title,
+.pi-accordion a.item > .title {
+  color: white;
+}
+
+#docsContent code {
+  color: #ddd;
+  background-color: #666;
+}

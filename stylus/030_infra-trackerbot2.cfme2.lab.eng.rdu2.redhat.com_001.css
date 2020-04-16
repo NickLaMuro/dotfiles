@@ -1,0 +1,35 @@
+body {
+  color: #fff;
+  background-color: #333;
+}
+
+pre {
+  color: #ddd;
+}
+
+.panel {
+  background-color: #444;
+}
+
+.panel-inverse.panel-success > .panel-heading {
+	background-color: #5cb75c;
+}
+
+.panel-inverse.panel-danger > .panel-heading {
+  background-color: #c90813;
+}
+
+.panel-inverse.panel-warning > .panel-heading {
+  background-color: #dfa94e;
+}
+
+.panel-success > .panel-heading,
+.panel-danger > .panel-heading,
+.panel-warning > .panel-heading {
+  color: #fff;
+}
+
+.well {
+  background-color: #222;
+  border: none;
+}

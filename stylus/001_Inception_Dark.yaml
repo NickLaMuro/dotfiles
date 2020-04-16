@@ -1,0 +1,18 @@
+---
+installDate: 1538149238529
+sections:
+- urls: []
+  urlPrefixes: []
+  domains: []
+  regexps:
+  - chrome-extension://fjnbnpbmkenffdnngjfgmeleoegfcffe/edit.html.*
+  - chrome-extension://fjnbnpbmkenffdnngjfgmeleoegfcffe/manage.html*
+url: http://userstyles.org/styles/112962
+updateUrl: https://userstyles.org/styles/chrome/112962.json?ik-codeTheme=ik-Ambiance
+md5Url: https://update.userstyles.org/112962.md5
+originalMd5: 9860f83b41e0e73cd28bf24c57641a53
+name: Inception Dark
+enabled: true
+id: 5
+_id: 37491a67-9d44-4fd4-ad92-8e6553424369
+_rev: 1583342080471

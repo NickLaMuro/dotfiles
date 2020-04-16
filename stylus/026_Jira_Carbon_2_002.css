@@ -1,0 +1,39 @@
+.aui-header .aui-dropdown2-trigger {
+  background-color: inherit !important;
+}
+
+.quicksearch-dropdown {
+  background-color: #2C3037 !important;
+}
+
+.icon-container.icon-container.quick-search-active {
+  background-color: #002A52 !important;
+}
+
+.quick-search-no-results {
+  color: #ddd !important;
+}
+
+/* story points */
+
+.ghx-issue .ghx-end {
+  background-color: inherit;
+  box-shadow: none;
+}
+
+aui-badge, .aui-badge {
+  color: #7a869a;
+  background: rgba(9,30,66,0.5)
+}
+
+.ghx-issue:hover .ghx-end,
+.ghx-issue.ghx-selected:hover .ghx-end,
+.ghx-issue.ghx-flagged:hover .ghx-end,
+.ghx-issue.ghx-flagged.ghx-selected:hover .ghx-end {
+  background-color: inherit;
+  box-shadow: none;
+}
+
+.ghx-controls-filters dd a:hover {
+  background-color: #4B97F8;
+}

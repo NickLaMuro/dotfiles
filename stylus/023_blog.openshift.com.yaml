@@ -1,0 +1,15 @@
+---
+enabled: true
+updateUrl: 
+md5Url: 
+url: 
+originalMd5: 
+installDate: 1554410412292
+name: blog.openshift.com
+sections:
+- domains:
+  - blog.openshift.com
+updateDate: 1554954706641
+id: 40
+_id: 56b5b56d-b45f-40ce-9d8d-ff31c1efee0b
+_rev: 1583342080472

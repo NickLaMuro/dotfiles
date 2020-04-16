@@ -1,0 +1,20 @@
+---
+installDate: 1538149238586
+sections:
+- domains:
+  - wikipedia.org
+  - git.wiki.kernel.org
+  - wiki.alpinelinux.org
+  - linux-nfs.org
+- domains:
+  - wiki.alpinelinux.org
+url: http://userstyles.org/styles/105844
+updateUrl: https://userstyles.org/styles/chrome/105844.json?ik-bg-choice=ik-yes&ik-bg-options=ik-Tiled&ik-bg-attachment=ik-Scroll&ik-base-color=%234183C4&ik-visited-color=%23295887&ik-bg-url=ik-default
+md5Url: https://update.userstyles.org/105844.md5
+originalMd5: 60c3b7d50082686e5be5e53c52003bde
+name: Wikipedia-Dark (ST)
+enabled: true
+id: 11
+updateDate: 1584049053457
+_id: eb1cb519-7a8b-434b-bc8c-fab61529812a
+_rev: 1584049053458

@@ -1,0 +1,14 @@
+#hlogo a {
+    height: 60px !important;
+    background-size: contain !important;
+    background-image: url(https://StylishThemes.github.io/StackOverflow-Dark/images/skeptics-logo.svg) !important;
+  }
+  #hmenus .nav li a {
+    border: none !important;
+    margin-top: 40px !important;
+  }
+  #hmenus .nav ul li:before {
+    mix-blend-mode: initial !important;
+    color: #999 !important;
+    left: 3px !important;
+  }

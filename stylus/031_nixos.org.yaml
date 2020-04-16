@@ -1,0 +1,15 @@
+---
+enabled: true
+updateUrl: 
+md5Url: 
+url: 
+originalMd5: 
+installDate: 1557872518388
+name: nixos.org
+sections:
+- domains:
+  - nixos.org
+updateDate: 1557872944386
+id: 49
+_id: 70aed230-22e2-4a62-896b-8a5cf77aaeec
+_rev: 1583342080472

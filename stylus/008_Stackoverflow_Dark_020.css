@@ -1,0 +1,29 @@
+/* nav manu text coloring only */
+  .nav li, .nav li.youarehere a, .nav a, .nav a:hover,
+  #footer .top-footer-links, #footer #footer-sites, .narrow .votes, .narrow .mini-counts,
+  .answered, .answered-accepted {
+    background-color: transparent !important;
+    color: #ddd !important;
+  }
+  .nav li.youarehere a, .nav li a:hover {
+    color: #4183C4 !important;
+  }
+  .answered-accepted .mini-counts span {
+    color: #fff !important;
+  }
+  .about-page .new-about-content-page h2.about-title {
+    color: #888 !important;
+  }
+  body:before {
+    -webkit-filter: brightness(.3) !important;
+    filter: brightness(.3) !important;
+  }
+
+  .answered-accepted .mini-counts {
+    background-color: #4b553c !important;
+    color: #ddd !important;
+  }
+  .answered .mini-counts span {
+    font-weight: bold !important;
+    color: #4b553c !important;
+  }

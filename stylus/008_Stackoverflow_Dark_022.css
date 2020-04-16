@@ -1,0 +1,6 @@
+/* ja.meta.stackoverflow.com (Japanese) */
+  .-logo .-img:not(._glyph) {
+    background-image: url(https://StylishThemes.github.io/StackOverflow-Dark/images/ja-meta-stackoverflow-logo.png) !important;
+    background-size: contain !important;
+    height: 60px !important;
+  }

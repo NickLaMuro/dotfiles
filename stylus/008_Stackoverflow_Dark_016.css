@@ -1,0 +1,4 @@
+/* electrical engineering */
+  .nav li, .nav li a, .nav li a:hover, .nav li.youarehere a, .answered-accepted .mini-counts {
+    background-color: transparent !important;
+  }

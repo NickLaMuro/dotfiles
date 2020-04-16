@@ -1,0 +1,224 @@
+:root {
+  --code:            #222;
+  --code-fg:         #ddd;
+  --background:      #333;
+  --foreground:      #ccc;
+  --footer-text:     #888;
+  --border:          #444;
+  
+  --table1:          #444;
+  --table2:          #4a4a4a;
+  --table3:          #555;
+  --table4:          #5a5a5a;
+  
+  --input:           #444;
+  --input-border:    #555;
+  
+  --link:            #0088ce;
+  --link-hover:      #00559e;
+  --link-visited:    #ad6ed1;
+  --list-link:       #d73a3a;
+  
+  --diff-bg-red:     #433;
+  --diff-bg-green:   #343;
+  --diff-bg-chg:     #333;
+}
+
+body {
+  background: var(--background);
+  color:      var(--foreground);
+	border:     1px solid var(--border);
+}
+
+input {
+  background: var(--input);
+  color:      var(--foreground);
+	border:     1px solid var(--input-border);
+  padding:    3px;
+}
+
+a, a[href], a.header, div.page_header a:visited {
+  color: var(--link);
+}
+
+a:hover, a:active, a[href]:hover, a[href]:active,
+div.page_header a:hover {
+  color: var(--link-hover);
+}
+
+a:visited, a[href]:visited, div.page_nav a:visited {
+  color: var(--link-visited);
+}
+
+a.list {
+  color: var(--foreground);
+}
+
+a.list:hover, .list a:hover {
+  color: var(--list-link);
+}
+
+div.page_header, div.page_footer {
+	background-color: var(--table1);
+}
+
+div.page_footer_text {
+  color:            var(--footer-text);
+}
+
+div.title, a.title, span.title {
+  color:            var(--foreground);
+	background-color: var(--table1);
+}
+
+a.title:hover, span.title:hover {
+	background-color: var(--table3);
+}
+
+div.index_include, div.page_path {
+  border-color: var(--border);
+}
+
+div.page_body {
+	background-color: var(--code);
+}
+
+div.diff.header {
+	background-color: var(--table1);
+	border-color:     var(--table3);
+}
+
+div.diff.extended_header {
+	background-color: var(--code);
+}
+
+div.diff.chunk_header span.chunk_info {
+  background-color: inherit;
+}
+
+div.diff.chunk_header a, div.diff.chunk_header {
+  color: #f0e;
+}
+
+td.pre, div.pre, div.diff,
+div.chunk_block.ctx div div.diff.ctx {
+  color: var(--code-fg);
+}
+
+div.chunk_block.rem div.old div.diff.rem {
+  background-color: var(--diff-bg-red);
+}
+
+div.chunk_block.add div.new div.diff.add {
+  background-color: var(--diff-bg-green);
+}
+
+div.chunk_block.chg div div.diff {
+  background-color: var(--diff-bg-chg);
+}
+
+div.diff.add span.marked {
+  background-color: #282;
+  color:            #8e8;
+}
+
+span.refs span.head {
+  border-color:     #383;
+  background-color: #383;
+  border-radius:    2px;
+}
+
+span.refs span.remote {
+  border-color:     #f0e;
+  background-color: #f0e;
+  border-radius:    2px;
+}
+
+tr.dark, table.blame .dark:hover {
+	background-color: var(--table1);
+}
+
+tr.light, table.blame .light:hover {
+	background-color: var(--table2);
+}
+
+tr.light:hover, tr.dark:hover {
+	background-color: var(--table3);
+}
+
+
+/*****************************/
+/*     Code Highlighting     */
+/*****************************/
+
+.kwa { color:#cda869; }
+.kwb { color:#cda869; }
+.kwc { color:#cda869; }
+.kwd { color:#cda869; }
+.str { color:#8f9d6a; }
+.num { color:#cf6a4c; font-weight:700 }
+
+/*! Highlight: Twilight (CodeMirror Reference)*/
+
+/*
+.CodeMirror                       { background:#141414; color:#ccc }
+.highlight                        { background:#141414; color:#ccc }
+.listingblock pre.prettyprint     { background:#141414; color:#ccc }
+.listingblock pre:not(.highlight) { background:#141414; color:#ccc }
+
+.highlight .pun { color:#ccc; }
+.highlight .pln { color:#ccc; }
+.highlight .hll { background-color:#ffc; }
+.highlight .com { color:#5f5a60 ;font-style:italic }
+.highlight .cm  { color:#5f5a60 ;font-style:italic }
+.highlight .c   { color:#5f5a60 ;font-style:italic }
+.highlight .err { border:#b22518 }
+.highlight .k   { color:#cda869; }
+.highlight .key { color:#cda869; }
+.highlight .kwd { color:#cda869; }
+.highlight .cp  { color:#5f5a60; }
+.highlight .c1  { color:#5f5a60; font-style:italic }
+.highlight .cs  { color:#5f5a60; font-style:italic }
+.highlight .gd  { background:#420e09 }
+.highlight .ge  { font-style:italic }
+.highlight .gr  { background:#b22518 }
+.highlight .gh  { color:navy; font-weight:700}
+.highlight .gi  { background: #253b22}
+.highlight .gp  { font-weight:700 }
+.highlight .gs  { font-weight:700 }
+.highlight .gu  { color:purple;font-weight:700}
+.highlight .kd  { color:#e9df8f}
+.highlight .kp  { color:#9b703f}
+.highlight .na  { color:#f9ee98}
+.highlight .nb  { color:#cda869}
+.highlight .nc  { color:#9b859d; font-weight:700}
+.highlight .no  { color:#9b859d}
+.highlight .nd  { color:#7587a6}
+.highlight .ni  { color:#cf6a4c; font-weight:700 }
+.highlight .nf  { color:#9b703f; font-weight:700 }
+.highlight .nn  { color:#9b859d; font-weight:700 }
+.highlight .nt  { color:#cda869; font-weight:700 }
+.highlight .nv  { color:#7587a6}
+.highlight .ow  { color:#aa22ff; font-weight:700 }
+.highlight .w   { color:#141414; }
+.highlight .mf  { color:#cf6a4c; }
+.highlight .mh  { color:#cf6a4c; }
+.highlight .mi  { color:#cf6a4c; }
+.highlight .mo  { color:#cf6a4c; }
+.highlight .str { color:#8f9d6a; }
+.highlight .sb  { color:#8f9d6a; }
+.highlight .sc  { color:#8f9d6a; }
+.highlight .sd  { color:#8f9d6a; font-style:italic }
+.highlight .s2  { color:#8f9d6a; }
+.highlight .se  { color:#f9ee98; font-weight:700 }
+.highlight .sh  { color:#8f9d6a; }
+.highlight .si  { color:#daefa3; font-weight:700 }
+.highlight .sx  { color:#8f9d6a; }
+.highlight .sr  { color:#e9c062; }
+.highlight .s1  { color:#8f9d6a; }
+.highlight .ss  { color:#cf6a4c; }
+.highlight .bp  { color:#0aa; }
+.highlight .vc  { color:#7587a6; }
+.highlight .vg  { color:#7587a6; }
+.highlight .vi  { color:#7587a6; }
+.highlight .il  { color:#099; }  *

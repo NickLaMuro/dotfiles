@@ -1,0 +1,4 @@
+.star-on {
+    -webkit-filter: brightness(.9) !important;
+    filter: brightness(.9) !important;
+  }

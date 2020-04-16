@@ -1,0 +1,169 @@
+/* Custom changes by Nick LaMuro */
+
+:root {
+  --dim:  #666;
+}
+
+.content-wrapper .container-fluid { background: none; }  /* Project home page conatainer background */
+
+/***** Pagination Controls *****/
+
+.gl-pagination {
+  border-top-color:     var(--darker);
+}
+
+.pagination > .disabled > span,
+.pagination > .disabled > span:hover,
+.pagination > .disabled > span:focus,
+.pagination > .disabled > a,
+.pagination > .disabled > a:hover,
+.participants-more .pagination > .disabled > .btn-link:hover,
+.user-list-more .pagination > .disabled > .btn-link:hover,
+.pagination > .disabled > a:focus {
+  background-color: var(--dark);
+  border-color:     var(--darker);
+  color:            var(--dim);
+}
+
+.pagination > .active > a,
+.pagination > .active > a:hover,
+.participants-more .pagination > .active > .btn-link:hover,
+.user-list-more .pagination > .active > .btn-link:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span,
+.pagination > .active > span:hover,
+.pagination > .active > span:focus {
+  background-color: var(--accent);
+  border-color:     var(--darker);
+  color:            var(--lighter);
+}
+
+.pagination > li > a,
+.pagination > li > span {
+  background-color: var(--dark);
+  border-color:     var(--darker);
+  color:            var(--lighter);
+}
+
+.pagination > li > a:hover,
+.participants-more .pagination > li > .btn-link:hover,
+.user-list-more .pagination > li > .btn-link:hover,
+.pagination > li > a:focus,
+.pagination > li > span:hover,
+.pagination > li > span:focus {
+  background-color: var(--darker);
+  border-color:     var(--darker);
+  color:            var(--lighter);
+}
+
+
+/***** Tabs *****/
+
+.gitlab-tabs li.active {
+  background-color: var(--dark);
+}
+
+
+/***** Code Blocks *****/
+
+.git-empty .light-well,
+.git-empty .description-block {
+  color:            var(--light);
+}
+
+.light-well, .description-block {
+  background-color: var(--dark);
+}
+
+pre.light-well, pre.description-block {
+  border-color:     var(--darker);
+}
+
+
+/***** Panels *****/
+
+.panel-default {
+  background-color: var(--dark);
+  border-color:     var(--darker);
+}
+
+.panel-default > .panel-heading {
+  background-color: var(--dark);
+  border-color:     var(--darker);
+}
+
+.panel-footer {
+  background-color: var(--dark);
+  border-color:     var(--darker);
+}
+
+
+
+
+/***** Repo View *****/
+
+.breadcrumb.repo-breadcrumb a {
+  color:            var(--light);
+}
+
+.project-repo-buttons .btn,
+.group-buttons .btn {
+  color:            var(--light);
+}
+
+.project-repo-buttons .btn:hover,
+.project-repo-buttons .btn:focus,
+.group-buttons .btn:hover,
+.group-buttons .btn:focus {
+  color:            var(--lighter);
+}
+
+
+
+/***** Compare View *****/
+
+.input-group .input-group-addon {
+  background-color: var(--blue);
+  color:            var(--lighter);
+  border-color:     var(--darker);
+}
+
+
+/***** Merge Requests *****/
+
+.btn.btn-close, .btn.btn-close-color {
+  background-color: var(--red) !important;
+  color:            var(--light) !important;
+  border-color:     var(--darker) !important;
+}
+
+.btn.btn-close:hover, .btn.btn-close-color:hover {
+  color:            var(--lighter) !important;
+}
+
+.diff-file .notes_holder td.notes-content .notes {
+  background-color: var(--darker);
+}
+
+.notes.timeline > .timeline-entry .notes-content {
+  border-top-color: var(--dark);
+}
+
+.diff-file .notes_holder td.notes-content {
+  background-color: var(--darker);
+}
+
+
+/***** about.gitlab.com *****/
+
+.md-page {
+  background-color: var(--dark);
+}
+
+.breadcrumb {
+  background-color: var(--darker);
+}
+
+.blog-entry li, .md-page li {
+  color: var(--light);
+}

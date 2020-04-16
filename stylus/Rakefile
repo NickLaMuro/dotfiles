@@ -1,0 +1,91 @@
+require 'rake/clean'
+
+STYLUS_EXPORT_FILENAME = Time.now.strftime("stylus-%Y-%m-%d-import.json")
+STYLUS_WORKING_DIR     = File.expand_path "..", __FILE__
+STYLUS_YAML_DATA_FILES = File.join STYLUS_WORKING_DIR, "*.yaml"
+STYLUS_CSS_FILES       = File.join STYLUS_WORKING_DIR, "*.css"
+
+CLEAN.include STYLUS_EXPORT_FILENAME
+CLOBBER.include STYLUS_YAML_DATA_FILES, STYLUS_CSS_FILES
+
+# It is recommended to first run `rake clobber` prior to moving a import file
+# into the `stylus` directory to start from a clean state to ensure any deleted
+# files are gone.
+desc "Import styles to dir structure from a stylus export"
+task :import do
+  require 'json'
+  require 'yaml'
+
+  export_data = JSON.parse(File.read(import_files.last))
+
+  export_data.each_with_index do |site_style_data, index|
+    style_filename_prefix = filename_prefix_for site_style_data["name"], index
+
+    site_style_data["sections"].each_with_index do |section_data, section_id|
+      file_name = css_file_for section_id, style_filename_prefix
+      file_data = section_data.delete("code")
+
+      File.write file_name, file_data
+    end
+
+    File.write "#{style_filename_prefix}.yaml", YAML.dump(site_style_data)
+  end
+end
+
+desc "Export stylus to into from a stylus formatted import"
+task :export => STYLUS_EXPORT_FILENAME
+
+file STYLUS_EXPORT_FILENAME do |export_file|
+  require 'json'
+  require 'yaml'
+
+  export_data = []
+
+  Dir[STYLUS_YAML_DATA_FILES].sort.each_with_index do |yaml_file|
+    style_data = YAML.load_file yaml_file
+
+    # HACK: Allows section keys to have "code": is on top when generated
+    sections   = style_data["sections"]
+    style_data["sections"] = []
+
+    sections.each_with_index do |section_data, section_id|
+      css_file               = css_file_for section_id, File.basename(yaml_file, ".yaml")
+      style_data["sections"] << {"code" => File.read(css_file)}.merge(section_data)
+    end
+    export_data << style_data
+  end
+
+  File.write export_file.name, json_generate(export_data)
+end
+
+def import_files
+  @import_files = Dir.glob File.join(STYLUS_WORKING_DIR, "stylus-*.json")
+  @import_files.sort
+  @import_files
+end
+
+def filename_prefix_for name, index
+  format_name = name.gsub(' ', '_')
+                    .gsub(/[\(\)\|,]/, '')
+  File.join STYLUS_WORKING_DIR, "#{format_index index}_#{format_name}"
+end
+
+def css_file_for section, prefix
+  "#{prefix}_#{format_index section}.css"
+end
+
+def format_index index
+  (index + 1).to_s.rjust(3, "0")
+end
+
+# Ripped from: https://stackoverflow.com/a/58367965/3574689
+def json_generate data
+  json  = JSON.pretty_generate(data)
+
+  regex = /
+    (?<content>"(?:[^\\"]|\\.)+") |
+    (?<open>\{)\s+(?<close>\})    |
+    (?<open>\[)\s+(?<close>\])
+  /mx
+  json.gsub(regex, '\k<open>\k<content>\k<close>')
+end

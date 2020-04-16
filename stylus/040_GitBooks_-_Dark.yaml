@@ -1,0 +1,18 @@
+---
+enabled: true
+updateUrl: https://userstyles.org/styles/chrome/162586.json
+md5Url: https://update.userstyles.org/162586.md5
+url: http://userstyles.org/styles/162586
+originalMd5: '093d965dd1f1ab9938e0fc5c28655f90'
+installDate: 1583938713586
+sections:
+- regexps:
+  - ".*gitbooks.io.*"
+- regexps:
+  - ".*gitbooks.io.*"
+name: GitBooks - Dark
+originalDigest: 6851ee7e0f02b2215cc1035798b9e6faa0769693
+_id: 5d3c9971-5449-4407-a7be-3cb48ded6af0
+_rev: 1583966213318
+id: 59
+updateDate: 1583966213318

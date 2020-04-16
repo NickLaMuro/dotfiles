@@ -1,0 +1,18 @@
+th {
+  background: #333;
+  color: #ddd;
+}
+
+code, pre {
+  background: #111;
+  color: #ddd;
+}
+
+.request .verb {
+  background: #333;
+  color: #86de74;
+}
+
+.request .template b {
+  color: #75bfff;
+}

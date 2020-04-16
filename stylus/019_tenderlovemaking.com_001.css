@@ -1,0 +1,146 @@
+body {
+  background-color: #333;
+  color: #ddd;
+}
+
+pre {
+  background-color: #222;
+  border-color: #222;
+  color: #ccc;
+}
+
+code {
+  background-color: #222;
+}
+
+h3 {
+  color: #AE54B1;
+}
+
+a {
+  color: #AE54B1;
+}
+
+genius-referent[data-genius-featured-referent] {
+  background-color: #54543c;
+}
+
+.CodeRay .class               { color: #9b859d;          }
+.CodeRay .constant            { color: #9b859d;          }
+.CodeRay .comment             { color: #5e5960;          }
+.CodeRay .char                { color: #8f9d6a;          }
+.CodeRay .string              { background-color: inherit; }
+.CodeRay .string .delimiter   { color: #8f9d6a;          }
+.CodeRay .string .content     { color: #8f9d6a;          }
+.CodeRay .string .char        { color: #cccccc;          }
+.CodeRay .string .inline      { color: #daefa3;          }
+.CodeRay .inline-delimiter    { color: #daefa3;          }
+.CodeRay .key                 { color: #8f9d6a;          }
+.CodeRay .key .delimiter      { color: #8f9d6a;          }
+.CodeRay .key .content        { color: #8f9d6a;          }
+.CodeRay .keyword             { color: #cda869;          }
+.CodeRay .function            { color: #9b703f;          }
+.CodeRay .integer             { color: #cf6a4c;          }
+.CodeRay .hex                 { color: #cf6a4c;          }
+.CodeRay .symbol              { color: #cf6a4c;          }
+.CodeRay .key                 { color: #cf6a4c;          }
+.CodeRay .predefined-constant { color: #7587a6;          }
+.CodeRay .instance-variable   { color: #7587a6;          }
+.CodeRay .global-variable     { color: #f9ee98;          }
+
+
+
+.CodeRay .preprocessor        { color: #afc3db;          }
+.CodeRay .include             { color: #8f9d6a;          }
+.CodeRay .directive           { color: #f9ee98;          }
+
+
+/* Diff code */
+
+.language-diff .CodeRay .line.comment:nth-child(1)      { color: #cda869;          }
+.language-diff .CodeRay .line.comment:nth-child(2)      { color: #9b703f;          }
+.language-diff .CodeRay .line.head                      { color: #cda869;          }
+.language-diff .CodeRay .line.head                      { background-color: inherit; }
+.language-diff .CodeRay .line.head .head                { color: #cda869;          }
+.language-diff .CodeRay .line.head .head                { background-color: inherit; }
+.language-diff .CodeRay .line.head .filename            { color: #cda869;          }
+.language-diff .CodeRay .line.insert                    { color: #00cc00;          }
+.language-diff .CodeRay .line.insert .string            { color: #00cc00;          }
+.language-diff .CodeRay .line.insert .string .delimiter { color: #00cc00;          }
+.language-diff .CodeRay .line.insert .string .content   { color: #00cc00;          }
+.language-diff .CodeRay .change                         { color: #00c5c7;          }
+.language-diff .CodeRay .change                         { background-color: inherit; }
+.language-diff .CodeRay .string                         { color: #cccccc;          }
+.language-diff .CodeRay .string .delimiter              { color: #cccccc;          }
+.language-diff .CodeRay .string .content                { color: #cccccc;          }
+.language-diff .CodeRay .key                            { color: #cccccc;          }
+
+
+
+
+
+
+/*! Highlight: Twilight (CodeMirror Reference)*/
+
+/*
+.CodeMirror                       { background:#141414; color:#ccc }
+.highlight                        { background:#141414; color:#ccc }
+.listingblock pre.prettyprint     { background:#141414; color:#ccc }
+.listingblock pre:not(.highlight) { background:#141414; color:#ccc }
+
+.highlight .pun { color:#ccc; }
+.highlight .pln { color:#ccc; }
+.highlight .hll { background-color:#ffc; }
+.highlight .com { color:#5f5a60 ;font-style:italic }
+.highlight .cm  { color:#5f5a60 ;font-style:italic }
+.highlight .c   { color:#5f5a60 ;font-style:italic }
+.highlight .err { border:#b22518 }
+.highlight .k   { color:#cda869; }
+.highlight .key { color:#cda869; }
+.highlight .kwd { color:#cda869; }
+.highlight .cp  { color:#5f5a60; }
+.highlight .c1  { color:#5f5a60; font-style:italic }
+.highlight .cs  { color:#5f5a60; font-style:italic }
+.highlight .gd  { background:#420e09 }
+.highlight .ge  { font-style:italic }
+.highlight .gr  { background:#b22518 }
+.highlight .gh  { color:navy; font-weight:700}
+.highlight .gi  { background: #253b22}
+.highlight .gp  { font-weight:700 }
+.highlight .gs  { font-weight:700 }
+.highlight .gu  { color:purple;font-weight:700}
+.highlight .kd  { color:#e9df8f}
+.highlight .kp  { color:#9b703f}
+.highlight .na  { color:#f9ee98}
+.highlight .nb  { color:#cda869}
+.highlight .nc  { color:#9b859d; font-weight:700}
+.highlight .no  { color:#9b859d}
+.highlight .nd  { color:#7587a6}
+.highlight .ni  { color:#cf6a4c; font-weight:700 }
+.highlight .nf  { color:#9b703f; font-weight:700 }
+.highlight .nn  { color:#9b859d; font-weight:700 }
+.highlight .nt  { color:#cda869; font-weight:700 }
+.highlight .nv  { color:#7587a6}
+.highlight .ow  { color:#aa22ff; font-weight:700 }
+.highlight .w   { color:#141414; }
+.highlight .mf  { color:#cf6a4c; }
+.highlight .mh  { color:#cf6a4c; }
+.highlight .mi  { color:#cf6a4c; }
+.highlight .mo  { color:#cf6a4c; }
+.highlight .str { color:#8f9d6a; }
+.highlight .sb  { color:#8f9d6a; }
+.highlight .sc  { color:#8f9d6a; }
+.highlight .sd  { color:#8f9d6a; font-style:italic }
+.highlight .s2  { color:#8f9d6a; }
+.highlight .se  { color:#f9ee98; font-weight:700 }
+.highlight .sh  { color:#8f9d6a; }
+.highlight .si  { color:#daefa3; font-weight:700 }
+.highlight .sx  { color:#8f9d6a; }
+.highlight .sr  { color:#e9c062; }
+.highlight .s1  { color:#8f9d6a; }
+.highlight .ss  { color:#cf6a4c; }
+.highlight .bp  { color:#0aa; }
+.highlight .vc  { color:#7587a6; }
+.highlight .vg  { color:#7587a6; }
+.highlight .vi  { color:#7587a6; }
+.highlight .il  { color:#099; }  */

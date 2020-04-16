@@ -1,0 +1,7 @@
+/* target sites to *NOT* hide the header background */
+  #header, #hmenus {
+    background-color: transparent !important;
+  }
+  #header {
+    background-image: none !important;
+  }

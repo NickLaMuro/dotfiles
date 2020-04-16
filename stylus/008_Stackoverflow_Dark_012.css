@@ -1,0 +1,10 @@
+/* chat.stackoverflow.com */
+  #hlogo a {
+    background-image: none !important;
+  }
+  #header-logo, #footer-logo {
+    background-image: url(https://StylishThemes.github.io/StackOverflow-Dark/images/stackoverflow-logo.svg) !important;
+  }
+  #header-logo {
+    background-size: contain !important;
+  }

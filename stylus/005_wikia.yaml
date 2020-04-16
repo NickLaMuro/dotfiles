@@ -1,0 +1,17 @@
+---
+installDate: 1538149238589
+name: wikia
+enabled: true
+sections:
+- urls: []
+  urlPrefixes: []
+  domains:
+  - wikia.com
+  regexps: []
+updateUrl: 
+md5Url: 
+url: 
+originalMd5: 
+id: 13
+_id: 5cc32e00-5161-4a93-8c24-fc99d477601c
+_rev: 1583342080471

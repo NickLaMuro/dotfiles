@@ -1,0 +1,47 @@
+html               { color:            #ccc;            }
+body               { background-color: #333;            }
+tr                 { border-bottom:    1px solid #888   } 
+tbody              { border-top:       3px solid #888   }
+
+blockquote         { background-color: #333;            }
+blockquote         { border-left:      5px solid #888;  }
+
+#topic-title h1 a  { color:            #ddd;            }
+.d-header          { background-color: #333;            }
+.topic-body        { border-top:         none;            }
+.posts .topic-body { background-color: #333 !important; }
+.topic-avatar      { border-top:         none;            }
+
+
+.topic-list-main-link a.title,
+.topic-list .main-link a.title,
+.extra-info-wrapper .topic-link,
+.latest-topic-list-item .main-link a.title {
+  color: #ddd;
+}
+
+.names span a,
+.badge-wrapper.bullet span.badge-category,
+.extra-info-wrapper .badge-wrapper.bullet span.badge-category,
+.extra-info-wrapper .badge-wrapper.bar span.badge-category,
+.extra-info-wrapper .badge-wrapper.none span.badge-category {
+  color: #aaa;
+}
+
+p > code,
+li > code,
+pre > code {
+  color:            #ddd;
+  background-color: #222;
+}
+
+.hljs { color: #bbb; }
+
+.hljs-keyword,
+.javascript .hljs-title,
+.nginx .hljs-title,
+.hljs-subst,
+.hljs-request,
+.hljs-status {
+  color: #bbb;
+}

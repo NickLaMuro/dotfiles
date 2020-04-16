@@ -1,0 +1,19 @@
+---
+enabled: true
+updateUrl: 
+md5Url: 
+url: 
+originalMd5: 
+installDate: 1544467538692
+name: bugzilla.redhat.com dark
+sections:
+- domains:
+  - bugzilla.redhat.com
+- regexps:
+  - ".*bugzilla.redhat.com/rest.*"
+- regexps:
+  - ".*bugzilla.redhat.com/docs.*"
+id: 34
+updateDate: 1565647008738
+_id: ce280f7f-1759-427f-8ddf-2f3bfc35615a
+_rev: 1583342080472

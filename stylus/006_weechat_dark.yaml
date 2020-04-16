@@ -1,0 +1,17 @@
+---
+installDate: 1538149238597
+name: weechat dark
+enabled: true
+sections:
+- urls: []
+  urlPrefixes: []
+  domains:
+  - weechat.org
+  regexps: []
+updateUrl: 
+md5Url: 
+url: 
+originalMd5: 
+id: 16
+_id: 3694b879-b16a-456c-8258-078c8ac7e586
+_rev: 1583342080471

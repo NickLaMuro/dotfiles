@@ -1,0 +1,20 @@
+---
+installDate: 1538149591001
+enabled: true
+updateUrl: https://userstyles.org/styles/chrome/159780.json
+md5Url: https://update.userstyles.org/159780.md5
+url: http://userstyles.org/styles/159780
+originalMd5: 474a325fa8ac53417d371fcb88be65d6
+sections:
+- urls: []
+  urlPrefixes: []
+  domains:
+  - addons.mozilla.org
+  regexps: []
+name: Dark Mozilla Add-ons (AMO)
+originalDigest: 75a3ce760cffc1d20078ac49a4fed602deb873a4
+id: 28
+updateDate: 1573769784273
+originalName: Dark Mozilla Add-ons (AMO)
+_id: eac40346-9f20-40ec-8103-2185ca5af37c
+_rev: 1583342080472

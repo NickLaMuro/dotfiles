@@ -1,0 +1,33 @@
+body {
+  background-color: var(--dark);
+  color:            var(--light);
+}
+
+a {
+  color:        var(--yellow);
+}
+
+div.cc-window {
+  display: none;
+}
+
+.outline-button.orange {
+  border-color: var(--yellow);
+  color:        var(--yellow);
+}
+
+.post-content {
+  color:            #ddd;
+}
+
+.callout {
+  color:            #bbb;
+}
+
+.post-content code, .post-content pre {
+  background-color: #222;
+}
+
+.post-header .author-display-name {
+  color:        var(--primary);
+}

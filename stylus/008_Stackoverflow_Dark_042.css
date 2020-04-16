@@ -1,0 +1,16 @@
+#hmenus {
+    border: none !important;
+  }
+  .module {
+    background-image: none !important;
+    border-top-width: 0 !important;
+    border: 1px solid #333 !important;
+    border-width: 1px 0 !important;
+  }
+  /* override !important flag set in site css */
+  a.question-hyperlink {
+    color: #4183C4 !important;
+  }
+  a.question-hyperlink:hover {
+    color: #aaa !important;
+  }

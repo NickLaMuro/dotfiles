@@ -1,0 +1,25 @@
+---
+enabled: true
+updateUrl: 
+md5Url: 
+url: 
+originalMd5: 
+installDate: 1582073033235
+name: generic_apache_dir_list
+sections:
+- domains:
+  - mirrors.edge.kernel.org
+  - file.cloudforms.lab.eng.rdu2.redhat.com
+  - releases.manageiq.org
+  - gifs.chrisarcand.com
+  - dl-cdn.alpinelinux.org
+  - file.rdu.redhat.com
+  - danluu.com
+  - 10.9.62.89
+- domains:
+  - gifs.chrisarcand.com
+  - dl-cdn.alpinelinux.org
+updateDate: 1584637121156
+id: 55
+_id: 7ffecc14-dd9c-4b04-b158-0f2728f4e34d
+_rev: 1584637121156

@@ -1,0 +1,4 @@
+/* hide top nav background on <li>, style is on <a> */
+  .nav li {
+    background-color: transparent !important;
+  }

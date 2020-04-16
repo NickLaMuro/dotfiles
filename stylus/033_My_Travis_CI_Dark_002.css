@@ -1,0 +1,91 @@
+/* My Additions */
+/* ------------ */
+
+.footer {
+	background: #222;
+	box-shadow: 0 -2px 3px #212121;
+}
+
+.footer address, .footer ul {
+	color: #888;
+}
+
+.badge.message-label {
+	background: #282828;
+	color: #3eaaaf;
+}
+
+/* settings */
+
+#env-var-secrecy {
+  box-shadow: none;
+}
+
+#env-var-secrecy p {
+  color: #cdb62c;
+}
+
+.settings-section,
+.user-settings > section,
+.profile-page nav.travistab-nav,
+.profile-page .profile-aside section {
+  border-bottom: 2px solid #444;
+}
+
+.profile-repositories-filter .search,
+.not-locked-profile-repositories-filter .search {
+  border: 2px solid #444;
+}
+
+.profile-settings {
+  color: #ccc;
+  border: 1px solid #666;
+}
+
+button.switch {
+  background: #222;
+}
+
+.switch .switch-inner {
+  background: #444;
+}
+
+.switch .switch-inner span.off {
+  background: #666;
+}
+
+input[type="password"],
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select, textarea {
+  background: #444;
+  border: 1px solid #555;
+  color: #aaa;
+}
+
+.account-token .token-field {
+  background-color: #444;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+.top .cta,
+.top .cta p::before
+{
+  background-color: #444;
+}
+
+.owner-tile.passed,
+.owner-tile.failed,
+.owner-tile.errored {
+  background: #333;
+}
+
+.owner-info::after,
+.fade-out::after
+{
+  background: none;
+}

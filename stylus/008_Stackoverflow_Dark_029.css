@@ -1,0 +1,6 @@
+/* pt.meta.stackoverflow.com (Portuguese) */
+  .-logo .-img:not(._glyph) {
+    background-image: url(https://StylishThemes.github.io/StackOverflow-Dark/images/pt-meta-stackoverflow-logo.svg) !important;
+    background-size: contain !important;
+    height: 60px !important;
+  }

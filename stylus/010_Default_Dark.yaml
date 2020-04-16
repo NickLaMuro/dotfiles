@@ -1,0 +1,17 @@
+---
+installDate: 1538149238618
+name: Default Dark
+enabled: true
+sections:
+- urls: []
+  urlPrefixes: []
+  domains:
+  - www.etalabs.net
+  regexps: []
+updateUrl: 
+md5Url: 
+url: 
+originalMd5: 
+id: 22
+_id: 82447722-223d-4cef-9946-84dbf77b7fb7
+_rev: 1583342080472

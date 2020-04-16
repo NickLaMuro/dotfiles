@@ -1,0 +1,15 @@
+pre {
+  white-space: pre;
+}
+.markdown-section table tr {
+	background-color: #24292e;
+	border-top: 1px solid #000;
+}
+
+.markdown-section table td, .markdown-section table th {
+	border: 1px solid #000;
+}
+
+.markdown-section table tr:nth-child(2n) {
+	background-color: #30353b;
+}

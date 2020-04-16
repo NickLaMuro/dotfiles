@@ -1,0 +1,44 @@
+---
+enabled: true
+updateUrl: https://userstyles.org/styles/chrome/137280.json
+md5Url: https://update.userstyles.org/137280.md5
+url: http://userstyles.org/styles/137280
+originalMd5: 0cd204bf10d9f908c2e59664d4a86e00
+installDate: 1550854051960
+sections:
+- domains:
+  - prototypr.io
+  - blog.framer.com
+  - uxplanet.org
+  - medium.freecodecamp.org
+  - medium.muz.li
+  - upscri.be
+  - hackernoon.com
+  - writingcooperative.com
+  - medium.com
+  - 500ish.com
+  - uxdesign.cc
+  - blog.productdisrupt.com
+  - journal.thriveglobal.com
+  - theuxblog.com
+- domains:
+  - prototypr.io
+  - blog.framer.com
+  - uxplanet.org
+  - medium.freecodecamp.org
+  - medium.muz.li
+  - upscri.be
+  - hackernoon.com
+  - writingcooperative.com
+  - medium.com
+  - 500ish.com
+  - uxdesign.cc
+  - blog.productdisrupt.com
+  - journal.thriveglobal.com
+  - theuxblog.com
+name: Medium (medium.com ) – Dark Grey
+originalDigest: eb46443b0d3ee350f81c7f7885aed809b7df76d9
+id: 37
+updateDate: 1584388168824
+_id: a7ccfc9a-9e72-4da4-9a61-4647684ef298
+_rev: 1584388168824

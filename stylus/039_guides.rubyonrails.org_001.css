@@ -1,0 +1,107 @@
+
+/* Avoids "flashes of white" */
+html, body {
+  background:       #444;
+}
+
+p code {
+  background:       #444;
+  color:            #eee;
+}
+
+pre, code {
+  color:            #eee;
+}
+
+#container {
+  background-color: #333;
+  color:            #ccc;
+}
+
+#feature {
+  background:       #444;
+  color:            #eee;
+}
+
+#subCol {
+  background:       #333;
+}
+
+#subCol h3.chapter img {
+  display: none;
+}
+
+#subCol .chapters ul li {
+  list-style: inherit;
+  padding: inherit;
+  margin-left: 1em;
+}
+
+#mainCol div.warning,
+#subCol dd.warning {
+  background:       #c52f24;
+}
+
+#mainCol div.warning a,
+#mainCol .note a {
+  color:            #fff;
+}
+
+#mainCol a,
+#subCol a,
+#feature a {
+  color:            #c52f24;
+}
+
+#mainCol a.anchorlink,
+#mainCol a.anchorlink code {
+  color:            #fff;
+}
+
+.note {
+  background:       #956b07;
+  color:            #eee;
+}
+
+.info {
+  background:       #47ade0;
+  color:            #eee;
+}
+
+.note code,
+.info code,
+.todo code {
+  background-color: #333;
+}
+
+div.code_container {
+  background: #222;
+  color:            #ccc;
+}
+
+.syntaxhighlighter .plain,
+.syntaxhighlighter .plain a {
+	color: #ccc !important;
+}
+
+.syntaxhighlighter .color2,
+.syntaxhighlighter .color2 a {
+	color: #ccc !important;
+}
+
+.syntaxhighlighter,
+.syntaxhighlighter a,
+.syntaxhighlighter div,
+.syntaxhighlighter code,
+.syntaxhighlighter table,
+.syntaxhighlighter table td,
+.syntaxhighlighter table tr,
+.syntaxhighlighter table tbody,
+.syntaxhighlighter table thead,
+.syntaxhighlighter table caption,
+.syntaxhighlighter textarea,
+.syntaxhighlighter .line.alt1,
+.syntaxhighlighter .line.alt2 {
+	background: #222 !important;
+	background-color: #222 !important;
+}

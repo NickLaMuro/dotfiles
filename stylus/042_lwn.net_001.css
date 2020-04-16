@@ -1,0 +1,38 @@
+body {
+  background-color: #222;
+  color:            #ddd;
+}
+
+h1 {
+  color:            #eee;
+}
+
+input[type=submit], input {
+  background-color: #444;
+  border: 1px solid #222;
+}
+
+pre {
+  background-color: #111;
+}
+
+#menu {
+  background-color: #333;
+  color:            #ddd;
+}
+
+div.topnav-container {
+  background-color: #333;
+}
+
+.navmenu ul {
+  background-color: #333;
+}
+
+a:link {
+  color:            #66f;
+}
+
+a:visited {
+  color:            #e3a;
+}
