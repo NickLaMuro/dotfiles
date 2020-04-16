@@ -1,0 +1,6 @@
+/* es.stackoverflow.com (Spanish) */
+  .-logo .-img:not(._glyph) {
+    background-image: url(https://StylishThemes.github.io/StackOverflow-Dark/images/es-stackoverflow-logo.svg) !important;
+    background-size: cover !important;
+    height: 50px !important;
+  }

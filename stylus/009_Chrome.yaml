@@ -1,0 +1,17 @@
+---
+installDate: 1538149238614
+name: Chrome
+enabled: true
+sections:
+- urls:
+  - chrome://bookmarks
+  urlPrefixes: []
+  domains: []
+  regexps: []
+updateUrl: 
+md5Url: 
+url: 
+originalMd5: 
+id: 21
+_id: 82a31a2d-280d-4055-b34b-b6d5a3d28708
+_rev: 1583342080472

@@ -1,0 +1,17 @@
+---
+enabled: true
+updateUrl: https://userstyles.org/styles/chrome/133817.json
+md5Url: https://update.userstyles.org/133817.md5
+url: http://userstyles.org/styles/133817
+originalMd5: 46cf17221a11be1894003dfb754d5757
+installDate: 1554743216737
+sections:
+- {}
+- domains:
+  - userstyles.org
+name: Darker userstyles.org
+originalDigest: 6b735cd42b17e1f674b6a91b1f8500648181d02f
+id: 43
+updateDate: 1554744074939
+_id: 970ae3cd-01fd-409b-b48e-ffb3eb6f5fcf
+_rev: 1583342080472

@@ -1,0 +1,36 @@
+body {
+  background-color: #333;
+  color: #fff;
+}
+
+code, pre {
+  color: #ddd;
+}
+
+pre {
+  background-color: #444;
+  box-shadow: none;
+}
+
+.navbar-inner {
+  background-image: none;
+  background-color: #2d2d2d;
+  border: 1px solid #222;
+}
+
+.navbar .nav > li > a,
+.navbar .brand {
+  text-shadow: none;
+}
+
+.brand > a,
+.navbar .nav > li > a {
+  color: #ccc;
+}
+
+
+.brand > a:hover,
+.navbar .nav > li > a:focus,
+.navbar .nav > li > a:hover {
+  color: #fff;
+}

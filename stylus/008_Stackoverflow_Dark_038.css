@@ -1,0 +1,6 @@
+/* stackExchange.com */
+  header h1 {
+    height: 60px !important;
+    background-size: cover !important;
+    background-image: url(https://StylishThemes.github.io/StackOverflow-Dark/images/stackexchange-logo.svg) !important;
+  }

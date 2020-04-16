@@ -1,0 +1,450 @@
+:root {
+  --header-red:      #cc0000;
+  --header-bg:       #252527;
+  --header-fg:       #fff;
+  --input-bg:        #222;
+  --input-fg:        #ddd;
+  --body-bg:         #333;
+  --body-fg:         #ddd;
+  --border:          #444;
+  
+  --table-header-fg: #ddd;
+  --table-header-bg: #484848;
+  
+  --comment-fg:      #bbb;
+  --history-fg:      #999;
+  --quote-fg:        #986fc9;
+  
+  --private-bg:      #322;
+  --private-fg:      #c33;
+  --private-fg2:     #933;
+  --private-hr:      #522;
+  
+  --required-bg:     #522;
+  
+  --highlight-bg:    #0093b9;
+  --highlight-link:  #a5cbfc;
+  --link-hover:      #0088ce;
+  
+  --link:            #0088ce;
+}
+
+html, body {
+  background:       var(--body-bg);
+}
+
+hr {
+  border-top:       1px var(--border) solid;
+  border-bottom:    1px var(--border) solid;
+  border-left:      none;
+  border-right:     none;
+}
+
+#bugzilla-body {
+  color:            var(--body-fg);
+}
+
+.bz_short_desc_container {
+  background-color: var(--input-bg);
+  color:            var(--input-fg);
+}
+
+#bz_top_half_spacer {
+  border:           1px var(--border) solid;
+}
+
+#footer {
+  border-top:       1px var(--border) solid;
+  background-color: var(--body-bg);
+}
+
+/* BZ Settings */
+/* ----------- */
+
+.tabs.tabs {
+	border-bottom: 1px solid var(--border);
+}
+
+.tabs td.selected {
+  background-color: var(--input-bg);
+}
+
+.tabs.tabs td.selected {
+  color:            var(--input-fg);
+  border-color:     var(--border);
+}
+
+.tabs.tabs td,
+.tabs.tabs td a {
+  color:            var(--input-fg);
+}
+
+
+/* BZ INPUT */
+/* -------- */
+
+textarea {
+  background-color: var(--input-bg);
+  color:            var(--input-fg);
+  padding:          .5em;
+  border:           none;
+  border-radius:    .3em;
+}
+
+input, .text_input {
+  background-color: var(--input-bg);
+  color:            var(--input-fg);
+  padding:          .3em;
+  border:           none;
+  border-radius:    .3em;
+}
+
+#summary_field#summary_field {
+  background-color: var(--body-bg);
+}
+
+#bvp_toggle_editor,
+.bz_query_buttons input,
+.bz_query_links button,
+.bz_query_edit button {
+  background-color: var(--input-bg);
+  color:            var(--input-fg);
+  border:           1px var(--border) solid;
+  border-radius:    .3em;
+}
+
+#bvp_toggle_editor:hover,
+.bz_query_buttons input:hover,
+.bz_query_links button:hover {
+  background-color: var(--highlight-bg);
+}
+
+#bvp_toggle_editor {
+  padding:          .3em;
+}
+
+.bz_private_data, .bz_private_data * {
+  background-color: var(--input-bg) !important;
+}
+
+.bz_query_edit button:hover {
+  background-color: var(--header-red);
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button,
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+  background:       var(--input-bg);
+  color:            var(--input-fg) !important;
+  border:           1px var(--border) solid;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+  background:       var(--header-red);
+  color:            var(--input-fg) !important;
+  border:           1px var(--border) solid;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+  background:       var(--highlight-bg);
+  border-color:     var(--input-fg);
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+  border-color:     var(--input-fg);
+}
+
+.dataTables_wrapper .dataTables_paginate .ellipsis {
+  color:            var(--input-fg);
+}
+
+div.bz_query_remember {
+  margin-top:       1em;
+  display:          inline-block !important;
+}
+
+.redhat_user a:link, .redhat_user a:hover {
+  color:            var(--header-red);
+}
+
+
+.selectize-input,
+.selectize-input input,
+.selectize-dropdown,
+.selectize-dropdown span,
+.selectize-dropdown.form-control {
+  color:            var(--input-fg);
+}
+
+.selectize-input,
+.selectize-input.full,
+.selectize-dropdown,
+.selectize-dropdown.form-control,
+.selectize-control .selectize-input.disabled,
+.selectize-control.single .selectize-input.input-active,
+.selectize-control.single .selectize-input.input-active input {
+  background-color: var(--input-bg);
+}
+
+.selectize-dropdown .active {
+  background-color: var(--highlight-bg);
+  color:            var(--input-fg);
+}
+
+.selectize-input, .selectize-dropdown {
+  border:           1px var(--border) solid;
+}
+
+.selectize-control.multi .selectize-input::after,
+.selectize-control.single .selectize-input::after {
+  border-color:     var(--input-fg) transparent transparent transparent;
+}
+
+.selectize-control.multi .selectize-input > div {
+  background-color: var(--private-fg);
+  color:            var(--header-fg)
+}
+
+.selectize-control.multi .selectize-input > div.active {
+  background-color: var(--required-bg);
+}
+
+.selectize-control.plugin-remove_button [data-value] .remove {
+  background-color: var(--private-fg2);
+}
+
+
+
+input.required, select.required, span.required_explanation {
+  color:            var(--input-fg);
+  background-color: var(--required-bg);
+  border:           1px var(--border) solid;
+}
+
+
+/* BZ TABLES */
+/* --------- */
+
+.bz_attach_footer,
+#attachment_table th,
+#external_bugs_table th,
+.bz_time_tracking_table th,
+.dependency_tree_controls {
+  background-color: var(--table-header-bg);
+  color:            var(--table-header-fg);
+}
+
+#attachment_table th,
+#attachment_table td,
+.bz_attach_footer,
+.bz_time_tracking_table th,
+.bz_time_tracking_table td,
+.dependency_tree_controls {
+  border:           1px var(--border) solid;
+}
+
+#email_prefs th,
+#email_prefs td,
+#shared_search_prefs th,
+#shared_search_prefs td,
+#saved_search_prefs th,
+#saved_search_prefs td,
+#bug_activity td {
+  /* border-color:     transparent; */
+  border-color:     var(--border);
+}
+
+tr.column_header {
+  background-color: var(--table-header-bg) !important;
+}
+
+table.fixedHeader-floating {
+  background-color: var(--body-bg);
+  color:            var(--body-fg);
+}
+
+#bz_buglist tr {
+  border:           1px var(--body-bg) solid;
+}
+
+table.dataTable tbody tr, tr.odd {
+  background-color: var(--body-bg) !important;
+  color:            var(--body-fg);
+}
+
+tr.bz_bugitem:hover {
+  background-color: var(--highlight-bg) !important;
+}
+
+tr.bz_bugitem:hover a {
+  color:            var(--hightlight-link);
+}
+
+tr.bz_bugitem:hover a:hover {
+  color:            var(--link-hover);
+}
+
+/* New BZ:  Similar BZ search table */
+
+.yui-skin-sam .yui-dt th {
+  color:            var(--table-header-fg);
+}
+
+.yui-skin-sam tr.yui-dt-even,
+.yui-skin-sam tr.yui-dt-odd {
+  background-color: var(--body-bg);
+}
+
+.yui-skin-sam .yui-dt th,
+.yui-skin-sam .yui-dt td {
+  border-right:     1px solid var(--border);
+}
+
+.yui-skin-sam .yui-dt-message {
+  background-color: var(--highlight-bg);
+  color:            var(--table-header-fg);
+}
+
+.yui-skin-sam .yui-button {
+	border: 1px solid #111;
+	background-color: #585858;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #585858), color-stop(100%, #111));
+	background: -webkit-linear-gradient(top, #585858 0%, #111 100%);
+	background: -moz-linear-gradient(top, #585858 0%, #111 100%);
+	background: -ms-linear-gradient(top, #585858 0%, #111 100%);
+	background: -o-linear-gradient(top, #585858 0%, #111 100%);
+	background: linear-gradient(to bottom, #585858 0%, #111 100%);
+}
+
+.yui-skin-sam .yui-button .first-child {
+  border-left-color: inherit;
+  border-right-color: inherit;
+}
+
+.yui-skin-sam .yui-button a {
+	color: var(--input-fg);
+}
+
+.bz_private_data,
+.bz_private_data *,
+.bz_time_tracking_table * {
+  background-color: var(--input-bg) !important;
+}
+
+
+/* BZ COMMENTS */
+/* ----------- */
+
+.bz_comment {
+  background-color: var(--header-bg);
+  color:            var(--comment-fg);
+  margin-bottom:    1.5em;
+  padding-bottom:   0.5em;
+}
+
+.bz_comment_head,
+.bz_first_comment_head {
+  background-color: var(--input-bg);
+  color:            var(--input-fg);
+}
+
+.bz_comment_text span.quote {
+  color:            var(--quote-fg);
+  white-space:      pre-wrap;
+}
+
+.bz_private {
+  background-color: var(--private-bg);
+  color:            var(--private-fg);
+}
+
+.ih_history {
+  background-color: var(--header-bg) !important;
+  color:            var(--comment-fg);
+  border:           1px var(--body-bg) solid;
+}
+
+.ih_inlinehistory {
+  color:            var(--history-fg);
+  border-top:       1px var(--border) solid;
+}
+
+.bz_private .ih_inlinehistory {
+  color:            var(--private-fg2);
+  border-top:       1px var(--private-hr) solid;
+}
+
+.ih_history_change,
+.ih_history .bz_comment_head,
+.ih_history .ih_history_item:first-of-type .bz_comment_head
+{
+  background-color: var(--header-bg);
+}
+
+.ih_inlinehistory {
+  margin-right: 1em;
+}
+
+.ih_history_change {
+  margin-left: 0;
+  padding-left: 1em;
+}
+
+.ih_history_item {
+  margin-bottom: 0px;
+  padding-bottom: 5px;
+}
+
+#comment_tabs {
+  margin-bottom: 5px;
+}
+
+.comment_tab {
+  border:           1px var(--border) solid;
+}
+
+.active_comment_tab {
+  background-color: var(--highlight-bg);
+  border:           1px var(--highlight-bg) solid;
+}
+
+#comment_preview {
+  border:           1px var(--border) solid;
+  border-radius:    .3em;
+}
+
+
+/* RPC Converters */
+/* -------------- */
+
+.alertify .ajs-dialog {
+  background-color: var(--input-bg);
+  color:            var(--input-fg);
+}
+
+.alertify .ajs-header, .alertify .ajs-footer {
+  background-color: var(--body-bg);
+  color:            var(--body-fg);
+}
+
+.alertify .ajs-header {
+  border-bottom:    1px var(--border) solid;
+}
+
+.alertify .ajs-body {
+  color:            var(--input-fg);
+}
+
+.alertify .ajs-footer {
+  border-top:       1px var(--border) solid;
+}
+
+.ajs-button {
+  background-color: var(--input-bg);
+  border:           1px var(--border) solid;
+  color:            var(--input-fg);
+}
+
+.ajs-button:hover {
+  background:       var(--highlight-bg);
+}

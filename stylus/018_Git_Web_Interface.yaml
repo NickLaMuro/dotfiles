@@ -1,0 +1,20 @@
+---
+enabled: true
+updateUrl: 
+md5Url: 
+url: 
+originalMd5: 
+installDate: 1549064612125
+name: Git Web Interface
+sections:
+- urlPrefixes:
+  - https://libvirt.org/git/
+  domains:
+  - git.postgresql.org
+  - repo.or.cz
+  regexps:
+  - http://(127.0.0.1|localhost):1234.*
+id: 35
+updateDate: 1579545049659
+_id: dd09981f-b4c2-4d96-94e5-b3d8771c688c
+_rev: 1583342080472

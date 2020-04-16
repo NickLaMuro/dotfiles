@@ -1,0 +1,5 @@
+/* darken vote off buttons */
+  .vote-up-off, .vote-down-off, .star-off {
+    -webkit-filter: brightness(.5) !important;
+    filter: brightness(.5) !important;
+  }

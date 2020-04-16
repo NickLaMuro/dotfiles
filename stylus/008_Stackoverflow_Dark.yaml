@@ -1,0 +1,114 @@
+---
+installDate: 1538149238606
+sections:
+- domains:
+  - serverfault.com
+  - superuser.com
+  - stackapps.com
+  - mathoverflow.net
+  - askubuntu.com
+  regexps:
+  - "^https?://((?!(www|area51|gaming)).*\\.)?stackexchange\\.com.*"
+- domains:
+  - serverfault.com
+  - superuser.com
+  - stackapps.com
+  - mathoverflow.net
+  - askubuntu.com
+  regexps:
+  - "^https?://((?!(www|area51|gaming)).*\\.)?stackexchange\\.com.*"
+- regexps:
+  - "^https?://((?!(www|area51|gaming)).*\\.)?stackexchange.com.*"
+- regexps:
+  - "^https?://((?!(academia|dba|electronics|meta|tex)).*\\.)?stackexchange.com.*"
+- domains:
+  - tex.stackexchange.com
+- regexps:
+  - "^https?://((academia|chess|english|meta|movies|salesforce|skeptics|judaism|ux)\\.)?stackexchange\\.com.*"
+- regexps:
+  - "^https?://((android|photo|programmers|wordpress)\\.)?stackexchange\\.com.*"
+- regexps:
+  - "^https?://((photo|security|wordpress)\\.)?stackexchange\\.com.*"
+- regexps:
+  - "^https?://((android|apple|dba|drupal|gis|mathematica|photo|scifi|security|tex|wordpress)\\.)?stackexchange\\.com.*"
+- regexps:
+  - "^https?://((android|apple|dba|gamedev|movies|salesforce|scifi|security|tex|ux|webapps|webmasters)\\.)?stackexchange\\.com.*"
+- domains:
+  - stackoverflow.com
+- domains:
+  - chat.stackoverflow.com
+- domains:
+  - askubuntu.com
+- domains:
+  - dba.stackexchange.com
+- urlPrefixes:
+  - https://stackoverflow.com/documentation
+- domains:
+  - electronics.stackexchange.com
+- domains:
+  - english.stackexchange.com
+- domains:
+  - es.stackoverflow.com
+- domains:
+  - es.meta.stackoverflow.com
+- domains:
+  - graphicdesign.stackexchange.com
+- domains:
+  - ja.stackoverflow.com
+- domains:
+  - ja.meta.stackoverflow.com
+- domains:
+  - mathoverflow.net
+- domains:
+  - meta.stackoverflow.com
+- urlPrefixes:
+  - https://meta.stackexchange.com
+- domains:
+  - photo.stackexchange.com
+- domains:
+  - portuguese.meta.stackexchange.com
+  - portuguese.stackexchange.com
+- domains:
+  - pt.stackoverflow.com
+- domains:
+  - pt.meta.stackoverflow.com
+- domains:
+  - rpg.stackexchange.com
+- domains:
+  - ru.stackoverflow.com
+- domains:
+  - ru.meta.stackoverflow.com
+- domains:
+  - salesforce.stackexchange.com
+- domains:
+  - serverfault.com
+- domains:
+  - skeptics.stackexchange.com
+- domains:
+  - softwareengineering.stackexchange.com
+- domains:
+  - stackapps.com
+- regexps:
+  - "^https?://stackexchange\\.com.*"
+- domains:
+  - superuser.com
+- domains:
+  - meta.superuser.com
+- domains:
+  - travel.stackexchange.com
+- domains:
+  - wordpress.stackexchange.com
+- domains:
+  - data.stackexchange.com
+url: http://userstyles.org/styles/35345
+updateUrl: https://userstyles.org/styles/chrome/35345.json
+md5Url: https://update.userstyles.org/35345.md5
+originalMd5: 23bad4518180ae077dbaf36460fc8e19
+name: Stackoverflow Dark
+enabled: true
+id: 18
+updateDate: 1585605084504
+originalName: Stackoverflow Dark
+originalDigest: 8b700c836998093ce4c072a4c18fca23df709171
+_id: 3013dca5-994e-41c5-bd80-664567cd46be
+_rev: 1585605084504

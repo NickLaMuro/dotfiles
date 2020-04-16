@@ -1,0 +1,212 @@
+/**** Old calendar Styles ****
+
+body {
+  background: #333;
+  color: #eee;
+}
+
+a:link, a:visited, a:hover,
+.lk, a.lk, .lk-button,
+.lk-online, a.lk-online { color: #59bdd6; }
+
+#calcontent { background: #222; }
+
+.cal-dialog-bg { background: #000; opacity: 0.7 !important }
+.cal-dialog, .cal-dialog-title, .cal-dialog-content,
+.cal-dialog-buttons { background: #444; color: #ddd; }
+.cal-dialog         { border: 1px solid #666; }
+
+.cal-dialog-buttons button       { border: none; background: #666; color: #ddd; border-radius: 3px }
+.cal-dialog-buttons button:hover { background: #555; }
+
+
+/**** GOOGLE APPS NAV ****/
+/*
+.gb_ka, .gb_ye, .gb_Ee, .gb_Ie, .gb_Pe, .gb_Se, .gb_Ve { background: #333; }
+.gb_ga, .gb_ja { background: #444; }
+.gb_Z:hover .gb_4 { background: #666; }
+
+
+#gb#gb a.gb_O, .gb_ga, .gb_ja { color: #ddd; }
+#gb a.gb_ka, #gb a.gb_ka:visited, #gb a.gb_ka:active, #gb a.gb_la, #gb a.gb_la:visited { color: #999; }
+
+.gb_Z:hover:not(.gb_0) a { border: 1px solid #666; }
+.gb_jb { border-bottom-color: #444; }
+.gb_la { border-bottom: 1px solid #888; }
+
+
+/**** NAV/SEARCH BAR ****/
+/*
+#vr-nav, #mainnav, .gb_Me, .gb_we, .gb_Ce, .gb_We, #onegoogbar > #gb > div { background: #333; }
+.gssb_e, .gssb_m { background: #444; }  /* search results */
+/*
+.gbqfqw { background: #444; border-color: #666; }
+.goog-imageless-button, .navbuttonouter { background: #666; }
+.goog-imageless-button:hover, .navbuttonouter:hover { background: #888; }
+.trans-strip { background: none; }
+
+.gbqfif, .gssb_m { color: #eee; }
+.date-top { color: #ddd; }
+.asor_x { color: #ccc; }
+.goog-imageless-button  { color: #aaa; }
+.goog-imageless-button-checked  { color: #ddd; z-index: 70; }
+
+#vr-nav { border-bottom: 1px solid #111; }
+.gssb_e { border: 1px solid #666}
+
+/* .goog-imageless-button-checked  { border-right: 2px solid #ccc; }
+.goog-imageless-button-hover  { border-right: 1px solid #ccc; } */
+
+
+/**** Mini Cal ****/
+/*
+.dpdiv, .dpi-popup, .dp-weekday, .dp-weekend, .dp-weekendh { background: #222; }
+.monthtableHeader:hover, .dp-weekend-selected, .dp-weekday-selected { background: #444; }
+
+.dp-today-selected { border-color: #888; }
+
+#dp_0_cur.dp-sb-cur, .dp-cell { color: #eee; }
+.dp-offmonth, .dp-offmonth-selected { color: #888;}
+
+
+/**** Side Calendar Menus ****/
+/*
+.chromeColor, .calHeader, .calList { background: #222; }
+#searchAddCal, #searchAddCalBox, .calHeader:hover, .calListLabelOuter-hvr { background: #444; }
+
+
+#searchAddCal { border: 1px solid #888; }
+#searchAddCalBox, .calListRow { border-bottom: 1px solid #222; }
+.clstMenu   { -webkit-filter: invert(); border: 1px solid #666; }
+
+.calListLabel, .calListLabel-sel, .calHeader { color: #ddd; }
+.calListLabelOuter-hvr .calListLabel-sel { color: #eee !important;}
+
+.calListImg-hvr, .calListImg-sel { -webkit-filter: invert(); box-shadow: none; }
+
+
+
+/**** Actual Calendar ****/
+
+/**** WEEK ****/
+/*
+#gridcontainer, .wk-weektop, .wk-dummyth { background: #222; }
+.wk-allday, .tg-timedevents, .tg-times-pri, .tg-times-sec { background: #444; }
+.wk-allday .st-bg-today, .wk-full-mode .wk-today, .tg-today    						 { background: #555; }
+
+.wk-dayname, .tg-times-pri, .tg-times-sec { color: #ddd; }
+.wk-today   { color: #e8e8e8; }
+.wk-tzlabel { color: #aaa; }
+
+.wk-dayname { border-top: 1px #222 solid; }
+.tg-col    { border-left: 1px solid #666; }
+.tg-dualmarker, .tg-dualmarker60 { border-top: 1px solid #666; border-bottom: 1px dotted #666; }
+.tg-time-pri, .tg-time-sec, .tg-timedevents, .wk-border { border-bottom: 1px solid #666; }
+.st-bg-all { border: 1px solid #888 }
+.wk-allday .st-bg-next, .wk-allday .st-bg-today, .wk-allday .st-bg-td-first, .wk-allday .st-bg-td-last,
+.st-bg, .wk-full-mode .wk-today, .wk-full-mode .wk-tomorrow { border-left: 1px solid #888; }
+.wk-full-mode .wk-today { border-top: 1px solid #888; }
+.wk-allday .st-bg-lc { border-right: 1px solid #888; }
+.tg-times-pri, .tg-times-sec { border-left: 1px solid #666; }
+.tg-col-today { border-left: 1px solid #888; }
+.wk-border-right .tg-timedevents { border-right: 1px solid #666; }
+
+::-webkit-scrollbar-thumb { background-color: rgba(255,255,255,.2) }
+
+
+/**** MONTH VIEW ****/
+/*
+.mv-container, .mv-daynames-table { background: #222; }
+.mv-event-container, .st-dtitle, .st-dtitle-nonmonth { background: #444; }
+
+.st-dtitle 					{ color: #eee; 	  }
+.mv-daynames-table  { color: #ccc; 	  }
+.st-dtitle-nonmonth { color: #888; 	  }
+.st-more            { color: #59bdd6; }
+
+.mv-event-container { border-top:  1px solid #666; border-right: 1px solid #666; border-bottom: 1px solid #666; }
+.st-dtitle 					{ border-top:  1px solid #666; border-left:  1px solid #666; }
+.st-dtitle-fr       { border-top:  none; }
+.st-bg              { border-left: 1px solid #666; }
+
+
+/**** LIST VIEW ****/
+/*
+.listv, .lv-row, .lv-alt { background: #222; }
+.lv-today .lv-datecell, .lv-hl-row .lv-datecell { background: #444; } 
+
+.lv-event-time, .lv-location { color: #ddd; }
+.lv-datelink { color: #59bdd6; }
+
+.lv-datecell { border-bottom: 1px solid #666; }
+.lv-today .lv-datecell, .lv-hl-row .lv-datecell { border-color: #666; }
+.lv-lastevent .lv-eventcell { border-bottom: 1px solid #666; }
+
+#lv_listview .cic { -webkit-filter: invert(80%); }
+
+.jfk-button-standard { background: #666; color: #ddd; }
+.jfk-button-standard.jfk-button-hover { background: #777; color: #ddd; }
+
+
+/**** EVENT PAGE ****/
+/*
+.ep-dp, .ep-ts .ui-dtsr-selected { background: #222; }
+.ep-ts .ui-dtsr-unselected  		 { background: #333; }
+.ui-sch-hover                    { background: #444; }
+.ep-rc-div                       { background: #555; }
+.ep-rc-notesinput                { background: #333; }
+
+.ep-title .textinput,
+.ep-dp .textinput,
+.ep-drs .text,
+.tpp-title .textinput,
+.tpp-dp .textinput,
+.tpp .drs .text,
+.fatc-w .textinput,
+.ep-gs-ta-cont .textinput {
+  background: #333;
+  color: #ddd;
+  border: 1px solid #666;
+}
+
+.ep-gl-head, .ep-gl-errs             { color: #aaa; }
+.ep-dp, .ep-ts .ui-dtsr-selected     { color: #ddd; }
+.ep-gc-plain .ep-gc-chip-text        { color: #eee; }
+.ep-dp-dt-th                         { color: #eee; }
+.ep .ep-rc-font label, .ep-go-label  { color: #eee !important; }
+.ep-rc-notesinput                    { color: #fff; }
+
+.ep-ts, .ep-ea, .ep-rc-div { border-bottom: 1px solid #666; }
+.ep-ts .ui-dtsr-selected, .ep-ts .ui-dtsr-unselected { border: 1px solid #666; }
+.ep-ts .ui-dtsr-selected { border-bottom-color: #222; }
+.ep-rc-notesinput        { border-color: #666; }
+
+
+.ep-gc-oa-disabled-required-attendance-icon { -webkit-filter: invert(87%); }
+.ep-gc-response-yes, .ep-gc-response-no 		{ -webkit-filter: invert() }
+
+
+/**** EVENT POPUP ****/
+/*
+.bubble   { background: #333; border-color: #666; }
+.prong-dk { border-color: #666 transparent; } 
+.prong-lt { border-color: #333 transparent; } 
+
+
+/**** "Goog Menu" ****/
+/*
+.goog-menu { background: #444; }
+.goog-menuitem-hover, .goog-menuitem-highlight { background: #666; border-color: #666; }
+.goog-menu, .goog-menuitem, .goog-tristatemenuitem, .goog-filterobsmenuitem,
+.goog-menuitem-highlight .goog-menuitem-content { color: #ddd; }
+
+
+
+/**** GOOGLE APPS (RedHat) CUSTOMIZATIONS ****/
+/*
+img[src="https://www.google.com/a/cpanel/redhat.com/images/logo.gif?service=google_default"] { 
+  /* src: none !important; */
+/*
+  display: none;
+}
+*/

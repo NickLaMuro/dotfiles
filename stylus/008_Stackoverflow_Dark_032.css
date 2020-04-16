@@ -1,0 +1,6 @@
+/* meta.ru.stackoverflow.com (Russian) */
+  .-logo .-img:not(._glyph) {
+    background-image: url(https://StylishThemes.github.io/StackOverflow-Dark/images/ru-meta-stackoverflow-logo.svg) !important;
+    background-size: contain !important;
+    height: 60px !important;
+  }

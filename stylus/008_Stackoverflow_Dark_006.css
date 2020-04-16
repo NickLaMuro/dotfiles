@@ -1,0 +1,15 @@
+/* target sites needing menu adjustments */
+  .nav.mainnavs li, .nav.askquestion li {
+    background-color: transparent !important;
+  }
+  .nav.mainnavs, .footerwrap {
+    background-image: none !important;
+  }
+  .nav.mainnavs li {
+    margin: 0 6px !important;
+  }
+  .nav.mainnavs li a, .nav.askquestion li a {
+    padding: 6px !important;
+    margin: 2px !important;
+    border-radius: 3px !important;
+  }

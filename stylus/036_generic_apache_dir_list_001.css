@@ -1,0 +1,13 @@
+html {
+  color:            #ddd;
+  background-color: #222;
+}
+
+a, a:visited {
+  color: #66f;
+}
+
+hr {
+  border-color: #333;
+  border-style: solid;
+}

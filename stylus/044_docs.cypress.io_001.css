@@ -1,0 +1,186 @@
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-header-background: #17202c;
+    --color-background: #234;
+    --color-background-table-odd: #1a2a3a;
+    --color-background-blockquote: #222;
+    --color-background-blockquote-code: #111;
+    --color-background-note: #123;
+    --color-background-success: #143;
+    --color-background-warning: #541;
+    --color-background-danger:  #511;
+    --color-background-code: #123;
+    --color-background-shell: #101113;
+    --color-border: #678;
+    --color-text-default:      #ddd;
+    --color-text-dim:          #bbb;
+    --color-text-header:       #eee;
+    --color-text-header-hover: #fff;
+    --color-text-dark:         #444;
+    --color-text-link:         #29d;
+  }
+
+  body, html {
+    background-color: var(--color-background);
+  }
+
+  code {
+    border-color:     var(--color-background-code);
+    background-color: var(--color-background-code);
+  }
+
+  .article-content a,
+  .toc-top .article-content a {
+    /*link */
+    color: var(--color-text-link);
+  }
+
+  #content-wrap,
+  #content,
+  #sidebar {
+    color: var(--color-text-default);
+    background-color: var(--color-background);
+  }
+
+  .article-header{
+    border-bottom-color: var(--color-border);
+  }
+
+  .article-title,
+  .article-content h1,
+  .toc-top .article-content h1,
+  .article-content h2,
+  .toc-top .article-content h2,
+  .article-content h3,
+  .toc-top .article-content h3 {
+    color: var(--color-text-header);
+    border-bottom-color: var(--color-border);
+  }
+
+  .toc {
+    border-left-color: var(--color-border);
+  }
+
+  .toc-link {
+    color: var(--color-text-dim)
+  }
+
+  .active > .toc-link {
+    color: var(--color-text-header)
+  }
+
+  .article-content blockquote,
+  .toc-top .article-content blockquote {
+    background-color: var(--color-background-blockquote);
+    border-left-color: var(--color-border);
+  }
+
+  .article-content blockquote code,
+  .toc-top .article-content blockquote code {
+    border-color:     var(--color-background-blockquote-code);
+    background-color: var(--color-background-blockquote-code);
+  }
+
+  .article-content ol,
+  .toc-top .article-content ol {
+    color: var(--color-text-default);
+  }
+
+  .article-content .note code,
+  .toc-top .article-content .note code {
+    color: var(--color-text-dark);
+  }
+
+  .article-content .note.info,
+  .toc-top .article-content .note.info {
+    color: var(--color-text-dim);
+    background-color: var(--color-background-note);
+  }
+
+  .article-content .note.success,
+  .toc-top .article-content .note.success {
+    background-color: var(--color-background-success);
+  }
+
+  .article-content .note.warning,
+  .toc-top .article-content .note.warning {
+    background-color: var(--color-background-warning);
+  }
+
+  .article-content .note.danger,
+  .toc-top .article-content .note.danger {
+    background-color: var(--color-background-danger);
+  }
+
+  .article-content .note ul > li,
+  .toc-top .article-content .note ul > lic {
+    color: var(--color-text-dim);
+  }
+
+  .article-content p,
+  .toc-top .article-content p {
+    color: var(--color-text-default);
+  }
+
+  .article pre.language-text,
+  .faq pre.language-text,
+  .article pre code.language-text,
+  .article pre.language-text code,
+  .faq pre code.language-text,
+  .faq pre.language-text code {
+    color: var(--color-text-default);
+    background-color: var(--color-background-shell);
+  }
+
+  .article-footer {
+    border-top-color: var(--color-border);
+  }
+
+  a.article-edit-link {
+    color: var(--color-text-dim);
+  }
+
+  .article-content table,
+  .toc-top .article-content table {
+    border-color: var(--color-border);
+  }
+
+  .article-content table th,
+  .toc-top .article-content table th {
+    border-bottom-color: var(--color-border);
+  }
+
+  .article-content table tr:nth-child(2n),
+  .toc-top .article-content table tr:nth-child(2n) {
+    background-color: var(--color-background-table-odd);
+  }
+
+  #sidebar {
+    border-right-color: var(--color-border);
+  }
+
+  .sidebar-title {
+    color: var(--color-text-default)
+  }
+
+  .sidebar-title:hover {
+    color: var(--color-text-header-hover)
+  }
+
+  .sidebar-title a.sidebar-link {
+    color: var(--color-text-default)
+  }
+
+  .toggle-sidebar-btns a,
+  .toggle-sidebar-btns span {
+    color: var(--color-text-dim)
+  }
+
+  ul.plugins-list li {
+    border-color: var(--color-border);
+  }
+
+  ul.plugins-list .keyword{
+    color: var(--color-text-dim)
+  }
+}

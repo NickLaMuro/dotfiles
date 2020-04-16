@@ -1,0 +1,107 @@
+:root {
+  --pg-light-gray:  #e7eae8; /* Extremely light gray, used for alternating color boxes such as on mailinglists.html */
+  --pg-medium-gray: #d7dad8; /* Medium gray, used in Dropotron */
+  --pg-dark-gray:   #666;    /* Dark gray, official PostgreSQL gray color and equivalent to RGB(102,102,102) */
+  --pg-terminal:    #222;    /* pre bg color */
+  --pg-term-light:  #f8f9fa;  /* pre text color */
+  --pg-gray-blue:   #688297; /* Grayish blue, used in Dropotron */
+  --pg-light-blue:  #55b1fc; /* Light blue */
+  --pg-medium-blue: #32668f; /* Medium blue, official PostgreSQL blue color */
+  --pg-dark-blue:   #264d6d; /* Dark blue */
+  --light:          #f8f9fa;
+  --dark:           #343a40;
+}
+
+body {
+  background-color: var(--dark);
+  color:            var(--light);
+}
+
+a, .news a {
+  color: var(--pg-light-blue);
+}
+
+b, strong, th {
+  color: var(--light) !important;
+}
+
+/* headers */
+
+#pgContentWrap a:not([href]):not([tabindex]), #docContent a:not([href]):not([tabindex]) {
+  color: var(--pg-light-blue) !important;
+}
+
+/* navbar fix */
+.bg-light {
+  background-color: var(--dark) !important;
+}
+
+/* tooltips */
+
+#docContent blockquote.TIP, #docContent .tip {
+  background-color: #073e00;
+}
+
+#docContent table.CAUTION td, #docContent table.CAUTION th {
+  background-color: #6b5100;
+}
+
+
+
+/* search */
+
+.form-control, .form-control:focus {
+  background-color: var(--pg-dark-blue);
+  border-color:     var(--dark);
+  color:            var(--light);
+}
+
+.form-control::placeholder, .form-control::placeholder {
+  color:            var(--pg-medium-gray);
+}
+
+button.btn.btn-default {
+  background-color: var(--pg-dark-blue);
+  border-color:     var(--dark);
+  color:            var(--light);
+}
+
+
+/* links */
+
+#pgContentWrap a, #docContent a {
+  color: var(--orange);
+}
+
+/* block quotes */
+
+#docContent blockquote.NOTE, #docContent .note {
+  
+  background-color: var(--pg-dark-blue);
+  color: var(--light);
+}
+
+pre, code, #docContent kbd, #docContent tt.LITERAL, #docContent tt.REPLACEABLE {
+  background-color: var(--pg-terminal) !important;
+  color: var(--pg-term-light) !important;
+}
+
+
+/* tables */
+
+#docContent table.table, #docContent table.informaltable, #docContent table.CALSTABLE {
+  border-color: var(--gray);
+  background-color: var(--dark);
+}
+
+#docContent table.table th, #docContent table.informaltable th, #docContent table.CALSTABLE th {
+  background-color: var(--dark);
+}
+
+#docContent table.table td, #docContent table.informaltable td, #docContent table.CALSTABLE td {
+  background-color: var(--dark);
+}
+
+#docContent .table .title > strong, #docContent .TABLE, #docContent .TABLE b {
+  color: var(--pg-light-blue) !important;
+}

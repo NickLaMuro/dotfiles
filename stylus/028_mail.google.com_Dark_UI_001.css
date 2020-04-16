@@ -1,0 +1,80 @@
+/* Loading... */
+#loading                     { background-color: #333; }  /* loading bg       */
+#nlpt                        { background-color: #666; }  /* loading bar      */
+.msg                         { color: #ddd; }             /* loading msg      */
+.msgb                        { color: #888; }             /* simple mode msg  */
+.submit_as_link              { color: #0bf; }             /* simple mode link */
+
+/* Profile Button */
+
+/* NOW NOT PROFILE... FUCKING GOOGLE... */
+/*.gb_Ra                       { background-color: #333; }  /* Button background */
+/*.gb_Ra                       { border: 1px solid #666; }  /* Button border     */
+/*.gb_Ra:hover                 { background-color: #555; }  /* Button background */
+
+/* Search Bar */
+
+.gb_Qe.gb_8e .gb_9e          { color: #0f0; }                          /* Search bar text color */
+.gb_Qe.gb_8e                 { background: rgba(255,255,255,0.16); }   /* Search bar background */
+.gb_Zb .gb_ne.gb_oe,
+.gb_Zb .gb_ne.gb_rc.gb_oe,
+.gb_ne.gb_rc.gb_oe           { background: rgba(255,255,255,0.16); }   /* Search bar background */
+.gb_Zb .gb_ne.gb_oe,
+.gb_Zb .gb_ne.gb_rc.gb_oe,
+.gb_ne.gb_oe .gb_Ie.gb_rc,
+.gb_ne.gb_oe .gb_Ie          { color: #ddd; }   /* Search bar text    (hover) */
+.gb_ne.gb_oe button svg      { color: #fff; }   /* Search bar buttons (hover) */
+
+/* Compose Button */
+
+.z0>.L3                      { background-color: #333; color: #ddd; }
+.z0>.L3:hover, .z0>.L3:focus { background-color: #444; }
+
+/* View Mail */
+
+.hx .gD      { color: #bbb; }                  /* To: Label (name)    */
+.ac2, .go    { color: #aaa; }                  /* From: / To: (email) */
+.g6          { color: #888; }                  /* Msg Body Summary    */
+.iv .g3      { color: #bbb; }                  /* Sent at             */
+.ha>.hP      { color: #ccc; }                  /* Email Title         */
+.hx          { color: #bbb; }                  /* Email text color    */
+.im          { color: #888; }                  /* Email inline quote  */
+.iY, .iY .Bu { background-color: #222; }       /* Mail Background     */
+/*.ajn         { -webkit-filter: invert(80%); }  /* User Picture icons  */
+
+img[src="//ssl.gstatic.com/ui/v1/icons/mail/profile_mask_2x.png"] {
+  -webkit-filter: invert(80%);
+}
+ 
+.ade         { -webkit-filter: invert(100%); }   /* Main Action Buttons */
+.bi4>.T-KT   { -webkit-filter: invert(100%); }   /* Unstared Button     */
+.hx .gH.bAm  { -webkit-filter: invert(100%); }   /* Upper Reply Button  */
+
+
+/* Bottom Reply/Forward Buttons */
+
+.dF .dG, .wR, .Ar  { background-color: #222; }
+.amn > .ams        { color:            #bbb; }
+.ams.bkH::before   { filter: invert(100%); }     /* Reply     */
+.ams.bkI::before   { filter: invert(100%); }     /* Reply All */
+.ams.bkG::before   { filter: invert(100%); }     /* Forward   */
+.amn > .ams        { box-shadow: inset 0 0 0 1px #888; }
+
+
+/* Search Filter Menu */
+.nr                                     { color: #ddd; }            /* Filter Fields */
+.boo > .ZG                              { color: #ccc; }
+.boo .aQl > .J-JN-M-I-Jm,
+.boo .aaa > .J-JN-M-I-Jm,
+.boo .ZE > .J-JN-M-I-Jm                 { color: #ccc; }
+.bs0 > .acM                             { color: #fff; }
+.bs1 + .bs3, .btj + .aD                 { color: #ccc; }            /* Has Attachment */
+.J-N                                    { color: #ccc; }            /* Greater/Less than menu */
+.J-N-JT .J-N-Jz, .J-N-JW .J-N-Jz        { color: #eee; }            /* Greater/Less than menu */
+.J-M                                    { background-color: #444; } /* Greater/Less than menu */
+.J-N-JT, .J-N-JW                        { background-color: #08f; }
+.ZF-z6, .ZF-zT, .ZF-Av .lJ, .ZF-Av .lN  { background-color: #333; }
+.bs1 + .bs3::before, .btj + .aD::before { filter: invert(100%); }     /* Checkbox */
+.T-axO .J-JN-M-I-JG                     { filter: invert(100%); }     /* Dropdown arrow */
+
+.boo .T-axO.aQl, .boo .T-axO.aaa        { box-shadow: inset 0 -1px 0 0 #4285f4 } /* underline for drop downs */

@@ -1,0 +1,86 @@
+/* login screen StackExchange logo replacement */
+  .login-page .se-logo {
+    -moz-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+    background: url(https://StylishThemes.github.io/StackOverflow-Dark/images/stackexchange-logo.svg) no-repeat !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    width: 200px !important; /* Width of new image */
+    height: 48px !important; /* Height of new image */
+    padding-left: 200px !important; /* Equal to width of new image */
+  }
+  /* login button (input type=button")*/
+  .login-page input.fr {
+    background-color: #4183C4 !important;
+  }
+  /* remove content border */
+  #content {
+    border: 0 !important;
+  }
+  #sidebar #newsletter-ad, #sidebar .ad-container, #sidebar .everyonelovesstackoverflow {
+    border-width: 2px !important;
+  }
+  /* start blog.stackexchange.com */
+  .cse .gsc-control-cse, .gsc-control-cse, div.pagination {
+    background-color: #181818 !important;
+  }
+  .sidebar p {
+    color: #ddd !important;
+  }
+  .job {
+    color: #888 !important;
+  }
+  .gsc-control-wrapper-cse {
+    padding-top: 10px !important;
+  }
+  /* hide google custom search placeholder */
+  .gsc-input input:not(.gse-input-focus) {
+    background-image: none !important;
+  }
+  .podcast-container {
+    -webkit-filter: invert(100%) !important;
+    filter: invert(100%) !important;
+  }
+  .filters-sidebar .filters ul li.current,
+  .filters-sidebar .filters ul li.current .filter-unread-count {
+    background: #182030 !important;
+  }
+  /* end blog.stackexchange.com */
+  /* chat.stackexchange.com */
+  .event-banner {
+    background-color: #222 !important;
+    border-color: #555 !important;
+  }
+  /* end chat.stackexchange.com */
+  /* http://stackexchange.com/newsletters/newsletter (see #36) */
+  .promotion-banner-container, .promotion-banner {
+    background: #222 !important;
+  }
+  table[style*="background-color"], table[style*="background-image"] {
+    background: transparent !important;
+    border: none !important;
+  }
+  table h2[style*="color: "][style*="!important"],
+  table a[style*="color: #000!important"]:not([href*="questions/tagged"]) {
+    /* can't use color here because they added an inline !important */
+    filter: invert(100%);
+  }
+  table tr, table td, table td p {
+    background: transparent !important;
+    color: #ddd !important;
+  }
+  table td a[href*="questions/tagged"] {
+    background: #222 !important;
+    color: #ddd !important;
+    border: none !important;
+    text-decoration: none !important;
+  }
+  table td hr {
+    border-style: solid !important;
+  }
+  footer .iconLogoSE path:first-child {
+    fill: #ededed !important;
+  }
+  div[class^="gv-"], table.gv-stats tr, table.gv-stats td {
+    color: initial !important;
+  }

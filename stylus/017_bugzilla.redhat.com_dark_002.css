@@ -1,0 +1,2 @@
+html, body      { color: var(--body-fg) }
+html, body, pre { background-color: var(--body-bg) }

@@ -1,0 +1,17 @@
+---
+enabled: true
+updateUrl: 
+md5Url: 
+url: 
+originalMd5: 
+installDate: 1579127294301
+name: gitter.im Dark Additions
+sections:
+- urls:
+  - http://localhost:5000/not-real-group/community
+  domains:
+  - gitter.im
+updateDate: 1582752365612
+id: 52
+_id: ca07cdf5-b9b3-4e94-9d59-42aa2e21adfc
+_rev: 1583342080472

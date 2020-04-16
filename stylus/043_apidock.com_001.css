@@ -1,0 +1,90 @@
+#body2, #content-wrapper, #content {
+  color: #ddd;
+  background: #333 !important;
+}
+
+#content h3, h4 {
+  color: #eee;
+}
+
+#content a {
+  color: #66f;
+}
+
+#flowdock-tab {
+  display: none;
+}
+
+.deprecated a {
+  color: #aaa !important;
+}
+
+pre {
+  background-color: #222;
+  border: 1px solid #555;
+  color: #ccc;
+}
+
+
+pre .attribute                                     { color: #7587a6;          }
+pre .constant, #content pre .constant a            { color: #9b859d;          }
+pre .comment,  #content pre .comment a             { color: #5e5960;          }
+pre .ident,    #content pre .ident a               { color: #dddddd;          }
+pre .keyword                                       { color: #cda869;          }
+pre .method                                        { color: #9b703f;          }
+pre .number                                        { color: #cf6a4c;          }
+pre .punct                                         { color: #dddddd;          }
+pre .string                                        { background-color: inherit; }
+pre .string                                        { color: #8f9d6a;          }
+pre .symbol                                        { color: #cf6a4c;          }
+
+
+.CodeRay .class               { color: #9b859d;          }
+.CodeRay .constant            { color: #9b859d;          }
+.CodeRay .comment             { color: #5e5960;          }
+.CodeRay .char                { color: #8f9d6a;          }
+.CodeRay .string              { background-color: inherit; }
+.CodeRay .string .delimiter   { color: #8f9d6a;          }
+.CodeRay .string .content     { color: #8f9d6a;          }
+.CodeRay .string .char        { color: #cccccc;          }
+.CodeRay .string .inline      { color: #daefa3;          }
+.CodeRay .inline-delimiter    { color: #daefa3;          }
+.CodeRay .key                 { color: #8f9d6a;          }
+.CodeRay .key .delimiter      { color: #8f9d6a;          }
+.CodeRay .key .content        { color: #8f9d6a;          }
+.CodeRay .keyword             { color: #cda869;          }
+.CodeRay .function            { color: #9b703f;          }
+.CodeRay .integer             { color: #cf6a4c;          }
+.CodeRay .hex                 { color: #cf6a4c;          }
+.CodeRay .symbol              { color: #cf6a4c;          }
+.CodeRay .key                 { color: #cf6a4c;          }
+.CodeRay .predefined-constant { color: #7587a6;          }
+.CodeRay .instance-variable   { color: #7587a6;          }
+.CodeRay .global-variable     { color: #f9ee98;          }
+
+
+
+.CodeRay .preprocessor        { color: #afc3db;          }
+.CodeRay .include             { color: #8f9d6a;          }
+.CodeRay .directive           { color: #f9ee98;          }
+
+
+/* Diff code */
+
+.language-diff .CodeRay .line.comment:nth-child(1)      { color: #cda869;          }
+.language-diff .CodeRay .line.comment:nth-child(2)      { color: #9b703f;          }
+.language-diff .CodeRay .line.head                      { color: #cda869;          }
+.language-diff .CodeRay .line.head                      { background-color: inherit; }
+.language-diff .CodeRay .line.head .head                { color: #cda869;          }
+.language-diff .CodeRay .line.head .head                { background-color: inherit; }
+.language-diff .CodeRay .line.head .filename            { color: #cda869;          }
+.language-diff .CodeRay .line.insert                    { color: #00cc00;          }
+.language-diff .CodeRay .line.insert .string            { color: #00cc00;          }
+.language-diff .CodeRay .line.insert .string .delimiter { color: #00cc00;          }
+.language-diff .CodeRay .line.insert .string .content   { color: #00cc00;          }
+.language-diff .CodeRay .change                         { color: #00c5c7;          }
+.language-diff .CodeRay .change                         { background-color: inherit; }
+.language-diff .CodeRay .string                         { color: #cccccc;          }
+.language-diff .CodeRay .string .delimiter              { color: #cccccc;          }
+.language-diff .CodeRay .string .content                { color: #cccccc;          }
+.language-diff .CodeRay .key                            { color: #cccccc;          }

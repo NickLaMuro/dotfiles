@@ -1,0 +1,15 @@
+---
+enabled: true
+updateUrl: 
+md5Url: 
+url: 
+originalMd5: 
+installDate: 1584049892772
+name: lwn.net
+sections:
+- domains:
+  - lwn.net
+updateDate: 1584050436518
+_id: 5bfbe244-9e41-48d1-8dda-b9b73c2211d6
+_rev: 1584050436518
+id: 62

@@ -1,0 +1,6 @@
+/* pt.stackoverflow.com (Portuguese) */
+  .-logo .-img:not(._glyph) {
+    background-image: url(https://StylishThemes.github.io/StackOverflow-Dark/images/pt-stackoverflow-logo.svg) !important;
+    background-size: cover !important;
+    height: 60px !important;
+  }

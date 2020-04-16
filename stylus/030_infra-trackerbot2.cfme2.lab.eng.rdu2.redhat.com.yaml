@@ -1,0 +1,15 @@
+---
+enabled: true
+updateUrl: 
+md5Url: 
+url: 
+originalMd5: 
+installDate: 1557856724076
+name: infra-trackerbot2.cfme2.lab.eng.rdu2.redhat.com
+sections:
+- domains:
+  - infra-trackerbot2.cfme2.lab.eng.rdu2.redhat.com
+updateDate: 1557858158594
+id: 48
+_id: c9582aea-3d5c-4b60-b093-449e8bf2027c
+_rev: 1583342080472

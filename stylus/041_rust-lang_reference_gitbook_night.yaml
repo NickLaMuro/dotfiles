@@ -1,0 +1,18 @@
+---
+enabled: true
+updateUrl: https://userstyles.org/styles/chrome/136850.json
+md5Url: https://update.userstyles.org/136850.md5
+url: http://userstyles.org/styles/136850
+originalMd5: 199a7e153c774663a7d59d33320c2697
+installDate: 1583938758648
+sections:
+- urls: []
+  urlPrefixes: []
+  domains: []
+  regexps:
+  - https://doc.rust-lang.org/reference.*
+name: rust-lang reference (gitbook night)
+originalDigest: 534356c7c9ac3053d480a9d823cfbf1f613b96b2
+_id: 4ec36c50-194e-40d7-a178-157a82f90083
+_rev: 1583938758649
+id: 61

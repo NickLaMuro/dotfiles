@@ -1,0 +1,5 @@
+#hlogo a {
+    height: 60px !important;
+    background-size: contain !important;
+    background-image: url(https://StylishThemes.github.io/StackOverflow-Dark/images/meta-superuser-logo.svg) !important;
+  }

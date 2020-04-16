@@ -1,0 +1,5 @@
+/* target sites that need an inverted header */
+  #header, #header > * {
+    -webkit-filter: invert(100%) !important;
+    filter: invert(100%) !important;
+  }

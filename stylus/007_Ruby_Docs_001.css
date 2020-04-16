@@ -1,0 +1,107 @@
+body {
+  background: #444;
+  color: #ddd;
+}
+
+a, a:visited, a:link {
+  color: #eee !important;
+}
+h2 a, h2 a:visited, h2 a:link {
+  color: #eee !important;
+}
+  
+
+h1, h2, h3, h4, h5, h6 {
+  color: #bbb;
+}
+
+h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
+  float: right;
+}
+
+pre { 
+  background: #222;
+  color: #5eff1f;
+}
+
+ul.link-list .type {
+  background: #b11;
+}
+
+/*
+::-webkit-scrollbar-thumb {
+  background: #666;
+}
+
+::-webkit-scrollbar-track {
+  background: #222;
+}
+*/
+
+#description,
+#documentation .method-heading {
+  color: #aaa;
+}
+
+#description dl,
+#documentation dl {
+  border: 1px solid #777;
+}
+
+#description dt,
+#documentation dt {
+  background: #666;
+}
+
+#documentation .method-detail:hover {
+  background: #555;
+  color: #ddd;
+}
+
+
+#metadata .section {
+  background-color: #333;
+  border: 1px solid #666;
+}
+
+#metadata h3.section-header,
+#documentation h3.section-header {
+  background: #555;
+}
+
+#metadata h3.section-header {
+  color: #48a9ca;
+}
+
+#documentation h3.section-header {
+  color: #ddd;
+  border: 1px solid #777;
+}
+
+#documentation .associated h3.section-header {
+  background: #606148 !important
+}
+
+#metadata h3.section-header a,
+#metadata h3.section-header a:visited,
+#metadata h3.section-header a:link {
+  border-bottom: none;
+}
+
+#project-metadata .section {
+  border: 1px solid #666;
+}
+
+#metadata h3.section-header,
+#project-metadata h3.section-header {
+  border-bottom: 1px solid #666;
+}
+
+.info          { background: #58694f }
+.associated    { background: #757557 !important }
+.file h2       { background-color: #555; color: #bbb; border: 1px solid #777; }
+
+#documentation .method-heading {
+  background: url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAAAlwSFlzAAALEwAACxMBAJqcGAAABCRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDUuNC4wIj4KICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAgICAgeG1sbnM6dGlmZj0iaHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8iCiAgICAgICAgICAgIHhtbG5zOmV4aWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vZXhpZi8xLjAvIgogICAgICAgICAgICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iCiAgICAgICAgICAgIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyI+CiAgICAgICAgIDx0aWZmOlJlc29sdXRpb25Vbml0PjI8L3RpZmY6UmVzb2x1dGlvblVuaXQ+CiAgICAgICAgIDx0aWZmOkNvbXByZXNzaW9uPjU8L3RpZmY6Q29tcHJlc3Npb24+CiAgICAgICAgIDx0aWZmOlhSZXNvbHV0aW9uPjcyPC90aWZmOlhSZXNvbHV0aW9uPgogICAgICAgICA8dGlmZjpPcmllbnRhdGlvbj4xPC90aWZmOk9yaWVudGF0aW9uPgogICAgICAgICA8dGlmZjpZUmVzb2x1dGlvbj43MjwvdGlmZjpZUmVzb2x1dGlvbj4KICAgICAgICAgPGV4aWY6UGl4ZWxYRGltZW5zaW9uPjE2PC9leGlmOlBpeGVsWERpbWVuc2lvbj4KICAgICAgICAgPGV4aWY6Q29sb3JTcGFjZT4xPC9leGlmOkNvbG9yU3BhY2U+CiAgICAgICAgIDxleGlmOlBpeGVsWURpbWVuc2lvbj4xNjwvZXhpZjpQaXhlbFlEaW1lbnNpb24+CiAgICAgICAgIDxkYzpzdWJqZWN0PgogICAgICAgICAgICA8cmRmOlNlcS8+CiAgICAgICAgIDwvZGM6c3ViamVjdD4KICAgICAgICAgPHhtcDpNb2RpZnlEYXRlPjIwMTc6MDI6MDMgMTY6MDI6OTU8L3htcDpNb2RpZnlEYXRlPgogICAgICAgICA8eG1wOkNyZWF0b3JUb29sPlBpeGVsbWF0b3IgMy41LjE8L3htcDpDcmVhdG9yVG9vbD4KICAgICAgPC9yZGY6RGVzY3JpcHRpb24+CiAgIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+Ck7TT4EAAAItSURBVDgRnVJNaxNhEJ53s5tsWFIrMYEWKX6EbU0a6KHpx6E/ouDBXvwTov4IEcSDB0HUgh8X/4IHW0uK3lIvJqSp1HqQmDZs7O6+++Ezr91QrIXSgXd3Z96Z53lmZgWdYm+r1d2elON8fdEw9m41GpdPST0ZflYu+/E/xrGTmUQiCb6pVrf3pZyAr43oOl3PZqlWrxNwaHNhgTquS/0g4PRo1DC+rTQaV5NaArp7nLDT6cQvK5V4bXZWnRflcvx5ael4Ssw1DKCtVirP00Jk6nNzFEWROl+Xl8nUNPriOOpkUyn6he8wDCmAio+1GnHNY9t+LcAkb1iW/huXbCkhqH14SLe3tpSfPFanp+ka2gpAMmAitNZ23UCLiAbpsTEayefJymTIxLlkGPRpcXGoiL8LiIGV9qFAAuAC5oSeBnrCoKFQIBhCqoFEx/dpY35eXTNrD4Ue3jpaY4vVk0iPEVQGSaAkzTQpj55DtMF+F0Au3jnEuD1eGzfLLfCGdDhZAVR2Il4TZhFJqTA5iReXPmLloESMQZgWtaYG3g877TYF/T6lMCQCEzMnxsAsl49/pERAyTYrJNoc/khPpqaaE6ZZGi8UsFxNzSKE/B+ex4lqaAHA9uD/9P2du63WFY4PAdhhw257tmWNFotFpeSg2yVmZKBdz3PQ1tP7rdadv9n/AeCLR5OTrzCUlZlcThxgLt9R7IThu3vN5s2k8Ezvh7b9/kGptH6m5PMm/QHQFDUfW2JuBAAAAABJRU5ErkJggg==
+) no-repeat left bottom; 
+}

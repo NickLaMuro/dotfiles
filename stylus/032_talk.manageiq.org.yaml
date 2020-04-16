@@ -1,0 +1,15 @@
+---
+enabled: true
+updateUrl: 
+md5Url: 
+url: 
+originalMd5: 
+installDate: 1558110418382
+name: talk.manageiq.org
+sections:
+- domains:
+  - talk.manageiq.org
+updateDate: 1558114651843
+id: 50
+_id: fe8eca09-b45a-4607-9acf-30c495ffb739
+_rev: 1583342080472

@@ -1,0 +1,13 @@
+/* LOCAL EDITS */
+
+/* Removed domains/URL regexps                                                             */
+/*                                                                                         */
+/* - URLs matching the regexp: ^https?://((chat|meta|es|ja|pt|ru)\.)*stackoverflow\.com.*  */
+/*                                                                                         */
+
+/***** User Profile Page *****/
+.profile-avatar { box-shadow: inset 0 10em 0 #222 !important; }
+.bc-black-3     { border-color: #444 !important; }
+.fc-dark        { color: #ddd !important; }
+.bg-black-025   { background-color: #333 !important; }
+.fc-medium      { color: #ddd !important; }

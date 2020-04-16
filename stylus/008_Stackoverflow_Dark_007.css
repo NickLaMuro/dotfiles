@@ -1,0 +1,9 @@
+/* darken everything that uses sprite.svg (vote arrows, feed icons, etc) */
+  .envelope-on, .envelope-off, .vote-up-off, .vote-up-on, .vote-down-off, .vote-down-on, .star-on, .star-off,
+  .comment-up-off, .comment-up-on, .comment-flag, .edited-yes, .feed-icon, .vote-accepted-off, .vote-accepted-on,
+  .vote-accepted-bounty, .badge-earned-check, .delete-tag, .expander-arrow-hide, .expander-arrow-show,
+  .expander-arrow-small-hide, .expander-arrow-small-show, .anonymous-gravatar, .gp-share, .fb-share, .twitter-share,
+  #notify-container span.notify-close, .migrated.to, .migrated.from {
+    -webkit-filter: invert(100%) hue-rotate(180deg) brightness(1.1) !important;
+    filter: invert(100%) hue-rotate(180deg) brightness(1.1) !important;
+  }

@@ -1,0 +1,7 @@
+#hlogo a {
+    text-indent: -9999px !important;
+  }
+  #footer {
+    background-color: #182030 !important;
+    background-image: url("https://meta.stackexchange.com/content/Sites/stackexchangemeta/img/icon-cloud-footer.png?v=ac80a4525ace") !important;
+  }

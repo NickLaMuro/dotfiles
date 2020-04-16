@@ -1,0 +1,17 @@
+---
+enabled: true
+updateUrl: https://userstyles.org/styles/chrome/153739.json
+md5Url: https://update.userstyles.org/153739.md5
+url: http://userstyles.org/styles/153739
+originalMd5: 83aa11565fca706df10ef75199df8059
+installDate: 1538149261085
+sections:
+- regexps:
+  - chrome-extension://.*
+  - moz-extension://.*
+name: Stylus Dark - ShadowFox
+originalDigest: 8e54cb8435bc3b4be928485008e0664486d98b70
+id: 26
+_id: c9293f01-422d-4b49-ba31-cfdc1c12d335
+_rev: 1587062228812
+updateDate: 1587062228812

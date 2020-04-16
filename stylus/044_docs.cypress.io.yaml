@@ -1,0 +1,15 @@
+---
+enabled: true
+updateUrl: 
+md5Url: 
+url: 
+originalMd5: 
+installDate: 1586293160235
+name: docs.cypress.io
+sections:
+- domains:
+  - docs.cypress.io
+updateDate: 1586297467128
+_id: ae054310-0e37-44ea-acb5-d37102452548
+_rev: 1586904337757
+id: 64

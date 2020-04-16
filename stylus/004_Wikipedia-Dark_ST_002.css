@@ -1,0 +1,9 @@
+/***** Alpine Linux Wiki Custom Fixes *****/
+
+p[style*="background-color:#eeeeee"][style*="white-space:pre"] {
+  background-color: #111 !important;
+}
+
+pre, .mw-code {
+  border-color: #555;
+}

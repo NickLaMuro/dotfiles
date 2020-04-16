@@ -1,0 +1,21 @@
+---
+enabled: true
+updateUrl: https://userstyles.org/styles/chrome/167913.json
+md5Url: https://update.userstyles.org/167913.md5
+url: http://userstyles.org/styles/167913
+originalMd5: f6afbe7f0dbb0e7fca075fdbc6470c85
+installDate: 1580950353006
+sections:
+- domains:
+  - pkgs.alpinelinux.org
+- domains:
+  - git.alpinelinux.org
+  - git.kernel.org
+- regexps:
+  - https://git.alpinelinux.org.*.patch
+name: Alpine Linux Packages - Dark
+originalDigest: 0a4426ca807916507d8db2bd4af77835d7aa2514
+id: 54
+updateDate: 1582078451178
+_id: 9954f022-68b9-48b4-8412-b11127323e7a
+_rev: 1583342080472

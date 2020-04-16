@@ -1,0 +1,94 @@
+html, body {
+  background-color: var(--header-bg);
+}
+
+a, a:visited {
+  color:            var(--link);
+}
+
+tt {
+  background-color: var(--input-bg);
+}
+
+pre {
+  background-color: var(--input-bg);
+  color:            var(--input-fg);
+	border:           1px solid var(--border);
+}
+
+th {
+  background-color: var(--table-header-bg);
+  color:            var(--table-header-fg);
+}
+
+div.body,
+div.body h1,
+div.body h2,
+div.body h3,
+div.body h4,
+div.body h5,
+div.body h6 {
+  background-color: var(--body-bg);
+  color:            var(--body-fg);
+}
+
+div.note {
+  background-color: var(--input-bg);
+  color:            var(--input-fg);
+	border:           1px solid var(--border);
+}
+
+.note tt {
+  background-color: var(--border);
+}
+
+table.docutils td, table.docutils th {
+  border-bottom-color: var(--border);
+}
+
+div.footer, div.footer a {
+  color:            var(--header-fg);
+}
+
+div.footer {
+  background-color: var(--header-bg);
+}
+
+
+/* Code Highlight */
+
+.highlight .s2 { color: #8f9d6a; }
+.highlight .kc { color: #cf6a4c; }
+.highlight .mi { color: #cf6a4c; }
+
+/* Undecided about this one... */
+/* .highlight .o { color: #cda869; } */
+
+
+
+
+/* CodeRay Twilight reference
+ *
+ * .CodeRay .class               { color: #9b859d;          }
+ * .CodeRay .constant            { color: #9b859d;          }
+ * .CodeRay .comment             { color: #5e5960;          }
+ * .CodeRay .char                { color: #8f9d6a;          }
+ * .CodeRay .string              { background-color: inherit; }
+ * .CodeRay .string .delimiter   { color: #8f9d6a;          }
+ * .CodeRay .string .content     { color: #8f9d6a;          }
+ * .CodeRay .key                 { color: #8f9d6a;          }
+ * .CodeRay .key .delimiter      { color: #8f9d6a;          }
+ * .CodeRay .key .content        { color: #8f9d6a;          }
+ * .CodeRay .keyword             { color: #cda869;          }
+ * .CodeRay .function            { color: #9b703f;          }
+ * .CodeRay .integer             { color: #cf6a4c;          }
+ * .CodeRay .symbol              { color: #cf6a4c;          }
+ * .CodeRay .predefined-constant { color: #7587a6;          }
+ * .CodeRay .global-variable     { color: #f9ee98;          }
+ * 
+ * 
+ * 
+ * .CodeRay .preprocessor        { color: #afc3db;          }
+ * .CodeRay .include             { color: #8f9d6a;          }
+ * .CodeRay .directive           { color: #f9ee98;          }
+ */

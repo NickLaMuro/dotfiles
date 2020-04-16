@@ -1,0 +1,4 @@
+/**** Specifics for nginx based dirs *****/
+body[bgcolor="white"] {
+  background-color: #222 !important;
+}

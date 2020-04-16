@@ -1,0 +1,19 @@
+.trpDisplayPicture .avatar__image,
+.dark-theme .trpDisplayPicture .avatar__image {
+  background-color: #434141;
+}
+
+.chat-header__group-avatar-upload-label,
+.dark-theme .chat-header__group-avatar-upload-label {
+  background-color: #2d2c2c;
+}
+
+.body-main-menu .list-item-avatar,
+.dark-theme .body-main-menu .list-item-avatar {
+  background-color: #383736;
+}
+
+.list-item.is-favourited::before {
+	left: 0.75rem !important;
+  transition: left 0.3s ease-out !important;
+}

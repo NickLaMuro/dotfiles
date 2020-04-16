@@ -1,0 +1,18 @@
+---
+installDate: 1542038567441
+enabled: true
+updateUrl: https://userstyles.org/styles/chrome/156817.json
+md5Url: https://update.userstyles.org/156817.md5
+url: http://userstyles.org/styles/156817
+originalMd5: 78e5caa2c539f3028dbdb69c1ed8a8eb
+sections:
+- domains:
+  - chat.google.com
+- domains:
+  - chat.google.com
+name: Google Chat Solarized Dark
+originalDigest: 4f691f3a3c895e987e4df36fb811187ec9d876a9
+id: 32
+updateDate: 1568385675349
+_id: f456414b-2207-4690-ba32-93da2c8e5612
+_rev: 1583342080472

@@ -1,0 +1,9 @@
+#hlogo a {
+    background-image: url(https://StylishThemes.github.io/StackOverflow-Dark/images/stackoverflow-logo.svg) !important;
+  }
+  .-logo > .-img {
+    background-image: url(https://StylishThemes.github.io/StackOverflow-Dark/images/stackoverflow-logo.svg) !important;
+    background-size: cover !important;
+    background-position: 0 0  !important;
+    background-repeat: no-repeat !important;
+  }

@@ -1,0 +1,120 @@
+:root {
+  --bg-color:     #202124;
+  --bg-color2:    #444;
+  --fg-color:     white;
+  --fg-color1:    #888;
+  --fg-color2:    #bbb;
+  --fg-color3:    #eee;
+  --border-color: #666;
+  
+  --google-blue:  #1a73e8;
+}
+
+.Cd9hpd .snByac                 { color: var(--fg-color2); }                       /* choose time scal */
+.Ox3r3c                         { color: var(--fg-color2); }                       /* "Meet with..." */
+
+.KSxb4d.RKLVef:hover,
+body.geSgge .KSxb4d.RKLVef:hover,
+.KSxb4d.N4XV7d.RKLVef:hover,
+body.geSgge .KSxb4d.N4XV7d.RKLVef:hover {
+  background-color: var(--bg-color2);
+}
+.MmhHI.N4XV7d                   { color: var(--fg-color1) }                        /* Future week days */
+
+body                            { background-color: var(--bg-color);  }
+header.gb_ja                    { background-color: var(--bg-color) !important; }  /* header */
+header.gb_ja                    { color: var(--fg-color); }                        /* header */
+header.gb_ka                    { background-color: var(--bg-color) !important; }  /* header */
+header.gb_ka                    { color: var(--fg-color); }                        /* header */
+header#gb                       { background-color: var(--bg-color) !important; }  /* header */
+header#gb                       { color: var(--fg-color); }                        /* header */
+.SU7tYb.F262Ye                  { background-color: var(--bg-color); }
+.yEkOpe.F262Ye                  { background-color: var(--bg-color); }
+.yEkOpe                         { border-right-color: var(--border-color); }
+.GXlaye .snByac, .rSoRzd        { color: var(--fg-color1); }
+.GXlaye.qRI4pc                  { border-color: var(--border-color); }
+.GXlaye.qRI4pc.u3bW4e .CeoRYc,
+.GXlaye.qRI4pc:hover            { background-color: var(--google-blue); border-color:     white; }
+.GXlaye .snByac:hover { color: var(--fg-color) !important; }
+.v83gc           { background-color: var(--bg-color);  }             /* calendar main */
+.YvjgZe.Qbfsob   { border-right-color: var(--bg-color) }             /* last weekday column */
+.CIFHgc          { border-right: 1px var(--border-color) solid;  }
+.EfQccc          { background-color: var(--bg-color2); }             /* repeated events */
+.SaBhMc          { background-color: var(--bg-color2); }             /* create button */
+.u5sQsb          { color: var(--fg-color);             }             /* create button */
+.IIB0tc .ULpymb  { background-color: var(--bg-color2); }             /* meet with people  */
+.J09ahd          { background-color: var(--bg-color2); }
+.GENA3c          { background-color: var(--bg-color);  }             /* calendar left */
+.Gk2izd          { background-color: var(--bg-color);  }             /* timezone      */
+
+.pdqVLc          { background-color: var(--bg-color);  }             /* event popup   */
+.EgH9k .JAPzS    { color: var(--fg-color2);  }                       /* event popup   */
+.EgH9k div.DN1TJ { color: var(--fg-color2);  }                       /* event popup   */
+.pdqVLc .NI2kfb  { color: var(--fg-color2);  }                       /* event popup   */
+
+.JtukPc          { background-color: var(--bg-color);  }             /* new event popup */
+.BvQsje          { background-color: var(--bg-color);  }             /* new event popup */
+.gHQcAb          { background-color: var(--bg-color);  }             /* new event popup */
+.VKy0Ic[aria-selected="true"] { background-color: var(--bg-color2);  }             /* new event popup */
+.Kb2sf           { background-color: var(--bg-color); }
+.jZ0DTb          { background-color: var(--bg-color); }              /* new event calendar selector */
+.ncFHed          { background-color: var(--bg-color); }              /* new event calendar selector */
+.ncFHed .MocG8c.KKjvXb { background-color: var(--bg-color2); }
+.XsU8xf          { background-color: var(--bg-color); }             /* new event close */
+.rF3YF:hover     { background-color: var(--bg-color2); }
+.jT5e9           { color: var(--fg-color1); }
+.NtP29           { color: var(--fg-color1); }                         /* date divider */
+.WpDZC           { color: var(--fg-color2); }
+.gHQcAb          { color: var(--fg-color2);  }                        /* new event popup */
+
+div.rF3YF svg    { fill: var(--fg-color2);  }                        /* new event close 'X' */
+div.rF3YF span   { color: var(--fg-color2);  }                       /* new event close 'X' */
+
+.qmv2fc.KKjvXb   { background-color: var(--bg-color2); }             /* new event type */
+.qmv2fc.kaAt2:hover { background-color: var(--bg-color2); }
+.qmv2fc.kaAt2:hover { color: var(--fg-color2); }
+.qmv2fc.KKjvXb:hover { background-color: var(--google-blue);}
+.qmv2fc.KKjvXb:hover { color: var(--fg-color3);}
+
+.shdZ7e .mIZh1c  { background-color: var(--bg-color2); }             /* new event title underline */
+
+.uQ1ixe .snByac  { color: var(--fg-color2);  }                       /* Calendar types */
+.NI2kfb          { color: var(--fg-color2);  }
+
+.MSZkRb .r4nke   { color: var(--fg-color2);  }                       /* Mini Cal header */
+
+.Kk7lMc-DWWcKd-OomVLb-haAclf { background-color: var(--bg-color);  } /*  */
+div.gboEAb       { border-left-color: var(--border-color); }         /* right menu    */
+.EdAri           { border-right-color: var(--border-color); }
+
+.MVMVEe          { border-left-color: var(--border-color); }
+.mmsF1c::after   { border-bottom-color: var(--border-color); }
+
+.DWWcKd-OomVLb-LgbsSe-Bz112c-haAclf { filter: invert(80%) }
+
+.J2aUD.T8M5bd .sx5BGe::before,
+.SGFqbe.T8M5bd .sx5BGe::before { 
+  background-image: linear-gradient(to right, var(--bg-color),rgba(255,255,255,0))
+}
+.J2aUD.T8M5bd .qmFsL::after, .SGFqbe.T8M5bd .qmFsL::after {
+  background-image: linear-gradient(to left,var(--bg-color),rgba(255,255,255,0))
+}
+
+
+.hEtGGf::after { background-image: none; } /* BS gradient thing on mini cal */
+.W0m3G::before { background-color: var(--bg-color); }
+.W0m3G .r4nke  { background-color: var(--bg-color); }
+.W0m3G .r4nke  { color: var(--fg-color1); }
+.TUH0Sd .r4nke, .TUH0Sd.i8dSE .r4nke, .TUH0Sd.vmrysd.uGtG7d .r4nke { background-color: #1a73e8 }
+.SoBqBf, .OWyNBb, .W0m3G { color: var(--fg-color2); }
+.W0m3G         { color: var(--fg-color2); }
+
+body[data-viewfamily="EVENT"] .SGWAac,
+body[data-viewfamily="SCHEDULE"] .SGWAac,
+body[data-viewfamily="SEARCH"] .SGWAac {
+  border-top-color: var(--border-color);
+}
+
+.YvjgZe {
+  border-right-color: var(--border-color);
+}
