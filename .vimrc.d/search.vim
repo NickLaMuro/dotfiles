@@ -52,7 +52,7 @@ let &cpo = s:save_cpo | unlet s:save_cpo
 " Setup builtin grep search to use alternative runtimes, if available
 if executable('rg')
   " Use rg over grep
-  set grepprg=rg\ --no-heading\ --vimgrep
+  set grepprg=rg\ --no-heading\ --vimgrep\ --no-messages
 elseif executable('ack')
   " Use ack over grep
   set grepprg=ack\ --nogroup
