@@ -118,12 +118,13 @@ module IRB
   class Context
     attr_reader :code_chunks
 
-    prepend Module.new {
-      def evaluate line, lineno
-        save_code_chunk line, lineno
-        super
-      end
-    }
+    # prepend Module.new {
+      # def evaluate *args
+      #   line, lineno, _ = args # in 2.6, this method sig changed to have a kwarg
+      #   save_code_chunk line, lineno
+      #   super
+      # end
+    # }
 
     def save_code_chunk line, lineno
       @code_chunks ||= []
