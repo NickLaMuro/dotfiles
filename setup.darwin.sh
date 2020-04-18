@@ -29,5 +29,19 @@ if [[ $(uname -s) == "Darwin" ]] ; then
   killall SystemUIServer
 
 
+  # Install Hombrew if it doesn't already exist
+  command -v brew > /dev/null
+  if [[ "$?" != "0" ]]; then
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+    brew install bash
+    brew install tmux
+    brew install hub
+    brew install ruby-install
+    brew install chruby
+    # brew install iterm2  # maybe another time...
+    brew install homebrew/cask-fonts/font-meslo-for-powerline
+  fi
+
   cd $CURRENT_WORKING_DIR
 fi
