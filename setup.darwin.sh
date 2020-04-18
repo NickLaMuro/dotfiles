@@ -43,5 +43,19 @@ if [[ $(uname -s) == "Darwin" ]] ; then
     brew install homebrew/cask-fonts/font-meslo-for-powerline
   fi
 
+  # Set default shell to "brew bash"
+  #
+  # Original instructions here:  https://itnext.io/upgrading-bash-on-macos-7138bd1066ba
+  #
+  if [[ -x /usr/local/bin/bash ]]; then
+    # use ZSH since we know it will be there on Darwin
+    #
+    # ... however, this script was written in bash... so not sure if it will
+    # port to zsh (which we will be using to run it).... oh well...
+
+    sudo /bin/zsh -c "echo '/usr/local/bin/bash' > /etc/shells"
+    chsh -s /usr/local/bin/bash
+  fi
+
   cd $CURRENT_WORKING_DIR
 fi
