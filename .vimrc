@@ -158,53 +158,6 @@ set shiftwidth=2
 set tabstop=2
 
 
-"------------------------------------------------------------
-" Mappings {{{1
-"
-" Useful mappings
-
-let mapleader = ";"
-
-" Map Y to act like D and C, i.e. to yank until EOL, rather than act as yy,
-" which is the default
-map Y y$
-
-" Map <C-L> (redraw screen) to also turn off search highlighting until the
-" next search
-nnoremap <C-L> :nohl<CR><C-L>
-
-" NERDTree and buffer shorcuts
-nmap <F3> :bp<CR>
-nmap <F4> :bn<CR>
-nmap <F5> :NERDTreeToggle<CR>
-
-" PuTTY friendly versions of the above
-nmap <C-\> :NERDTreeToggle<CR>
-"nmap <C-[> :bp<CR>
-"nmap <C-]> :bn<CR>
-
-" PageUp/PageDown... but easier
-map <C-j> <C-f>
-map <C-k> <C-b>
-"map <PageUp> <C-k>
-"map <PageDown> <C-j>
-
-" Tabs
-"nmap <Leader>tt :tabnew<CR>
-"nmap <F11> :tabp<CR>
-"nmap <F12> :tabn<CR>
-"nmap <Leader>tw :bd<CR>
-"nmap <leader>tb :tabfirst<CR>
-"nmap <leader>tb :tablast<CR>
-
-" Rails.vim shortcuts
-nmap <Leader><C-R>m :Rmodel<CR>
-nmap <Leader><C-R>v :Rview<CR>
-nmap <Leader><C-R>c :Rcontroller<CR>
-nmap <Leader><C-R>a :A<CR>
-nmap <Leader><C-R>r :R<CR>
-
-
 " Bufferline
 " ----------
 
