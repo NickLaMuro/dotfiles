@@ -39,7 +39,7 @@ function! s:Spellcheck()
 endfunction
 
 " Trigger s:Spellcheck() by typing :Spellcheck
-command Spellcheck call <SID>Spellcheck()
+command! Spellcheck call <SID>Spellcheck()
 
 " Trigger s:Spellcheck() on specific filetypes
 "

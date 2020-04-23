@@ -34,7 +34,7 @@ let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
 
 
-command AirlineToggleBranch call <SID>AirlineToggleBranch()
+command! AirlineToggleBranch call <SID>AirlineToggleBranch()
 function! s:AirlineToggleBranch()
   if g:airline_section_b == ''
     let g:airline_section_b = '%{airline#util#wrap(airline#extensions#branch#get_head(),0)}'
