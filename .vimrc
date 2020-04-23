@@ -189,6 +189,10 @@ autocmd Filetype *.h set tabstop=8
 "------------------------------------------------------------
 " Load Plugin Files
 
+" Set before all plugin files so we have it available as keybindings in any of
+" them (otherwise some keybindings might stop working)
+let mapleader = ";"
+
 let dir_name = expand('<sfile>:p:h')
 for plugin_file in split(globpath(dir_name, '.vimrc.d/*'), '\n')
   execute 'source' plugin_file
