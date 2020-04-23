@@ -1,5 +1,3 @@
-let mapleader = ";"
-
 " Map Y to act like D and C, i.e. to yank until EOL, rather than act as yy,
 " which is the default
 map Y y$
