@@ -3,7 +3,7 @@
 
 " http://stackoverflow.com/questions/2575545/vim-pipe-selected-text-to-shell-cmd-and-receive-output-on-vim-info-command-line
 " Not sure if I will keep it or not
-function PipeSelection() range
+function! PipeSelection() range
   echo system('echo '.shellescape(join(getline(a:firstline, a:lastline), "\n")).'| pbcopy')
 endfunction
 
@@ -23,7 +23,7 @@ endfunc
 " http://stackoverflow.com/a/29179159
 "
 " command Bd  \| bd \#
-command Bd call <SID>BuffDeleteAndReturnToLastBuff()
+command! Bd call <SID>BuffDeleteAndReturnToLastBuff()
 
 function! s:BuffDeleteAndReturnToLastBuff()
   exec "b #"
