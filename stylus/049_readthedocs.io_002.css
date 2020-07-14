@@ -1,0 +1,65 @@
+.wy-nav-content-wrap {
+  background: #333;
+}
+
+.wy-nav-content {
+  background: #222;
+}
+
+code,
+.rst-content tt,
+.rst-content code {
+  background: #111;
+  border-color: #444;
+}
+
+.wy-table-odd td,
+.wy-table-striped tr:nth-child(2n-1) td,
+.rst-content table.docutils:not(.field-list) tr:nth-child(2n-1) td {
+  background: #333;
+}
+
+.wy-table-bordered-all,
+.wy-table-bordered-all td,
+.rst-content table.docutils,
+.rst-content table.docutils td {
+  border-color: #444;
+}
+
+.rst-content pre.literal-block,
+.rst-content div[class^="highlight"] {
+  border-color: #444;
+}
+
+.btn-neutral {
+  background-color: #333 !important;
+  color: #ddd !important;
+}
+
+.btn-neutral:hover {
+  background-color: #555 !important;
+}
+
+.wy-menu-vertical li.current a {
+  background-color: #222;
+  border-right-color: #444;
+}
+
+.wy-menu-vertical li.on a,
+.wy-menu-vertical li.current > a {
+  background-color: #555;
+  color: #bbb;
+}
+
+.wy-menu-vertical li.toctree-l1.current > a {
+  
+  border-bottom-color: #444;
+  border-top-color: #444;
+}
+
+.wy-menu-vertical li.on a:hover,
+.wy-menu-vertical li.current > a:hover,
+.wy-menu-vertical li.current a:hover {
+  background-color: #666;
+  color: #fff;
+}
