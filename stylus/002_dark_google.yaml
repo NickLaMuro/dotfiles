@@ -7,10 +7,10 @@ sections:
   - https?://www\.google\.[a-z]*/(?!calendar|nexus).*
 - regexps:
   - https?://calendar\.google\.[a-z]*/calendar/.*
-updateUrl: 
-md5Url: 
-url: 
-originalMd5: 
+updateUrl:
+md5Url:
+url:
+originalMd5:
 id: 7
 updateDate: 1554255874393
 _id: 96d045d7-c2f6-478e-a0f2-308fa4289193
