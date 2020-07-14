@@ -1,0 +1,15 @@
+---
+enabled: true
+updateUrl:
+md5Url:
+url:
+originalMd5:
+installDate: 1592606772730
+name: doc.qt.io
+sections:
+- domains:
+  - doc.qt.io
+updateDate: 1592607821054
+_id: e11a896c-d82d-4e85-87d7-eed1fc664d9a
+_rev: 1592607821054
+id: 70

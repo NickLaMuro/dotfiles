@@ -1,0 +1,58 @@
+body {
+  background-color: #222;
+  color: #bbb;
+}
+
+input.gsc-input {
+  border-color: #555 !important;
+}
+
+li a.active,
+.navigationbar li {
+  color: #ddd;
+}
+
+table .odd {
+  background-color: #555;
+}
+
+#mm-wrap,
+#navbar {
+  background-color: #444;
+}
+
+#main_title_bar .search_bar input.gsc-input {
+  background-color: #444 !important;
+}
+
+#mm-wrap #mm-helper > li.mm-item > a.mm-link {
+  color: #ddd;
+}
+
+#navbar #mm-wrap #mm-helper li.mm-item {
+  border-right-color: #666;
+}
+
+.col-1, .context {
+  background-color: #444;
+}
+
+.context h3.fn, .context h3.flags {
+  color: #eee;
+}
+
+h3.fn code {
+  background-color: #555;
+}
+
+.mainContent p,
+.navigationbar li a,
+.navigationbar ul:last-of-type li a,
+.toc h3 a {
+  color: #bbb;
+}
+
+
+.toc, .sectionlist {
+  background-color: #444;
+}
