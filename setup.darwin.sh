@@ -20,9 +20,13 @@ if [[ $(uname -s) == "Darwin" ]] ; then
   #     option  = ~
   #     shift   = @
   #
+  # List sourced from here: https://apple.stackexchange.com/a/294411
+  #
   # Note:  The above seem wrong, as '@l' below is definitely CMD-l ...
   #
-  # List sourced from here: https://apple.stackexchange.com/a/294411
+  # updates below with what I have found out from testing...
+  #
+  #     shift   = $
   #
   defaults write -g NSUserKeyEquivalents -dict-add "Lock Screen" "@l"
 
@@ -41,6 +45,7 @@ if [[ $(uname -s) == "Darwin" ]] ; then
     brew install chruby
     # brew install iterm2  # maybe another time...
     brew install homebrew/cask-fonts/font-meslo-for-powerline
+    brew install homebrew/cask-fonts/font-hack-nerd-font # might be my new font
   fi
 
   # Set default shell to "brew bash"
