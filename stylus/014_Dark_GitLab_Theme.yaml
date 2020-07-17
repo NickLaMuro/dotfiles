@@ -9,11 +9,11 @@ sections:
 - domains:
   - gitlab.com
   regexps:
-  - https?://(.*)?(gitlab.(?!io).*|gitgud.io|salsa.debian.org|framagit.org|source.joinmastodon.org|repo.getmonero.org|gitlub.club|your.custom.domain)/.*
+  - https?://([^\.]*\.)?(gitlab.(?!io)[^/]*|gitgud.io|salsa.debian.org|framagit.org|source.joinmastodon.org|repo.getmonero.org|gitlub.club|your.custom.domain)/.*
 - domains:
   - gitlab.com
   regexps:
-  - https?://(.*)?(gitlab.(?!io).*|gitgud.io|salsa.debian.org|framagit.org|source.joinmastodon.org|repo.getmonero.org|gitlub.club|your.custom.domain)/.*
+  - https?://([^\.]*\.)?(gitlab.(?!io)[^/]*|gitgud.io|salsa.debian.org|framagit.org|source.joinmastodon.org|repo.getmonero.org|gitlub.club|your.custom.domain)/.*
 - regexps:
   - https?://design.gitlab.com(/.*)
 - regexps:
@@ -25,7 +25,7 @@ sections:
 name: Dark GitLab Theme
 originalDigest: dbf744cd19cea67677f2b0c88c5a58ae1855fc06
 id: 30
-updateDate: 1581100514420
+updateDate: 1589213630845
 originalName: Dark GitLab Theme
 _id: d8799894-7f89-49b2-b773-aa1aa9db10de
-_rev: 1583342080472
+_rev: 1589213630845
