@@ -134,29 +134,56 @@ button,
 }
 
 @media screen and (min-width: 50.063em) {
-    .commit-description:after {
-        background: linear-gradient(360deg, #444 5%, rgba(50, 50, 50, 0) 100%);
-    }
-    .tile h2:after,
-    .pr-row .row-branch:after {
-        background: linear-gradient(-90deg, #333 0, rgba(50, 50, 50, 0) 100%);
-    }
-    .fade-out:after {
-        background: linear-gradient(-90deg, #333 30%, rgba(50, 50, 50, 0) 100%);
-    }
-    .job-lang:after, .job-env:after, .pr-row .row-message:after {
-        background: linear-gradient(-90deg, #333 30%, rgba(50, 50, 50, 0) 100%);
-    }
-    .pr-row .two-line:first-of-type {
-        border-color: #333;
-    }
-    .pr-row .row-branch:hover a {
-        background-color: inherit;
-    }
-    .branch-row .row-last-build:before {
-        background-color: #333;
-    }
-    .option-tofu { 
-        border-color: #222;
-    }
+  .commit-description:after {
+    background: linear-gradient(360deg, #444 5%, rgba(50, 50, 50, 0) 100%);
+  }
+  .tile h2:after,
+  .pr-row .row-branch:after {
+    background: linear-gradient(-90deg, #333 0, rgba(50, 50, 50, 0) 100%);
+  }
+  .fade-out:after {
+    background: linear-gradient(-90deg, #333 30%, rgba(50, 50, 50, 0) 100%);
+  }
+
+  .job-lang:after, .job-env:after, .pr-row .row-message:after {
+    background: linear-gradient(-90deg, #333 30%, rgba(50, 50, 50, 0) 100%);
+  }
+  
+  .job-env::after,
+  .jobs-item.passed:hover .job-env::after,
+  .jobs-item.passed:hover .job-lang::after,
+  .jobs-item.passed:hover .job-name::after {
+    height: 34px;
+  }
+
+  .jobs-item.started:hover .job-env::after,
+  .jobs-item.started:hover .job-lang::after,
+  .jobs-item.started:hover .job-name::after {
+    background: linear-gradient(-90deg, #332 30%, rgba(50, 50, 50, 0) 100%);
+  }
+
+  .jobs-item.passed:hover .job-env::after,
+  .jobs-item.passed:hover .job-lang::after,
+  .jobs-item.passed:hover .job-name::after {
+    background: linear-gradient(-90deg, #231 30%, rgba(50, 50, 50, 0) 100%);
+  }
+  
+  .jobs-item.failed:hover .job-env:after,
+  .jobs-item.failed:hover .job-lang:after,
+  .jobs-item.failed:hover .job-name:after {
+    background: linear-gradient(-90deg, #322 30%, rgba(50, 50, 50, 0) 100%);
+  }
+
+  .pr-row .two-line:first-of-type {
+      border-color: #333;
+  }
+  .pr-row .row-branch:hover a {
+      background-color: inherit;
+  }
+  .branch-row .row-last-build:before {
+      background-color: #333;
+  }
+  .option-tofu { 
+      border-color: #222;
+  }
 }
