@@ -252,3 +252,10 @@ background-position: left top !important;
   }
 
   /* grunt build - remove to end of file */
+
+.mwe-popups .mwe-popups-extract[dir='ltr']:after {
+ right:0;
+ background-image:-webkit-linear-gradient(to right,rgba(255,255,255,0),#222 50%);
+ background-image:-moz-linear-gradient(to right,rgba(255,255,255,0),#222 50%);
+ background-image:linear-gradient(to right,rgba(255,255,255,0),#222 50%)
+}
