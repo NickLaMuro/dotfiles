@@ -1,0 +1,15 @@
+---
+enabled: true
+updateUrl:
+md5Url:
+url:
+originalMd5:
+installDate: 1589997553137
+name: docs.syncthing.net
+sections:
+- domains:
+  - docs.syncthing.net
+updateDate: 1589997553137
+_id: e04e0d9a-a8c2-4cfa-ab1a-e2ed85696562
+_rev: 1589997553137
+id: 67

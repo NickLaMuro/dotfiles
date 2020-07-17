@@ -1,6 +1,14 @@
 /* My Additions */
 /* ------------ */
 
+pre.codedisplay[class*="language-"] {
+  background-color: #111 !important;
+}
+
+code[class*="language-"], pre[class*="language-"] {
+  text-shadow: none;
+}
+
 .footer {
 	background: #222;
 	box-shadow: 0 -2px 3px #212121;
@@ -14,6 +22,40 @@
 	background: #282828;
 	color: #3eaaaf;
 }
+
+.jobs-item {
+  background-color: #333;
+  border-color: #282828;
+}
+
+.jobs-item.started:active,
+.jobs-item.started:hover,
+.jobs-item.started:hover .job-env:hover,
+.jobs-item.started:hover .job-lang:hover,
+.jobs-item.started:hover .job-name:hover {
+  background-color: #332;
+}
+
+.jobs-item.passed:active,
+.jobs-item.passed:hover,
+.jobs-item.passed:hover .job-env:hover,
+.jobs-item.passed:hover .job-lang:hover,
+.jobs-item.passed:hover .job-name:hover {
+  background-color: #231;
+}
+
+.jobs-item.failed:active,
+.jobs-item.failed:hover,
+.jobs-item.failed:hover .job-env:hover,
+.jobs-item.failed:hover .job-lang:hover,
+.jobs-item.failed:hover .job-name:hover {
+  background-color: #322;
+}
+
+.log-body .log-line.highlight {
+  background-color: #145;
+}
+
 
 /* settings */
 

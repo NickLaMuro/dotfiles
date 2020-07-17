@@ -1,0 +1,15 @@
+---
+enabled: true
+updateUrl:
+md5Url:
+url:
+originalMd5:
+installDate: 1589391886381
+name: keepassxc.org
+sections:
+- domains:
+  - keepassxc.org
+updateDate: 1589485346665
+_id: 147fb8a9-c60d-47b9-b057-c4a1fd0bc34a
+_rev: 1589485346665
+id: 66

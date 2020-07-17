@@ -1,0 +1,73 @@
+body, div.body {
+  background-color: #222;
+  color: #eaeaea;
+}
+
+pre {
+  background-color: #111;
+}
+
+tt, code {
+  background-color: #111;
+  color: #fff;
+}
+
+div.body {
+  color: #ddd;
+}
+
+div.sphinxsidebar a,
+div.sphinxsidebar h3,
+div.sphinxsidebar h4 {
+  color: #444;
+  color: #bbb;
+}
+
+div.sphinxsidebar p {
+  color: #aaa;
+}
+
+div.sphinxsidebar input {
+  border-color: #555;
+}
+
+div.sphinxsidebar #searchbox input[type="text"],
+div.sphinxsidebar #searchbox input[type="submit"] {
+  background-color: #444;
+  color: #ddd;
+}
+
+div.note {
+	background-color: #333;
+	border-color: #444;
+}
+
+div.warning {
+	background-color: #744;
+	border: 1px solid #722;
+}
+
+a.reference {
+  color: #004B6B;
+  color: #48a;
+}
+
+a:hover {
+  color: #6ac;
+	text-decoration: underline;
+}
+
+a, a.reference, a:hover, a.reference:hover {
+  border: none;
+}
+
+a:hover tt, a:hover code {
+  background: #004B6B;
+}
+
+tt.xref, code.xref, a tt {
+  background-color: #111;
+  color: #fff;
+	text-decoration: underline;
+  border: none;
+}

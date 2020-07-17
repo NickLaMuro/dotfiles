@@ -1,9 +1,9 @@
 ---
 enabled: true
-updateUrl: 
-md5Url: 
-url: 
-originalMd5: 
+updateUrl:
+md5Url:
+url:
+originalMd5:
 installDate: 1578615150904
 name: My Travis CI Dark
 sections:
@@ -17,7 +17,7 @@ sections:
   - docs.travis-ci.com
 - domains:
   - developer.travis-ci.com
-updateDate: 1578619650702
+updateDate: 1588796590612
 id: 51
 _id: a7f28d64-88e2-46fd-94b2-917777d063d1
-_rev: 1583342080472
+_rev: 1588796590612

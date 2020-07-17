@@ -37,6 +37,10 @@
   background-color: var(--color_bg1);
 }
 
+.fb, .fh {
+  background-color: inherit;
+}
+
 /* footer */
 
 /* CUSTOM */
@@ -45,7 +49,7 @@
 
 /* FOREGROUNDS */
 
-.cw, .ef, .do {
+.cw, .ef, .do, .dy, .dt {
   color: var(--color_fg1);
 }
 

@@ -8,10 +8,10 @@ sections:
   domains:
   - kubernetes.io
   regexps: []
-updateUrl: 
-md5Url: 
-url: 
-originalMd5: 
+updateUrl:
+md5Url:
+url:
+originalMd5:
 id: 23
 _id: b40e1042-d151-48ab-b1a5-ce8ac1966bbf
 _rev: 1583342080472

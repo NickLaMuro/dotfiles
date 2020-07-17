@@ -229,6 +229,11 @@ div.CodeMirror-selected {
 .CodeMirror-cursor {
   border-left: 1px solid #fff!important
 }
+
+.section-editor .section:not(:first-child) {
+  border-top-color: #444;
+}
+
 span.cm-comment {
   color: #939393!important
 }

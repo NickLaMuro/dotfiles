@@ -1,0 +1,17 @@
+---
+enabled: true
+updateUrl:
+md5Url:
+url:
+originalMd5:
+installDate: 1592239090643
+name: readthedocs.io
+sections:
+- domains:
+  - readthedocs.io
+- domains:
+  - mitmproxy.readthedocs.io
+updateDate: 1592333085299
+_id: af16608a-f4e0-460f-890c-42c5a021f6c3
+_rev: 1592333085299
+id: 69

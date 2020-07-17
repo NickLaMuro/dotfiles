@@ -147,6 +147,9 @@
 	--pf-global--target-size--MinHeight: 44px;
   
   --pf-c-select__toggle--Color: #ddd;
+  
+  --rhe-theme--bg-color--shade2: #333;
+  --rhe-theme--text-color--shade2: #ddd;
 }
 
 pfe-tab {
@@ -159,15 +162,61 @@ pfe-tab[aria-selected="true"] {
 
 main {
   color: #ddd;
+}
+
+main, .main-content, .portal-content-area {
   background-color: var(--pf-global--BackgroundColor--100);
 }
 
 pre, code {
   color: var(--pf-global--Color--200);
   background-color: var(--pf-global--BackgroundColor--300);
+  border-color: #333;
+}
+
+.card-white {
+  color: #ddd;
+  background-color: #222;
+  border-color: #333;
+}
+
+.code-raw .code-raw-toolbar {
+  background-color: #333;
+  border-color: #333;
+}
+
+.code-raw .code-raw-btn {
+  color: #fff;
+  background-color: #444;
+  border-color: #333;
+}
+
+.btn.btn-open-white,
+.btn.btn-bordered-blue {
+  background-color: #444;
+}
+
+.btn.btn-open-white,
+.btn.btn-open-white:link,
+.btn.btn-open-white:visited,
+.btn.btn-bordered-blue,
+.btn.btn-bordered-blue:link,
+.btn.btn-bordered-blue:visited {
+  color: #ddd;
 }
 
 a:link, a:visited {
+  color: #66f
+}
+
+.action-nav li a {
+  background-color: #444;
+  color: #fff;
+}
+
+.action-nav li a:hover,
+.action-nav li a:focus {
+  background-color: #555;
   color: #66f
 }
 
@@ -179,9 +228,20 @@ a:link, a:visited {
   color: var(--pf-global--Color--400);
 }
 
+.pf-c-expandable .pf-c-expandable__content {
+  border-left-color: #666;
+  border-right-color: #666;
+  border-bottom-color: #666;
+}
+
 .clip-content-wrapper {
   color: var(--pf-global--Color--200);
   background-color: var(--pf-global--BackgroundColor--300);
+}
+
+.support-grid.support-case .pf-c-expandable__toggle {
+  background-color: #666;
+  border-color: #666;
 }
 
 .support-grid form h2,
@@ -197,6 +257,9 @@ a:link, a:visited {
 .support-comment {
   color: var(--pf-global--Color--400);
   background-color: var(--pf-global--BackgroundColor--400);
+  border-right-color: #666;
+  border-top-color: #666;
+  border-bottom-color: #666;
 }
 
 .card-light,
@@ -213,4 +276,16 @@ a:link, a:visited {
 
 .support-grid.support-case .grid-aside {
   display: none;
+}
+
+.subscriber-content-block {
+  background-color: #333;
+}
+
+.subscriber-content-block::before {
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0) 0%,#333 100%)
+}
+
+.tag-list .badge {
+  background-color: #111;
 }

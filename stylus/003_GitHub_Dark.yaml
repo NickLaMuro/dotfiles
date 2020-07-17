@@ -15,6 +15,11 @@ sections:
   - githubusercontent.com
   - graphql-explorer.githubapp.com
   regexps:
+  - "^https?://((blog|gist|guides|help|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"
+- domains:
+  - githubusercontent.com
+  - graphql-explorer.githubapp.com
+  regexps:
   - "^https?://(help\\.)?github\\.com/((?!generated_pages/preview).)*$"
 url: http://userstyles.org/styles/37035
 updateUrl: https://userstyles.org/styles/chrome/37035.json?ik-syntax-theme=ik-Twilight&ik-bg-choice=ik-yes&ik-bg-options=ik-Tiled&ik-bg-attachment=ik-Scroll&ik-tab-size=ik-2&ik-code-wrap=ik-nowrap&ik-base-color=%234183C4&ik-font-choice=Menlo&ik-bg-url=ik-default
@@ -23,8 +28,8 @@ originalMd5: b6f0445ab6cd607deb577b964e99be2a
 name: GitHub Dark
 enabled: true
 id: 10
-updateDate: 1582926666500
+updateDate: 1592948785427
 originalName: GitHub Dark
 originalDigest: 0b0ec9cf83f78c3a7503d1b61e65c62598b9f4e1
 _id: 8150175c-c25e-4c40-9834-d0209ee89eb2
-_rev: 1583342080471
+_rev: 1592948785427

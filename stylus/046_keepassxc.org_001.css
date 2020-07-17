@@ -1,0 +1,73 @@
+body {
+  background-color: #222;
+  color: #89b;
+}
+
+h3 {
+  border-bottom-color: #34495e;
+}
+
+code {
+  background-color: #111;
+  border-radius: 3px;
+  border: 1px solid #444;
+  color: #c7254e;
+}
+
+pre {
+  background-color:    #111;
+  border-top-color:    #333;
+  border-bottom-color: #333;
+}
+
+pre code {
+  border: none;
+  color: #ccc;
+}
+
+.btn-default {
+  background-color: #444;
+}
+
+.btn-default:hover,
+.btn-default.hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
+  background-color: #34495e;
+}
+
+.footer {
+  background-color: #111;
+}
+
+.navbar-default {
+  background-color: #111;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #78a;
+}
+
+.faq dt a {
+  color: #89b;
+}
+
+.faq h5 {
+  background-color: #333;
+}
+
+.faq dl,
+.faq-questions {
+  border-color: #333;
+}
+
+.thumbnail {
+  background-color: #111;
+  border-color: #333;
+}
+
+.thumbnail .caption {
+  color: #89b;
+}

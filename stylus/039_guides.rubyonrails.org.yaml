@@ -1,15 +1,16 @@
 ---
 enabled: true
-updateUrl: 
-md5Url: 
-url: 
-originalMd5: 
+updateUrl:
+md5Url:
+url:
+originalMd5:
 installDate: 1583887865443
 name: guides.rubyonrails.org
 sections:
 - domains:
   - guides.rubyonrails.org
-updateDate: 1583889675601
+  - edgeguides.rubyonrails.org
+updateDate: 1591820194023
 _id: 44ee361c-6d3c-4a08-b356-9bd89666d3f0
-_rev: 1583889675601
+_rev: 1591820194023
 id: 58

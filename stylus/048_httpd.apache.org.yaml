@@ -1,0 +1,15 @@
+---
+enabled: true
+updateUrl:
+md5Url:
+url:
+originalMd5:
+installDate: 1591715778355
+name: httpd.apache.org
+sections:
+- domains:
+  - httpd.apache.org
+updateDate: 1591734250206
+_id: 62d6f46a-63de-402b-bf33-c4805c780331
+_rev: 1591734271016
+id: 68

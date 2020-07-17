@@ -1,0 +1,84 @@
+:root {
+  --darker:  #111;
+  --dark:    #222;
+  --dark2:   #333;
+  --dark3:   #444;
+  --light:   #ccc;
+  --lighter: #eee;
+  --accent:  #7289da;
+  --accent2: #dc5034;
+  --code:    #d12;
+}
+
+html, body:not(.dark)::before {
+  background: var(--dark);
+}
+
+body, body.navless {
+  background-color: transparent;
+}
+
+code, pre {
+  color: var(--code);
+}
+
+code {
+  border: 1px solid var(--dark3);
+  background-color: var(--darker);
+}
+
+footer {
+  background: var(--dark2);
+}
+
+h1, h1 a {
+  color: var(--light);
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  color: var(--light);
+}
+
+a {
+  color: var(--accent);
+}
+
+.author_widget h3, .author_widget h3 a {
+  color: var(--accent);
+}
+
+.backtotop {
+  background: var(--dark3);
+}
+
+.social_outline.github i {
+  color: var(--light);
+}
+
+.social_outline.github {
+  border-color: var(--light);
+}
+
+.postinfo_widget a.logo img {
+  filter: invert(90%);
+}
+
+.postcontents p:nth-of-type(1) {
+  color: var(--lighter);
+}
+
+.postcontents ol,
+.postcontents ul {
+  color: var(--light);
+}
+
+.tags_list li a {
+  background-color: var(--dark3);
+  color: var(--accent2);
+}
+
+.comments,
+.postlist article,
+.widget {
+  border-bottom-color: var(--dark3);
+}

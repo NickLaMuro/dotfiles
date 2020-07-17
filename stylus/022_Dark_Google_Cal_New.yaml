@@ -1,15 +1,15 @@
 ---
 enabled: true
-updateUrl: 
-md5Url: 
-url: 
-originalMd5: 
+updateUrl:
+md5Url:
+url:
+originalMd5:
 installDate: 1553216402492
 name: Dark Google Cal New
 sections:
 - domains:
   - calendar.google.com
 id: 39
-updateDate: 1564674984800
+updateDate: 1589829000338
 _id: 171352d0-30a8-4a12-9fba-7fd6e01fadb7
-_rev: 1583342080472
+_rev: 1589829000338

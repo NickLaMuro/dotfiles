@@ -1,106 +1,26 @@
-/* local edits */
+/* Unfuck repository view */
 
-.gh-header {
-  background-color: transparent;
+#js-repo-pjax-container .container-xl {
+  /* max-width: 980px; */
+  max-width: 1012px;
 }
 
-.gh-header .gh-header-sticky.is-stuck + .gh-header-shadow {
-  background-color: #181818;
-  border-bottom: 1px solid #343434;
+.repository-content > .gutter-condensed > .col-md-9 {
+  width: 100%;
 }
 
-.gh-header .gh-header-sticky {
-  height: 1px !important;
+.repository-content > .gutter-condensed > .col-md-3 {
+  display: none;
 }
 
-.page-responsive .pagehead {
-  background: #1c1c1c !important;
+.UnderlineNav {
+  box-shadow: none;
 }
 
-/* Fix background color for PR review main comment */
-
-.discussion-item-review .pull-request-review-body-wrapper .timeline-comment {
-  background-color: #181818 !important;
+.blame-commit-info {
+  width: 200px;
 }
 
-.TimelineItem-body {
-  color: #bababa;
-}
-
-/* Pull Request Review "speech bubble" arrow */
-
-.discussion-item-review .pull-request-review-body-wrapper .timeline-comment::before {
-  border-right-color: transparent !important;
-}
-
-.pull-request-review-body-wrapper .timeline-comment-group .timeline-comment::before {
-  border-bottom-color: #484848;
-}
-
-.pull-request-review-body-wrapper .timeline-comment-group .timeline-comment::after {
-  border-bottom-color: #202020;
-}
-
-.timeline-comment--caret::after {
-  border-right-color: #202020;
-}
-
-.TimelineItem--condensed .TimelineItem-badge, .TimelineItem::before {
-  background-color: #383838;
-}
-
-.tabnav-tab.selected, .tabnav-tab[aria-selected="true"] {
-  background-color: #222;
-  border-color: #343434;
-}
-
-.timeline-comment, .review-comment {
-  color: #bababa;
-}
-
-.TimelineItem-break {
-  background-color: transparent;
-  border-top-color: transparent;
-}
-
-.markdown-body .lead-mktg p {
-  color: #bababa;
-}
-
-/***** Diffs *****/
-
-.soft-wrap .blob-code-inner {
-  word-wrap: normal;
-  white-space: pre;
-}
-
-/***** GraphQL (GraphiQL) *****/
-
-.content .sectionbody .dlist dt,
-.content .verseblock-content,
-.content dl code,
-.content h2 code,
-.content h3 code,
-.content h4 code,
-.content ol code,
-.content p > tt,
-.content table code,
-.content ul code,
-p code {
-  background-color: #222;
-}
-
-.graphiql-container .doc-explorer,
-.graphiql-container .doc-explorer-contents, .graphiql-container .history-contents,
-.graphiql-container .docExplorerWrap, .graphiql-container .historyPaneWrap {
-  background: #222;
-}
-
-.graphiql-container .doc-category-title,
-.graphiql-container .search-box {
-  border-bottom-color: #444;
-}
-
-.graphiql-container .doc-explorer-contents {
-  border-top-color: #444;
+.btn .octicon {
+  color: inherit;
 }

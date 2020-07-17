@@ -1,0 +1,59 @@
+body {
+  background-color: #222;
+  color: #ccc;
+}
+
+.logo {
+  filter: invert();
+}
+
+.navbar-default {
+  background-color: #333;
+  border-color: #333;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #ccc;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #fff;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+  background-color: #111;
+}
+
+code {
+  background-color: #111;
+}
+
+pre,
+.hljs,
+.hljs-subst,
+.hljs-tag .hljs-title,
+.nginx .hljs-title,
+.demo-api-code-panel
+{
+  background-color: #111;
+  border-color: #333;
+  color: #ddd;
+}
+
+.demo-api-method-switcher {
+  border-left-color: #333;
+  border-right-color: #333;
+}
+
+.demo-api-method-switcher-item {
+  background-color: #444;
+  color: #ccc;
+}
+
+      .hljs-constant  { color: #9b859d; }
+      .hljs-literal   { color: #7587a6; }
+      .hljs-number    { color: #cf6a4c; }
+      .hljs-string    { color: #8f9d6a; }
+.ruby .hljs-symbol    { color: #cf6a4c; }

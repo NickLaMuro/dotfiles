@@ -1,9 +1,9 @@
 ---
 enabled: true
-updateUrl: 
-md5Url: 
-url: 
-originalMd5: 
+updateUrl:
+md5Url:
+url:
+originalMd5:
 installDate: 1557856724076
 name: infra-trackerbot2.cfme2.lab.eng.rdu2.redhat.com
 sections:

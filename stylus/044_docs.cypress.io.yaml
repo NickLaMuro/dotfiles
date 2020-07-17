@@ -1,9 +1,9 @@
 ---
 enabled: true
-updateUrl: 
-md5Url: 
-url: 
-originalMd5: 
+updateUrl:
+md5Url:
+url:
+originalMd5:
 installDate: 1586293160235
 name: docs.cypress.io
 sections:

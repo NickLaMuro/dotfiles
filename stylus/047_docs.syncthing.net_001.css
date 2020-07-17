@@ -1,0 +1,23 @@
+html,
+body,
+div.body {
+  background-color: #1a1a1a;
+  color: #eaeaea;
+}
+
+pre {
+  background-color: #111;
+}
+
+div.sphinxsidebar h3,
+div.sphinxsidebar h4 {
+  color: #eaeaea;
+}
+
+div.sphinxsidebar a {
+  color: #dadada;
+}
+
+a.reference {
+  color: #2bf;
+}
