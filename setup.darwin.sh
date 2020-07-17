@@ -20,9 +20,13 @@ if [[ $(uname -s) == "Darwin" ]] ; then
   #     option  = ~
   #     shift   = @
   #
+  # List sourced from here: https://apple.stackexchange.com/a/294411
+  #
   # Note:  The above seem wrong, as '@l' below is definitely CMD-l ...
   #
-  # List sourced from here: https://apple.stackexchange.com/a/294411
+  # updates below with what I have found out from testing...
+  #
+  #     shift   = $
   #
   defaults write -g NSUserKeyEquivalents -dict-add "Lock Screen" "@l"
 
