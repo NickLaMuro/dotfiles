@@ -24,11 +24,5 @@
   display: none;
 }*/
 
-
-/* Remove "Advanced Search Options" (G-Suite Only for now) */
-.PY.G-atb           { height: 48px; display: flex }
-div[role="toolbar"] { display: none; }
-
-
 /* Remove "Room and group DM chat results are only available at chat.google.com" wasted space */
 .ED.EN { display: none; }

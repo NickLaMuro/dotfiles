@@ -78,3 +78,11 @@ img[src="//ssl.gstatic.com/ui/v1/icons/mail/profile_mask_2x.png"] {
 .T-axO .J-JN-M-I-JG                     { filter: invert(100%); }     /* Dropdown arrow */
 
 .boo .T-axO.aQl, .boo .T-axO.aaa        { box-shadow: inset 0 -1px 0 0 #4285f4 } /* underline for drop downs */
+
+/* Remove "Advanced Search Options" */
+.PY.G-atb                               { height: 48px; display: flex }
+div[role="toolbar"]                     { display: none; }
+
+
+/* Remove "Meet" sidebar menu */
+.YN                                     { display: none; }

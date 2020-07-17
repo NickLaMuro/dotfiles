@@ -11,7 +11,7 @@ sections:
   - calendar.google.com
   regexps:
   - https?://mail\.google\.com/mail/u/1/.*
-updateDate: 1586875932345
+updateDate: 1589208538207
 id: 47
 _id: 8107128b-8a36-47a7-958c-32b41bf056f3
-_rev: 1586875932345
+_rev: 1589208538207
