@@ -6,13 +6,12 @@ url: http://userstyles.org/styles/169643
 originalMd5: eadad8d3128e65c01c71762e572a58b8
 installDate: 1554760427733
 sections:
-- urls: []
-  urlPrefixes: []
-  domains:
+- domains:
   - npmjs.com
-  regexps: []
 name: NPM Dark Theme - Complete
 originalDigest: 44acfb964ed6f0cfb56ef527e6a42351375c0c3b
 id: 45
 _id: c1cf422f-c634-4f5e-9098-62f97d70f942
-_rev: 1583342080472
+_rev: 1588287112667
+updateDate: 1588287112667
+originalName: NPM Dark Theme - Complete
