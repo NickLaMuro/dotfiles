@@ -86,3 +86,6 @@
 [submodule ".vim/bundles/patchreview-vim"]
 	path = .vim/bundles/patchreview-vim
 	url = https://github.com/junkblocker/patchreview-vim
+[submodule ".vim/bundles/vim-crystal"]
+	path = .vim/bundles/vim-crystal
+	url = https://github.com/vim-crystal/vim-crystal.git
