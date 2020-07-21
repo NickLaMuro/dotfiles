@@ -1,4 +1,4 @@
-if exists("g:colors_name") && g:colors_name == "NVL_twilight"
+if exists("g:colors_name") && g:colors_name == "nvl_twilight"
   hi link rubyRailsUserClass            GenericConstant
 
   hi link rubyRailsARAssociationMethod  GenericFrameworkFunction

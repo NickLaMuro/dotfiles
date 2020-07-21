@@ -38,7 +38,7 @@ hi link rubyException        Operator
 hi link rubyStringDelimiter  String
 
 " Specific extra additions that require NVL_twilight
-if exists("g:colors_name") && g:colors_name == "NVL_twilight"
+if exists("g:colors_name") && g:colors_name == "nvl_twilight"
   hi link rubyConstant               GenericConstant
 
   hi link rubyInstanceVariable       GenericInstanceVariable
