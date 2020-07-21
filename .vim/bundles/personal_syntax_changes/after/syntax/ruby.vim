@@ -53,4 +53,14 @@ if exists("g:colors_name") && g:colors_name == "nvl_twilight"
   hi link rubyRegexp                 GenericRegexp
   hi link rubyRegexpDelimiter        GenericRegexp
   hi link rubyRegexpSpecial          GenericRegexp
-end
+
+  " Rails additions (since they can still exist in filetype=ruby)
+  hi link rubyRailsUserClass            GenericConstant
+
+  hi link rubyRailsARAssociationMethod  GenericFrameworkFunction
+  hi link rubyRailsARMethod             GenericFrameworkFunction
+  hi link rubyRailsRenderMethod         GenericFrameworkFunction
+  hi link rubyRailsMethod               GenericFrameworkFunction
+  hi link javaScriptRailsFunction       GenericFrameworkFunction
+  hi link erubyRailsMethod              GenericFrameworkFunction
+endif
