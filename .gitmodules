@@ -89,3 +89,6 @@
 [submodule ".vim/bundles/vim-crystal"]
 	path = .vim/bundles/vim-crystal
 	url = https://github.com/vim-crystal/vim-crystal.git
+[submodule ".vim/bundles/nvl_twilight.vim"]
+	path = .vim/bundles/nvl_twilight.vim
+	url = https://github.com/NickLaMuro/nvl_twilight.vim.git
