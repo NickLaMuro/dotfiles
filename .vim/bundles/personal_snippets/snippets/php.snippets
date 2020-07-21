@@ -1,0 +1,37 @@
+snippet post
+	$_POST['${1}']${2}
+snippet request
+	$_REQUEST['${1}']${2}
+snippet foreachk
+	foreach ($${1:variable} as $${2:key} => $${3:value}){
+		${4:// code...}
+	}
+snippet try
+	try  {
+		${1:// code...}
+	} catch (${2:Exception} $e) {
+		${3:// code...}
+	}
+snippet get
+	$_GET['${1}']${2}
+# Documented class
+snippet classe
+	/**
+	 * ${1}
+	 */
+	class ${2:ClassName} extends ${3:AnotherClass}
+	{
+		${4}
+		function ${5:__construct}(${6:argument})
+		{
+			${7:// code...}
+		}
+	}
+snippet log
+	error_log(var_export(${1}, true));${2}
+snippet defd
+	${1}defined('${2}')${3}
+snippet session
+	$_SESSION['${1}']${2}
+snippet var
+	var_export(${1});${2}

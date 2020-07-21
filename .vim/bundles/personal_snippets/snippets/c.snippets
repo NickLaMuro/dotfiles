@@ -1,0 +1,12 @@
+snippet fpf
+	fprintf(${1:stderr}, "${2:%s}\n"${3});${4}
+
+#Include
+----------
+#inc.inc
+snippet inc inc
+	#include "${1:`Filename("$1.h")`}"${2}
+#inc.inc_global
+snippet inc inc_global
+	#include <${1:stdio}.h>${2}
+----------
