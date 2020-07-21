@@ -61,9 +61,6 @@
 [submodule ".vim/bundles/vim-rails"]
 	path = .vim/bundles/vim-rails
 	url = https://github.com/tpope/vim-rails.git
-[submodule ".vim/bundles/vim-files"]
-	path = .vim/bundles/vim-files
-	url = https://github.com/NickLaMuro/vim-files.git
 [submodule ".vim/bundles/vim-dispatch"]
 	path = .vim/bundles/vim-dispatch
 	url = https://github.com/tpope/vim-dispatch.git
