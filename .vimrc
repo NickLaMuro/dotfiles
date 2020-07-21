@@ -39,7 +39,7 @@ filetype plugin on
 "helptags ~/.vim/doc
 
 " Enable syntax highlighting
-colorscheme NVL_twilight
+colorscheme nvl_twilight
 syntax on
 
 "------------------------------------------------------------
