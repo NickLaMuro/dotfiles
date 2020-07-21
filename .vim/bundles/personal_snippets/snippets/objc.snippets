@@ -1,0 +1,34 @@
+snippet cli
+	@interface ${1:ClassName} : ${2:NSObject}
+	{${3}
+	}
+	${4}
+	@end
+snippet I
+	+ (void) initialize
+	{
+		[[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWIthObjectsAndKeys:
+			${1}@"value", @"key",
+			nil]];
+	}
+snippet cati
+	@interface ${1:NSObject} (${2:Category})
+	${3}
+	@end
+
+#m
+----------
+snippet m method
+	- (${1:id}) ${2:method}
+	{${3}
+		${4:return nil;}
+	}
+snippet m class method
+	+ (${1:id}) ${2:method}
+	{${3}
+		return nil;
+	}
+----------
+
+snippet bez
+	NSBezierPath *${1:path} = [NSBezierPath bezierPath];${2}

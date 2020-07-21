@@ -64,6 +64,49 @@ Where:
 - `[REPO_NAME]` is the name of the repo in the dir (EX: patchreview-vim)
 
 
+### Removing a plugin
+
+Steps from the following:
+
+- https://stackoverflow.com/a/1260982/3574689
+- https://git.wiki.kernel.org/index.php/GitSubmoduleTutorial#Removal
+
+
+> 1. Delete the relevant section from the `.gitmodules` file.
+>    
+> 2. Stage the .gitmodules changes:
+>    
+>    ```console
+>    $ git add .gitmodules
+>    ```
+>    
+> 3. Delete the relevant section from `.git/config`.
+>    
+> 4. Remove the submodule files from the working tree and index:
+>    
+>    ```console
+>    $ git rm --cached path_to_submodule (no trailing slash).
+>    ```
+>    
+> 5. Remove the submodule's .git directory:
+>    
+>    ```console
+>    $ rm -rf .git/modules/path_to_submodule
+>    ```
+>    
+> 6. Commit the changes:
+>    
+>    ```console
+>    $ git commit -m "Removed submodule <name>"
+>    ```
+>    
+> 7. Delete the now untracked submodule files:
+>    
+>    ```console
+>    $ rm -rf path_to_submodule
+>    ```
+
+
 License
 -------
 
