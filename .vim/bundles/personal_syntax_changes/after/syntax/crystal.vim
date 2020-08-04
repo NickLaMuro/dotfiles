@@ -1,32 +1,37 @@
+hi link crystalRegexpAnchor         Function
+hi link crystalRegexpCharClass      Function
+hi link crystalRegexpQuantifier     Function
+hi link crystalRegexpEscape         Function
 
-hi link crystalRegexpAnchor       rubyRegexpAnchor
-hi link crystalRegexpCharClass    rubyRegexpCharClass
-hi link crystalRegexpQuantifier   rubyRegexpQuantifier
-hi link crystalRegexpEscape       rubyRegexpEscape
+hi link crystalSymbol               Number
+hi link crystalEscape               Number
 
-hi link crystalSymbol             rubySymbol
-hi link crystalEscape             rubyEscape
+hi link crystalInclude              Operator
+hi link crystalControl              Operator
+hi link crystalOperator             Operator
+hi link crystalException            Operator
 
-hi link crystalInclude            rubyInclude
-hi link crystalControl            rubyControl
-hi link crystalOperator           rubyOperator
-hi link crystalException          rubyException
+hi link crystalStringDelimiter      String
 
-hi link rubyStringDelimiter       String
+if hlexists('GenericConstant')
+  hi link crystalConstant           GenericConstant
+endif
 
-hi link crystalStringDelimiter    rubyStringDelimiter
+if hlexists('GenericInstanceVariable')
+  hi link crystalInstanceVariable   GenericInstanceVariable
+  hi link crystalBlockParameter     GenericInstanceVariable
+  hi link crystalClassVariable      GenericInstanceVariable
+  hi link crystalGlobalVariable     GenericInstanceVariable
+  hi link crystalPseudoVariable     GenericInstanceVariable
+endif
 
-hi link crystalConstant           rubyConstant
+if hlexists('GenericInterpolation')
+  hi link crystalInterpolation      GenericInterpolation
+  hi link crystalInterpolationDelim GenericInterpolation
+endif
 
-hi link crystalInstanceVariable   rubyInstanceVariable
-hi link crystalBlockParameter     rubyBlockParameter
-hi link crystalClassVariable      rubyClassVariable
-hi link crystalGlobalVariable     rubyGlobalVariable
-hi link crystalPseudoVariable     rubyPseudoVariable
-
-hi link crystalInterpolation      rubyInterpolation
-hi link crystalInterpolationDelim rubyInterpolationDelimiter
-
-hi link crystalRegexp             rubyRegexp
-hi link crystalRegexpDelimiter    rubyRegexpDelimiter
-hi link crystalRegexpSpecial      rubyRegexpSpecial
+if hlexists('GenericRegexp')
+  hi link crystalRegexp             GenericRegexp
+  hi link crystalRegexpDelimiter    GenericRegexp
+  hi link crystalRegexpSpecial      GenericRegexp
+endif
