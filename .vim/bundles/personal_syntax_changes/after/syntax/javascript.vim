@@ -9,4 +9,5 @@ hi link javaScriptParen Normal
 if hlexists('GenericInstanceVariable')
   hi link javaScriptMember GenericInstanceVariable
   hi link javaScriptType   GenericInstanceVariable
+  hi link javaScriptNull   GenericInstanceVariable
 endif
