@@ -28,9 +28,6 @@
 [submodule ".vim/bundles/tabular"]
 	path = .vim/bundles/tabular
 	url = https://github.com/godlygeek/tabular.git
-[submodule ".vim/bundles/dbext.vim"]
-	path = .vim/bundles/dbext.vim
-	url = https://github.com/vim-scripts/dbext.vim.git
 [submodule ".vim/bundles/vim-coffee-script"]
 	path = .vim/bundles/vim-coffee-script
 	url = https://github.com/kchmck/vim-coffee-script.git
@@ -89,3 +86,6 @@
 [submodule ".vim/bundles/nvl_twilight.vim"]
 	path = .vim/bundles/nvl_twilight.vim
 	url = https://github.com/NickLaMuro/nvl_twilight.vim.git
+[submodule ".vim/bundles/vim-dadbod"]
+	path = .vim/bundles/vim-dadbod
+	url = https://github.com/tpope/vim-dadbod.git
