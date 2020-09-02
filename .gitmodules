@@ -86,3 +86,6 @@
 [submodule ".vim/bundles/nvl_twilight.vim"]
 	path = .vim/bundles/nvl_twilight.vim
 	url = https://github.com/NickLaMuro/nvl_twilight.vim.git
+[submodule ".vim/bundles/vim-dadbod"]
+	path = .vim/bundles/vim-dadbod
+	url = https://github.com/tpope/vim-dadbod.git
