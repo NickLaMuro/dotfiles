@@ -6,8 +6,6 @@
 # 
 
 
-source_file /etc/bash_completion
-
 if type brew &>/dev/null; then
   HOMEBREW_PREFIX=$(brew --prefix)
   if [[ -r "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]]; then
@@ -17,5 +15,6 @@ if type brew &>/dev/null; then
       [[ -r "$COMPLETION" ]] && source "$COMPLETION"
     done
   fi
+else
+  source_file /etc/bash_completion
 fi
-
