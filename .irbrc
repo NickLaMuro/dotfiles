@@ -155,3 +155,79 @@ def __with_tmp_file__ tmpfile_data, unlink = true
     tmpfile.unlink if unlink
   end
 end
+
+# Twilight IRB colors
+if defined?(IRB::Color)
+  module IRB
+    module Color
+      COMMENT_COLOR                           = "38;2;94;89;96"
+      TOKEN_SEQ_EXPRS[:on_comment][0]         = [COMMENT_COLOR]
+
+      STRING_COLOR                            = "38;2;143;157;106"
+      TOKEN_SEQ_EXPRS[:on_backtick][0]        = [STRING_COLOR, BOLD]
+      TOKEN_SEQ_EXPRS[:on_tstring_beg][0]     = [STRING_COLOR, BOLD]
+      TOKEN_SEQ_EXPRS[:on_tstring_content][0] = [STRING_COLOR]
+      TOKEN_SEQ_EXPRS[:on_tstring_end][0]     = [STRING_COLOR, BOLD]
+      TOKEN_SEQ_EXPRS[:on_heredoc_beg][0]     = [STRING_COLOR, BOLD]
+      TOKEN_SEQ_EXPRS[:on_heredoc_end][0]     = [STRING_COLOR, BOLD]
+      TOKEN_SEQ_EXPRS[:on_words_beg][0]       = [STRING_COLOR, BOLD]
+      TOKEN_SEQ_EXPRS[:on_qwords_beg][0]      = [STRING_COLOR, BOLD]
+
+      STRING_EMB_COLOR                        = "38;2;218;239;163"
+      TOKEN_SEQ_EXPRS[:on_embexpr_beg][0]     = [STRING_EMB_COLOR, BOLD]
+      TOKEN_SEQ_EXPRS[:on_embexpr_end][0]     = [STRING_EMB_COLOR, BOLD]
+      TOKEN_SEQ_EXPRS[:on_embvar][0]          = [STRING_EMB_COLOR, BOLD]
+      # Best option available
+      #
+      # Normally, this is more of a KEYWORD_COLOR, but because the contents are
+      # a string color, this is the best option
+      TOKEN_SEQ_EXPRS[:on_regexp_beg][0]      = [STRING_EMB_COLOR, BOLD]
+      TOKEN_SEQ_EXPRS[:on_regexp_end][0]      = [STRING_EMB_COLOR, BOLD]
+
+      SYMBOL_COLOR                            = "38;2;207;106;76"
+      TOKEN_SEQ_EXPRS[:on_CHAR][0]            = [SYMBOL_COLOR, BOLD]
+      TOKEN_SEQ_EXPRS[:on_symbeg][0]          = [SYMBOL_COLOR, BOLD]
+      TOKEN_SEQ_EXPRS[:on_int][0]             = [SYMBOL_COLOR, BOLD]
+      TOKEN_SEQ_EXPRS[:on_float][0]           = [SYMBOL_COLOR, BOLD]
+      TOKEN_SEQ_EXPRS[:on_rational][0]        = [SYMBOL_COLOR, BOLD]
+      TOKEN_SEQ_EXPRS[:on_imaginary][0]       = [SYMBOL_COLOR, BOLD]
+      TOKEN_SEQ_EXPRS[:on_label][0]           = [SYMBOL_COLOR, BOLD]
+      TOKEN_SEQ_EXPRS[:on_symbols_beg][0]     = [SYMBOL_COLOR, BOLD]
+      TOKEN_SEQ_EXPRS[:on_qsymbols_beg][0]    = [SYMBOL_COLOR, BOLD]
+
+      # TODO: handle `on_label_end` for stuff like: { "foo-bar": 42 }
+
+      KEYWORD_COLOR                           = "38;2;205;168;105"
+      TOKEN_SEQ_EXPRS[:on_kw][0]              = [KEYWORD_COLOR]
+
+      GLOBAL_COLOR                            = "38;2;117;135;166"
+      TOKEN_SEQ_EXPRS[:on_gvar][0]            = [GLOBAL_COLOR]
+      TOKEN_SEQ_EXPRS[:on_ivar]               = [[GLOBAL_COLOR,BOLD], ALL]
+
+      CONSTANT_COLOR                          = "38;2;155;133;157"
+      TOKEN_SEQ_EXPRS[:on_const][0]           = [CONSTANT_COLOR,BOLD,UNDERLINE]
+
+      FUNC_DEF_COLOR                          = "38;2;155;112;63"
+      TOKEN_SEQ_EXPRS[:on_ident][0]           = [FUNC_DEF_COLOR,BOLD]
+
+      BOOL_KEYWORDS = %w[true false].freeze
+      def self.dispatch_seq(token, expr, str, in_symbol:)
+        if token == :on_parse_error or token == :compile_error
+          TOKEN_SEQ_EXPRS[token][0]
+        elsif in_symbol
+          [SYMBOL_COLOR]
+        elsif TOKEN_KEYWORDS.fetch(token, []).include?(str)
+          case token
+          when :on_const then [CONSTANT_COLOR, BOLD]
+          when :on_kw
+            BOOL_KEYWORDS.include?(str) ? [SYMBOL_COLOR, BOLD] : [GLOBAL_COLOR, BOLD]
+          end
+        elsif (seq, exprs = TOKEN_SEQ_EXPRS[token]; (expr & (exprs || 0)) != 0)
+          seq
+        else
+          nil
+        end
+      end
+    end
+  end
+end
