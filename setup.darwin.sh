@@ -48,6 +48,7 @@ if [[ $(uname -s) == "Darwin" ]] ; then
     brew install syncthing
 
     brew install iterm2
+    brew install keepassxc
     brew install homebrew/cask-fonts/font-meslo-for-powerline
     brew install homebrew/cask-fonts/font-hack-nerd-font # might be my new font
   fi
