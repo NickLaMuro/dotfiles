@@ -45,6 +45,7 @@ if [[ $(uname -s) == "Darwin" ]] ; then
     brew install ruby-install
     brew install chruby
     brew install rg
+    brew install syncthing
 
     brew install iterm2
     brew install homebrew/cask-fonts/font-meslo-for-powerline
