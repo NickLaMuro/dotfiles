@@ -44,6 +44,7 @@ if [[ $(uname -s) == "Darwin" ]] ; then
     brew install hub
     brew install ruby-install
     brew install chruby
+    brew install rg
     # brew install iterm2  # maybe another time...
     brew install homebrew/cask-fonts/font-meslo-for-powerline
     brew install homebrew/cask-fonts/font-hack-nerd-font # might be my new font
