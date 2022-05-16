@@ -25,7 +25,9 @@ help() {
 }
 
 if [ "$SMC" == "" ]; then
-SMC="/Applications/smcFanControl.app/Contents/Resources/smc"
+  SMC="/Applications/smcFanControl.app/Contents/Resources/smc"
+else
+  CUSTOM_SMC="true"
 fi
 
 
@@ -47,14 +49,29 @@ down() {
 #   0x4650
 #
 set_speed() {
-  local SPEED=`python -c "print hex($1 << 2)" | sed s/^0x//`
-  sudo "$SMC" -k "FS! " -w 0003 # force fan0 and fan1 to manual
-  sudo "$SMC" -k F0Tg -w $SPEED # force RPM to $SPEED for fan0
-  sudo "$SMC" -k F1Tg -w $SPEED # force RPM to $SPEED for fan1
+  if [[ "$CUSTOM_SMC" == "" ]]; then # do something different if $SMC is manually set
+    local SPEED=`python -c "print hex($1 << 2)" | sed s/^0x//`
+
+    sudo "$SMC" -k "FS! " -w 0003 # force fan0 and fan1 to manual
+    sudo "$SMC" -k F0Tg -w $SPEED # force RPM to $SPEED for fan0
+    sudo "$SMC" -k F1Tg -w $SPEED # force RPM to $SPEED for fan1
+  else
+    local SPEED=$1
+
+    sudo "$SMC" -k F0Md -w 01     # force fan0 to manual
+    sudo "$SMC" -k F1Md -w 01     # force fan1 to manual
+    sudo "$SMC" -k F0Tg -p $SPEED # force RPM to $SPEED for fan0
+    sudo "$SMC" -k F1Tg -p $SPEED # force RPM to $SPEED for fan1
+  fi
 }
 
 reset() {
-  sudo "$SMC" -k "FS! " -w 0000 # return fans to auto mode
+  if [[ "$CUSTOM_SMC" == "" ]]; then
+    sudo "$SMC" -k "FS! " -w 0000 # return fans to auto mode
+  else
+    sudo "$SMC" -k F0Md -w 00
+    sudo "$SMC" -k F1Md -w 00
+  fi
 }
 
 case "$1" in
