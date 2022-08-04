@@ -32,25 +32,26 @@ if [[ $(uname -s) == "Darwin" ]] ; then
 
   killall SystemUIServer
 
-
   # Install Hombrew if it doesn't already exist
   command -v brew > /dev/null
   if [[ "$?" != "0" ]]; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
-    brew install bash
-    brew install bash-completion
-    brew install tmux
-    brew install hub
-    brew install ruby-install
-    brew install chruby
-    brew install rg
-    brew install syncthing
+    export BREW=$(which brew)
 
-    brew install iterm2
-    brew install keepassxc
-    brew install homebrew/cask-fonts/font-meslo-for-powerline
-    brew install homebrew/cask-fonts/font-hack-nerd-font # might be my new font
+    $BREW install bash
+    $BREW install bash-completion
+    $BREW install tmux
+    $BREW install hub
+    $BREW install ruby-install
+    $BREW install chruby
+    $BREW install rg
+    $BREW install syncthing
+
+    $BREW install iterm2
+    $BREW install keepassxc
+    $BREW install homebrew/cask-fonts/font-meslo-for-powerline
+    $BREW install homebrew/cask-fonts/font-hack-nerd-font # might be my new font
   fi
 
   # Set default shell to "brew bash"
