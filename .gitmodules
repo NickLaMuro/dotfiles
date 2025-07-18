@@ -89,3 +89,6 @@
 [submodule ".vim/bundles/vim-dadbod"]
 	path = .vim/bundles/vim-dadbod
 	url = https://github.com/tpope/vim-dadbod.git
+[submodule ".vim/bundles/vim-rhubarb"]
+	path = .vim/bundles/vim-rhubarb
+	url = https://github.com/tpope/vim-rhubarb.git
