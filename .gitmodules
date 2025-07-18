@@ -92,3 +92,6 @@
 [submodule ".vim/bundles/vim-rhubarb"]
 	path = .vim/bundles/vim-rhubarb
 	url = https://github.com/tpope/vim-rhubarb.git
+[submodule ".vim/packs/ai/opt/llama.vim"]
+	path = .vim/packs/ai/opt/llama.vim
+	url = https://github.com/ggml-org/llama.vim.git
